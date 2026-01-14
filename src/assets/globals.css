@@ -1,0 +1,205 @@
+@import 'tailwindcss';
+
+@plugin "tailwindcss-animate";
+
+@theme {
+  /* --- 1. Typography --- */
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+
+  /* --- 2. Radius Ayarları (Shadcn) --- */
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --radius-2xl: calc(var(--radius) + 8px);
+  --radius-3xl: calc(var(--radius) + 12px);
+  --radius-4xl: calc(var(--radius) + 16px);
+
+  /* --- 3. Renk Haritası --- */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+
+  /* Primary  */
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary-hover: var(--primary-hover);
+
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+
+  /* Chart Colors */
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+
+  /* Sidebar Colors */
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* --- 4. Custom Container --- */
+  --breakpoint-container: 1200px;
+}
+
+/* --- DEĞERLERİN TANIMLANDIĞI YER --- */
+:root {
+  /* Radius Base */
+  --radius: 0.5rem;
+
+  /* Base Colors */
+  --background: #fafafa;
+  --foreground: #333333;
+
+  /* Card Colors */
+  --card: #ffffff;
+  --card-foreground: #333333;
+
+  /* Popover Colors */
+  --popover: #ffffff;
+  --popover-foreground: #333333;
+
+  /* --- TRENDYOL PRIMARY (TURUNCU) --- */
+  --primary: #f27a1a;
+  --primary-foreground: #ffffff;
+  --primary-hover: #d8660e;
+
+  /* Secondary */
+  --secondary: #f4f4f5;
+  --secondary-foreground: #18181b;
+
+  /* Muted */
+  --muted: #f4f4f5;
+  --muted-foreground: #666666;
+
+  /* Accent */
+  --accent: #f4f4f5;
+  --accent-foreground: #18181b;
+
+  /* Destructive */
+  --destructive: #dc3545;
+  --destructive-foreground: #ffffff;
+
+  /* Borders */
+  --border: #e6e6e6;
+  --input: #e6e6e6;
+  --ring: #f27a1a;
+
+  /* Charts */
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+
+  /* Sidebar */
+  --sidebar: #fafafa;
+  --sidebar-foreground: #333333;
+  --sidebar-primary: #f27a1a;
+  --sidebar-primary-foreground: #ffffff;
+  --sidebar-accent: #f4f4f5;
+  --sidebar-accent-foreground: #333333;
+  --sidebar-border: #e6e6e6;
+  --sidebar-ring: #f27a1a;
+}
+
+.dark {
+  --background: #202020;
+  --foreground: #fafafa;
+  --card: #202020;
+  --card-foreground: #fafafa;
+  --popover: #202020;
+  --popover-foreground: #fafafa;
+  --primary: #f27a1a;
+  --primary-foreground: #ffffff;
+  --primary-hover: #d8660e;
+  --secondary: #27272a;
+  --secondary-foreground: #fafafa;
+  --muted: #27272a;
+  --muted-foreground: #a1a1aa;
+  --accent: #27272a;
+  --accent-foreground: #fafafa;
+  --destructive: #7f1d1d;
+  --destructive-foreground: #fafafa;
+  --border: #27272a;
+  --input: #27272a;
+  --ring: #d8660e;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html {
+    /* Sayfa içi kaydırmayı yumuşat */
+    scroll-behavior: smooth;
+    /* iOS'te font büyümesini engelle */
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Mobilde tıklama gölgesini kaldır (App Hissi) */
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Metin seçildiğinde marka rengi olsun */
+  ::selection {
+    @apply bg-orange-100 text-orange-900;
+  }
+}
+
+@layer components {
+  /* --- 1. Custom Responsive Container --- */
+  /* Mobilde kenarlardan boşluk bırakır, masaüstünde ortalar */
+  .container-custom {
+    @apply w-full mx-auto px-4 sm:px-6 lg:px-8 max-w-[1200px];
+  }
+
+  /* --- 2. Typography Utils --- */
+  .headerTopPrg {
+    @apply text-xs text-muted-foreground cursor-pointer hover:text-foreground transition duration-300;
+  }
+
+  .text-primary-hover {
+    @apply hover:text-[var(--primary-hover)] transition-colors;
+  }
+
+  .tabsTrigger {
+    @apply text-base font-semibold data-[state=active]:text-primary data-[state=active]:border-b-2 data-[state=active]:border-primary shadow-none bg-transparent cursor-pointer;
+  }
+
+  /* --- 3. Mobile UX Utils --- */
+  /* Dokunmatik cihazlarda gecikmeyi önle */
+  .touch-manipulation {
+    touch-action: manipulation;
+  }
+}

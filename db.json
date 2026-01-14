@@ -1,0 +1,6684 @@
+{
+  "users": [
+    {
+      "id": "firebase_uid_12345",
+      "email": "user@example.com",
+      "fullName": "Demo User",
+      "role": "user",
+      "favorites": [
+        101,
+        203,
+        305
+      ],
+      "addresses": [
+        {
+          "id": 1,
+          "title": "Ev Adresi",
+          "city": "İstanbul",
+          "district": "Kadıköy",
+          "fullAddress": "Caferağa Mah. Moda Cad. No:1"
+        }
+      ]
+    },
+    {
+      "id": "firebase_uid_98765",
+      "email": "admin@example.com",
+      "fullName": "Admin User",
+      "role": "admin",
+      "favorites": [],
+      "addresses": []
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Kadın",
+      "slug": "kadin",
+      "parentId": null,
+      "level": 0
+    },
+    {
+      "id": "2",
+      "name": "Erkek",
+      "slug": "erkek",
+      "parentId": null,
+      "level": 0
+    },
+    {
+      "id": "3",
+      "name": "Elektronik",
+      "slug": "elektronik",
+      "parentId": null,
+      "level": 0
+    },
+    {
+      "id": "4",
+      "name": "Ev & Yaşam",
+      "slug": "ev-yasam",
+      "parentId": null,
+      "level": 0
+    },
+    {
+      "id": "5",
+      "name": "Kozmetik",
+      "slug": "kozmetik",
+      "parentId": null,
+      "level": 0
+    },
+    {
+      "id": "11",
+      "name": "Giyim",
+      "slug": "kadin-giyim",
+      "parentId": 1,
+      "level": 1
+    },
+    {
+      "id": "12",
+      "name": "Ayakkabı",
+      "slug": "kadin-ayakkabi",
+      "parentId": 1,
+      "level": 1
+    },
+    {
+      "id": "13",
+      "name": "Aksesuar",
+      "slug": "kadin-aksesuar",
+      "parentId": 1,
+      "level": 1
+    },
+    {
+      "id": "21",
+      "name": "Giyim",
+      "slug": "erkek-giyim",
+      "parentId": 2,
+      "level": 1
+    },
+    {
+      "id": "22",
+      "name": "Ayakkabı",
+      "slug": "erkek-ayakkabi",
+      "parentId": 2,
+      "level": 1
+    },
+    {
+      "id": "31",
+      "name": "Bilgisayar",
+      "slug": "bilgisayar",
+      "parentId": 3,
+      "level": 1
+    },
+    {
+      "id": "32",
+      "name": "Telefon",
+      "slug": "telefon",
+      "parentId": 3,
+      "level": 1
+    },
+    {
+      "id": "41",
+      "name": "Mobilya",
+      "slug": "mobilya",
+      "parentId": 4,
+      "level": 1
+    },
+    {
+      "id": "111",
+      "name": "Elbise",
+      "slug": "elbise",
+      "parentId": 11,
+      "level": 2
+    },
+    {
+      "id": "112",
+      "name": "Tişört",
+      "slug": "kadin-tisort",
+      "parentId": 11,
+      "level": 2
+    },
+    {
+      "id": "113",
+      "name": "Jean",
+      "slug": "kadin-jean",
+      "parentId": 11,
+      "level": 2
+    },
+    {
+      "id": "114",
+      "name": "Mont & Kaban",
+      "slug": "kadin-mont",
+      "parentId": 11,
+      "level": 2
+    },
+    {
+      "id": "121",
+      "name": "Sneaker",
+      "slug": "kadin-sneaker",
+      "parentId": 12,
+      "level": 2
+    },
+    {
+      "id": "122",
+      "name": "Topuklu Ayakkabı",
+      "slug": "topuklu-ayakkabi",
+      "parentId": 12,
+      "level": 2
+    },
+    {
+      "id": "131",
+      "name": "Takı & Mücevher",
+      "slug": "taki-mucevher",
+      "parentId": 13,
+      "level": 2
+    },
+    {
+      "id": "211",
+      "name": "Gömlek",
+      "slug": "erkek-gomlek",
+      "parentId": 21,
+      "level": 2
+    },
+    {
+      "id": "212",
+      "name": "Sweatshirt",
+      "slug": "erkek-sweatshirt",
+      "parentId": 21,
+      "level": 2
+    },
+    {
+      "id": "213",
+      "name": "Pantolon",
+      "slug": "erkek-pantolon",
+      "parentId": 21,
+      "level": 2
+    },
+    {
+      "id": "221",
+      "name": "Spor Ayakkabı",
+      "slug": "erkek-spor-ayakkabi",
+      "parentId": 22,
+      "level": 2
+    },
+    {
+      "id": "311",
+      "name": "Laptop",
+      "slug": "laptop",
+      "parentId": 31,
+      "level": 2
+    },
+    {
+      "id": "312",
+      "name": "Tablet",
+      "slug": "tablet",
+      "parentId": 31,
+      "level": 2
+    },
+    {
+      "id": "321",
+      "name": "Cep Telefonu",
+      "slug": "cep-telefonu",
+      "parentId": 32,
+      "level": 2
+    },
+    {
+      "id": "322",
+      "name": "Bluetooth Kulaklık",
+      "slug": "bluetooth-kulaklik",
+      "parentId": 32,
+      "level": 2
+    },
+    {
+      "id": "411",
+      "name": "Koltuk Takımı",
+      "slug": "koltuk-takimi",
+      "parentId": 41,
+      "level": 2
+    },
+    {
+      "id": "6",
+      "name": "Anne & Çocuk",
+      "slug": "anne-cocuk",
+      "parentId": null,
+      "level": 0
+    },
+    {
+      "id": "7",
+      "name": "Süpermarket",
+      "slug": "supermarket",
+      "parentId": null,
+      "level": 0
+    },
+    {
+      "id": "8",
+      "name": "Ayakkabı & Çanta",
+      "slug": "ayakkabi-canta",
+      "parentId": null,
+      "level": 0
+    },
+    {
+      "id": "61",
+      "name": "Bebek Giyim",
+      "slug": "bebek-giyim",
+      "parentId": 6,
+      "level": 1
+    },
+    {
+      "id": "62",
+      "name": "Oyuncak",
+      "slug": "oyuncak",
+      "parentId": 6,
+      "level": 1
+    },
+    {
+      "id": "611",
+      "name": "Bebek Takımları",
+      "slug": "bebek-takimlari",
+      "parentId": 61,
+      "level": 2
+    },
+    {
+      "id": "621",
+      "name": "Eğitici Oyuncak",
+      "slug": "egitici-oyuncak",
+      "parentId": 62,
+      "level": 2
+    },
+    {
+      "id": "71",
+      "name": "Deterjan & Temizlik",
+      "slug": "deterjan-temizlik",
+      "parentId": 7,
+      "level": 1
+    },
+    {
+      "id": "711",
+      "name": "Çamaşır Deterjanı",
+      "slug": "camasir-deterjani",
+      "parentId": 71,
+      "level": 2
+    },
+    {
+      "id": "51",
+      "name": "Parfüm & Deodorant",
+      "slug": "parfum-deodorant",
+      "parentId": 5,
+      "level": 1
+    },
+    {
+      "id": "511",
+      "name": "Parfüm",
+      "slug": "parfum",
+      "parentId": 51,
+      "level": 2
+    },
+    {
+      "id": "81",
+      "name": "Çanta",
+      "slug": "canta",
+      "parentId": 8,
+      "level": 1
+    },
+    {
+      "id": "811",
+      "name": "Sırt Çantası",
+      "slug": "sirt-cantasi",
+      "parentId": 81,
+      "level": 2
+    }
+  ],
+  "brands": [
+    {
+      "id": "1",
+      "name": "TrendyolMilla",
+      "slug": "trendyolmilla"
+    },
+    {
+      "id": "2",
+      "name": "TrendyolMan",
+      "slug": "trendyolman"
+    },
+    {
+      "id": "3",
+      "name": "Apple",
+      "slug": "apple"
+    },
+    {
+      "id": "4",
+      "name": "Samsung",
+      "slug": "samsung"
+    },
+    {
+      "id": "5",
+      "name": "Adidas",
+      "slug": "adidas"
+    },
+    {
+      "id": "6",
+      "name": "Nike",
+      "slug": "nike"
+    },
+    {
+      "id": "7",
+      "name": "Mavi",
+      "slug": "mavi"
+    },
+    {
+      "id": "8",
+      "name": "Koton",
+      "slug": "koton"
+    },
+    {
+      "id": "9",
+      "name": "L'Oreal",
+      "slug": "loreal"
+    },
+    {
+      "id": "10",
+      "name": "Monster",
+      "slug": "monster"
+    },
+    {
+      "id": "11",
+      "name": "Karaca",
+      "slug": "karaca"
+    },
+    {
+      "id": "12",
+      "name": "Dyson",
+      "slug": "dyson"
+    },
+    {
+      "id": "13",
+      "name": "Philips",
+      "slug": "philips"
+    },
+    {
+      "id": "14",
+      "name": "Pull & Bear",
+      "slug": "pull-and-bear"
+    }
+  ],
+  "sellers": [
+    {
+      "id": "101",
+      "name": "Trendyol",
+      "rating": 9.8,
+      "followerCount": 500000
+    },
+    {
+      "id": "102",
+      "name": "TeknoStore",
+      "rating": 9.4,
+      "followerCount": 12000
+    },
+    {
+      "id": "103",
+      "name": "ModaDünyası",
+      "rating": 8.9,
+      "followerCount": 4500
+    },
+    {
+      "id": "104",
+      "name": "EvimŞahane",
+      "rating": 9.1,
+      "followerCount": 8000
+    }
+  ],
+  "products": [
+    {
+      "id": "101",
+      "title": "Siyah Kare Yaka Örme Elbise",
+      "price": 499.99,
+      "discountPrice": 349.99,
+      "currency": "TRY",
+      "categoryId": 111,
+      "brandId": 1,
+      "brandName": "TrendyolMilla",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=600&q=80",
+        "https://images.unsplash.com/photo-1550614000-4b9519e02a48?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 12500,
+      "isFreeShipping": true,
+      "badges": [
+        "Kargo Bedava",
+        "Hızlı Teslimat"
+      ],
+      "shortDescription": "Salaş elbise ve esnek kumaş.",
+      "description": "Gün boyu konfor sunan tasarım. Yaz aylarının vazgeçilmezi.",
+      "variants": [
+        {
+          "size": "S",
+          "stock": 50,
+          "color": "Siyah"
+        },
+        {
+          "size": "M",
+          "stock": 20,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kalıp",
+          "value": "Slim Fit"
+        },
+        {
+          "key": "Materyal",
+          "value": "%95 Pamuk"
+        }
+      ]
+    },
+    {
+      "id": "11102",
+      "title": "Çiçek Desenli Şifon Elbise",
+      "price": 899.99,
+      "discountPrice": 750,
+      "currency": "TRY",
+      "categoryId": 111,
+      "brandId": 8,
+      "brandName": "Koton",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.3,
+      "reviewCount": 450,
+      "isFreeShipping": true,
+      "badges": [
+        "Yazlık",
+        "Trend"
+      ],
+      "shortDescription": "Yaz ayları için ferah kullanım.",
+      "description": "Uçuş uçuş kumaşıyla yazın vazgeçilmezi.",
+      "variants": [
+        {
+          "size": "38",
+          "stock": 15,
+          "color": "Renkli"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kumaş",
+          "value": "Şifon"
+        },
+        {
+          "key": "Kol",
+          "value": "Askılı"
+        }
+      ],
+      "extraDetails": [
+        "Astarsızdır."
+      ]
+    },
+    {
+      "id": "11103",
+      "title": "Kırmızı Saten Abiye",
+      "price": 1500,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 111,
+      "brandId": 28,
+      "brandName": "Mango",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 120,
+      "isFreeShipping": true,
+      "badges": [
+        "Davet",
+        "Premium"
+      ],
+      "shortDescription": "Özel geceler için şık tasarım.",
+      "description": "Yırtmaç detaylı, zarif saten abiye.",
+      "variants": [
+        {
+          "size": "36",
+          "stock": 5,
+          "color": "Kırmızı"
+        }
+      ],
+      "features": [
+        {
+          "key": "Materyal",
+          "value": "Saten"
+        },
+        {
+          "key": "Boy",
+          "value": "Maxi"
+        }
+      ]
+    },
+    {
+      "id": "11104",
+      "title": "Beyaz Keten Günlük Elbise",
+      "price": 1200,
+      "discountPrice": 999,
+      "currency": "TRY",
+      "categoryId": 111,
+      "brandId": 1,
+      "brandName": "TrendyolMilla",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 800,
+      "isFreeShipping": true,
+      "badges": [
+        "Doğal Kumaş"
+      ],
+      "shortDescription": "Terletmeyen keten kumaş.",
+      "description": "Sıcak havalarda serin tutan yapı.",
+      "variants": [
+        {
+          "size": "M",
+          "stock": 40,
+          "color": "Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kumaş",
+          "value": "%100 Keten"
+        },
+        {
+          "key": "Yaka",
+          "value": "Gömlek Yaka"
+        }
+      ]
+    },
+    {
+      "id": "11105",
+      "title": "Mavi Triko Elbise",
+      "price": 600,
+      "discountPrice": 450,
+      "currency": "TRY",
+      "categoryId": 111,
+      "brandId": 14,
+      "brandName": "Pull & Bear",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1619086303291-0ef7699e4b31?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.4,
+      "reviewCount": 300,
+      "isFreeShipping": false,
+      "badges": [
+        "Kışlık"
+      ],
+      "shortDescription": "Vücudu saran triko.",
+      "description": "Kış kombinlerinin kurtarıcısı.",
+      "variants": [
+        {
+          "size": "S",
+          "stock": 25,
+          "color": "Mavi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kumaş",
+          "value": "Triko"
+        },
+        {
+          "key": "Boy",
+          "value": "Midi"
+        }
+      ]
+    },
+    {
+      "id": "11106",
+      "title": "Siyah Mini Parti Elbisesi",
+      "price": 1100,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 111,
+      "brandId": 29,
+      "brandName": "Bershka",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 150,
+      "isFreeShipping": true,
+      "badges": [
+        "Gece"
+      ],
+      "shortDescription": "Payetli kumaş, iddialı.",
+      "description": "Gece dışarı çıkarken parlayın.",
+      "variants": [
+        {
+          "size": "XS",
+          "stock": 10,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Desen",
+          "value": "Payetli"
+        },
+        {
+          "key": "Boy",
+          "value": "Süper Mini"
+        }
+      ]
+    },
+    {
+      "id": "11107",
+      "title": "Vintage Puantiyeli Elbise",
+      "price": 750,
+      "discountPrice": 500,
+      "currency": "TRY",
+      "categoryId": 111,
+      "brandId": 1,
+      "brandName": "TrendyolMilla",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1612336307429-8a898d10e223?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.2,
+      "reviewCount": 90,
+      "isFreeShipping": false,
+      "badges": [
+        "Retro"
+      ],
+      "shortDescription": "90'lar modası.",
+      "description": "Retro tarzı sevenler için puantiyeli.",
+      "variants": [
+        {
+          "size": "L",
+          "stock": 12,
+          "color": "Siyah/Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Desen",
+          "value": "Puantiyeli"
+        },
+        {
+          "key": "Kalıp",
+          "value": "A-Line"
+        }
+      ]
+    },
+    {
+      "id": "11109",
+      "title": "Zümrüt Yeşili Kadife Elbise",
+      "price": 1300,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 111,
+      "brandId": 8,
+      "brandName": "Koton",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 200,
+      "isFreeShipping": true,
+      "badges": [
+        "Kış Şıklığı"
+      ],
+      "shortDescription": "Yumuşak kadife doku.",
+      "description": "Kış davetleri için sıcak ve şık.",
+      "variants": [
+        {
+          "size": "38",
+          "stock": 8,
+          "color": "Yeşil"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kumaş",
+          "value": "Kadife"
+        },
+        {
+          "key": "Yaka",
+          "value": "V Yaka"
+        }
+      ]
+    },
+    {
+      "id": "11110",
+      "title": "Bohem Tarz Maksi Elbise",
+      "price": 1800,
+      "discountPrice": 1400,
+      "currency": "TRY",
+      "categoryId": 111,
+      "brandId": 30,
+      "brandName": "Oxxo",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 110,
+      "isFreeShipping": true,
+      "badges": [
+        "Bohem"
+      ],
+      "shortDescription": "Etnik desenli.",
+      "description": "Festival ve tatil için ideal bohem tarz.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 20,
+          "color": "Toprak"
+        }
+      ],
+      "features": [
+        {
+          "key": "Stil",
+          "value": "Bohem"
+        },
+        {
+          "key": "Boy",
+          "value": "Ayak Bileği"
+        }
+      ]
+    },
+    {
+      "id": "11201",
+      "title": "Grafik Baskılı Oversize Tişört",
+      "price": 299.99,
+      "discountPrice": 199.99,
+      "currency": "TRY",
+      "categoryId": 112,
+      "brandId": 14,
+      "brandName": "Pull & Bear",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1503342394128-c104d54dba01?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 1500,
+      "isFreeShipping": true,
+      "badges": [
+        "Sokak Stili"
+      ],
+      "shortDescription": "Pamuklu rahat kalıp.",
+      "description": "Sokak stili için ideal oversize tişört.",
+      "variants": [
+        {
+          "size": "S",
+          "stock": 50,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kalıp",
+          "value": "Oversize"
+        },
+        {
+          "key": "Materyal",
+          "value": "%100 Pamuk"
+        }
+      ]
+    },
+    {
+      "id": "102",
+      "title": "Yüksek Bel Skinny Jean",
+      "price": 899.9,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 113,
+      "brandId": 7,
+      "brandName": "Mavi",
+      "sellerId": 103,
+      "images": [
+        "https://www.bikelifejeans.com/image/cache/catalog/urunler/Y%C3%BCksek%20Bel%20Palazzo%20Jean/buz%20mavi/Facetune_25-01-2024-01-55-36-459x688h.jpg"
+      ],
+      "rating": 4.8,
+      "reviewCount": 340,
+      "isFreeShipping": true,
+      "badges": [
+        "Avantajlı Ürün"
+      ],
+      "shortDescription": "İkonik denim kalitesi.",
+      "description": "Kaliteli kumaş yüksek bel jean.",
+      "variants": [
+        {
+          "size": "26/30",
+          "stock": 10,
+          "color": "Beyaz"
+        },
+        {
+          "size": "26/30",
+          "stock": 2,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Bel",
+          "value": "Yüksek Bel"
+        },
+        {
+          "key": "Paça",
+          "value": "Dar Paça"
+        },
+        {
+          "key": "Renk",
+          "value": "Siyah"
+        },
+        {
+          "key": "Renk",
+          "value": "Beyaz"
+        },
+        {
+          "key": "Kumaş",
+          "value": "Denim"
+        }
+      ],
+      "extraDetails": [
+        "Bu ürün Mavi tarafından gönderilecektir."
+      ]
+    },
+    {
+      "id": "11303",
+      "title": "Gri Slim Fit Jean",
+      "price": 1100,
+      "discountPrice": 899,
+      "currency": "TRY",
+      "categoryId": 113,
+      "brandId": 7,
+      "brandName": "Mavi",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 600,
+      "isFreeShipping": true,
+      "badges": [
+        "Çok Satan"
+      ],
+      "shortDescription": "Toparlayıcı etki.",
+      "description": "Vücudu saran esnek yapı.",
+      "variants": [
+        {
+          "size": "28/30",
+          "stock": 25,
+          "color": "Gri"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kalıp",
+          "value": "Slim"
+        },
+        {
+          "key": "Bel",
+          "value": "Normal Bel"
+        }
+      ]
+    },
+    {
+      "id": "11304",
+      "title": "Wide Leg Buz Mavi Jean",
+      "price": 1200,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 113,
+      "brandId": 1,
+      "brandName": "TrendyolMilla",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 1200,
+      "isFreeShipping": true,
+      "badges": [
+        "Flaş Ürün"
+      ],
+      "shortDescription": "Bol paça rahatlık.",
+      "description": "Sezonun en trend wide leg kalıbı.",
+      "variants": [
+        {
+          "size": "36",
+          "stock": 50,
+          "color": "Buz Mavi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Paça",
+          "value": "Wide Leg"
+        },
+        {
+          "key": "Kumaş",
+          "value": "%100 Pamuk"
+        }
+      ]
+    },
+    {
+      "id": "11305",
+      "title": "Levi's 501 Original Crop",
+      "price": 3500,
+      "discountPrice": 2999,
+      "currency": "TRY",
+      "categoryId": 113,
+      "brandId": 31,
+      "brandName": "Levi's",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1560243563-062bfc001d68?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 850,
+      "isFreeShipping": true,
+      "badges": [
+        "İkonik"
+      ],
+      "shortDescription": "Klasik kesim, modern dokunuş.",
+      "description": "Dünyanın en ikonik jean modeli.",
+      "variants": [
+        {
+          "size": "27",
+          "stock": 10,
+          "color": "Lacivert"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kalıp",
+          "value": "Straight"
+        },
+        {
+          "key": "Bel",
+          "value": "Yüksek Bel"
+        }
+      ]
+    },
+    {
+      "id": "11306",
+      "title": "Jean Pantalon",
+      "price": 850,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 113,
+      "brandId": 1,
+      "brandName": "TrendyolMilla",
+      "sellerId": 101,
+      "images": [
+        "https://cdn.dsmcdn.com/mnresize/420/620/ty522/product/media/images/20220907/17/170300658/515367624/2/2_org_zoom.jpg"
+      ],
+      "rating": 4.3,
+      "reviewCount": 180,
+      "isFreeShipping": false,
+      "badges": [],
+      "shortDescription": "Yaz için siyah şıklık.",
+      "description": "İç göstermeyen kalın esnek kumaş.",
+      "variants": [
+        {
+          "size": "38",
+          "stock": 30,
+          "color": "Siyah"
+        },
+        {
+          "size": "39",
+          "stock": 3,
+          "color": "Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Renk",
+          "value": "Beyaz"
+        },
+        {
+          "key": "Renk",
+          "value": "Siyah"
+        },
+        {
+          "key": "Paça",
+          "value": "Boru Paça"
+        }
+      ]
+    },
+    {
+      "id": "11307",
+      "title": "Taşlanmış Boyfriend Jean",
+      "price": 1050,
+      "discountPrice": 950,
+      "currency": "TRY",
+      "categoryId": 113,
+      "brandId": 32,
+      "brandName": "Colin's",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1576995853123-5a10305d93c0?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 420,
+      "isFreeShipping": true,
+      "badges": [
+        "Rahat Kalıp"
+      ],
+      "shortDescription": "Maskülen ve rahat.",
+      "description": "Hafta sonu rahatlığı için ideal boyfriend kesim.",
+      "variants": [
+        {
+          "size": "29",
+          "stock": 15,
+          "color": "Açık Mavi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kalıp",
+          "value": "Boyfriend"
+        },
+        {
+          "key": "Yıkama",
+          "value": "Taşlanmış"
+        }
+      ]
+    },
+    {
+      "id": "11308",
+      "title": " Lacivert Jean",
+      "price": 1300,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 113,
+      "brandId": 28,
+      "brandName": "Mango",
+      "sellerId": 105,
+      "images": [
+        "https://static.ticimax.cloud/8416/uploads/urunresimleri/buyuk/yuksek-bel-dugme-detayli-kadin-ispanyo-4-9113.jpg"
+      ],
+      "rating": 4.7,
+      "reviewCount": 300,
+      "isFreeShipping": true,
+      "badges": [
+        "Ofis Stili"
+      ],
+      "shortDescription": "Hafif İspanyol paça.",
+      "description": "Botlarla mükemmel uyum sağlayan jean.",
+      "variants": [
+        {
+          "size": "36",
+          "stock": 20,
+          "color": "Koyu Lacivert"
+        }
+      ],
+      "features": [
+        {
+          "key": "Paça",
+          "value": "Bootcut"
+        },
+        {
+          "key": "Kumaş",
+          "value": "Likralı"
+        }
+      ]
+    },
+    {
+      "id": "11309",
+      "title": "Yırtık Detaylı Şort Etek",
+      "price": 650,
+      "discountPrice": 500,
+      "currency": "TRY",
+      "categoryId": 113,
+      "brandId": 1,
+      "brandName": "TrendyolMilla",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1591195853828-11db59a44f6b?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.4,
+      "reviewCount": 900,
+      "isFreeShipping": true,
+      "badges": [
+        "Fırsat"
+      ],
+      "shortDescription": "Jean şort etek.",
+      "description": "Önü etek arkası şort görünümlü pratik tasarım.",
+      "variants": [
+        {
+          "size": "34",
+          "stock": 60,
+          "color": "Mavi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tip",
+          "value": "Şort Etek"
+        },
+        {
+          "key": "Materyal",
+          "value": "Denim"
+        }
+      ]
+    },
+    {
+      "id": "11401",
+      "title": "Siyah Şişme Mont",
+      "price": 1800,
+      "discountPrice": 1500,
+      "currency": "TRY",
+      "categoryId": 114,
+      "brandId": 6,
+      "brandName": "Nike",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 1200,
+      "isFreeShipping": true,
+      "badges": [
+        "Kış Sezonu"
+      ],
+      "shortDescription": "Sıcak tutan dolgu.",
+      "description": "Su itici özellikli kışlık şişme mont.",
+      "variants": [
+        {
+          "size": "M",
+          "stock": 40,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Dolgu",
+          "value": "Sentetik"
+        },
+        {
+          "key": "Kalıp",
+          "value": "Regular"
+        }
+      ]
+    },
+    {
+      "id": "11403",
+      "title": "Klasik Bej Trençkot",
+      "price": 2200,
+      "discountPrice": 1800,
+      "currency": "TRY",
+      "categoryId": 114,
+      "brandId": 8,
+      "brandName": "Koton",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1591047139829-d91aecb6caea?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 500,
+      "isFreeShipping": true,
+      "badges": [
+        "Ofis"
+      ],
+      "shortDescription": "Kruvaze yaka, kuşaklı.",
+      "description": "Zamansız şıklık sunan trençkot.",
+      "variants": [
+        {
+          "size": "38",
+          "stock": 15,
+          "color": "Bej"
+        }
+      ],
+      "features": [
+        {
+          "key": "Boy",
+          "value": "Midi"
+        },
+        {
+          "key": "Kumaş",
+          "value": "Gabardin"
+        }
+      ]
+    },
+    {
+      "id": "11404",
+      "title": "Krem Peluş Kaban",
+      "price": 1600,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 114,
+      "brandId": 14,
+      "brandName": "Pull & Bear",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1584030373081-f37b7bb4fa8e?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 600,
+      "isFreeShipping": true,
+      "badges": [
+        "Yumuşacık"
+      ],
+      "shortDescription": "Teddy bear dokusu.",
+      "description": "Ekstra yumuşak ve sıcak tutan yapı.",
+      "variants": [
+        {
+          "size": "L",
+          "stock": 10,
+          "color": "Krem"
+        }
+      ],
+      "features": [
+        {
+          "key": "Doku",
+          "value": "Peluş"
+        },
+        {
+          "key": "Kapama",
+          "value": "Düğmeli"
+        }
+      ]
+    },
+    {
+      "id": "12101",
+      "title": "Nike Air Force 1 '07",
+      "price": 4200,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 121,
+      "brandId": 6,
+      "brandName": "Nike",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 5,
+      "reviewCount": 3500,
+      "isFreeShipping": true,
+      "badges": [
+        "Efsane",
+        "Çok Satan"
+      ],
+      "shortDescription": "Beyaz deri klasik sneaker.",
+      "description": "Her kombine uyan ikonik tasarım.",
+      "variants": [
+        {
+          "size": "38",
+          "stock": 50,
+          "color": "Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Taban",
+          "value": "Air Taban"
+        },
+        {
+          "key": "Materyal",
+          "value": "Hakiki Deri"
+        }
+      ]
+    },
+    {
+      "id": "12103",
+      "title": "New Balance 530",
+      "price": 4800,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 121,
+      "brandId": 41,
+      "brandName": "New Balance",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1628253747716-0c4f5c90fdda?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 1500,
+      "isFreeShipping": true,
+      "badges": [
+        "Trend",
+        "Konfor"
+      ],
+      "shortDescription": "Retro koşu stili.",
+      "description": "Abzorb taban teknolojisi ile gün boyu rahatlık.",
+      "variants": [
+        {
+          "size": "39",
+          "stock": 10,
+          "color": "Gümüş"
+        }
+      ],
+      "features": [
+        {
+          "key": "Teknoloji",
+          "value": "Abzorb"
+        },
+        {
+          "key": "Stil",
+          "value": "Dad Shoe"
+        }
+      ]
+    },
+    {
+      "id": "12104",
+      "title": "Puma Mayze Platform",
+      "price": 2800,
+      "discountPrice": 2200,
+      "currency": "TRY",
+      "categoryId": 121,
+      "brandId": 19,
+      "brandName": "Puma",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 900,
+      "isFreeShipping": true,
+      "badges": [
+        "Yüksek Taban"
+      ],
+      "shortDescription": "Kalın tabanlı deri sneaker.",
+      "description": "Sokak modasının iddialı parçası.",
+      "variants": [
+        {
+          "size": "38",
+          "stock": 25,
+          "color": "Beyaz/Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Taban",
+          "value": "Platform"
+        },
+        {
+          "key": "Materyal",
+          "value": "Deri"
+        }
+      ]
+    },
+    {
+      "id": "12106",
+      "title": "Skechers D'Lites",
+      "price": 3200,
+      "discountPrice": 2800,
+      "currency": "TRY",
+      "categoryId": 121,
+      "brandId": 43,
+      "brandName": "Skechers",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1559563458-527698bf5295?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 1800,
+      "isFreeShipping": true,
+      "badges": [
+        "Hafif"
+      ],
+      "shortDescription": "Memory Foam taban.",
+      "description": "Yürüyüş için maksimum konfor.",
+      "variants": [
+        {
+          "size": "39",
+          "stock": 30,
+          "color": "Beyaz/Gümüş"
+        }
+      ],
+      "features": [
+        {
+          "key": "Taban",
+          "value": "Hafızalı Köpük"
+        },
+        {
+          "key": "Kullanım",
+          "value": "Yürüyüş"
+        }
+      ]
+    },
+    {
+      "id": "12107",
+      "title": "Vans Old Skool",
+      "price": 2400,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 121,
+      "brandId": 20,
+      "brandName": "Vans",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 2500,
+      "isFreeShipping": true,
+      "badges": [
+        "Kaykay Stili"
+      ],
+      "shortDescription": "Süet kanvas karışımı.",
+      "description": "Yan şerit detaylı ikonik model.",
+      "variants": [
+        {
+          "size": "38",
+          "stock": 40,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Taban",
+          "value": "Waffle"
+        },
+        {
+          "key": "Materyal",
+          "value": "Süet & Kanvas"
+        }
+      ]
+    },
+    {
+      "id": "12110",
+      "title": "Pull & Bear Kalın Taban Sneaker",
+      "price": 1200,
+      "discountPrice": 999,
+      "currency": "TRY",
+      "categoryId": 121,
+      "brandId": 14,
+      "brandName": "Pull & Bear",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1597045566677-8cf032ed6634?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.3,
+      "reviewCount": 600,
+      "isFreeShipping": true,
+      "badges": [
+        "Uygun Fiyat"
+      ],
+      "shortDescription": "Basic beyaz sneaker.",
+      "description": "Günlük kullanım için ekonomik ve şık.",
+      "variants": [
+        {
+          "size": "39",
+          "stock": 45,
+          "color": "Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Taban",
+          "value": "Chunky"
+        },
+        {
+          "key": "Materyal",
+          "value": "Suni Deri"
+        }
+      ]
+    },
+    {
+      "id": "12201",
+      "title": "Siyah Rugan Stiletto",
+      "price": 1100,
+      "discountPrice": 899,
+      "currency": "TRY",
+      "categoryId": 122,
+      "brandId": 1,
+      "brandName": "TrendyolMilla",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 800,
+      "isFreeShipping": true,
+      "badges": [
+        "Gece"
+      ],
+      "shortDescription": "10 cm ince topuk.",
+      "description": "Klasik ve zarif tasarım.",
+      "variants": [
+        {
+          "size": "37",
+          "stock": 20,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Topuk",
+          "value": "İnce"
+        },
+        {
+          "key": "Materyal",
+          "value": "Rugan"
+        }
+      ]
+    },
+    {
+      "id": "12203",
+      "title": "Gümüş Bantlı Topuklu Sandalet",
+      "price": 1400,
+      "discountPrice": 1200,
+      "currency": "TRY",
+      "categoryId": 122,
+      "brandId": 28,
+      "brandName": "Mango",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 200,
+      "isFreeShipping": true,
+      "badges": [
+        "Düğün"
+      ],
+      "shortDescription": "İnce bant detaylı.",
+      "description": "Özel günler için parıltılı tasarım.",
+      "variants": [
+        {
+          "size": "39",
+          "stock": 10,
+          "color": "Gümüş"
+        }
+      ],
+      "features": [
+        {
+          "key": "Model",
+          "value": "Sandalet"
+        },
+        {
+          "key": "Topuk",
+          "value": "Kadeh"
+        }
+      ]
+    },
+    {
+      "id": "12204",
+      "title": "Kırmızı Platform Topuklu",
+      "price": 1600,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 122,
+      "brandId": 29,
+      "brandName": "Bershka",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1549298916-b41d501d3772?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 150,
+      "isFreeShipping": true,
+      "badges": [
+        "İddialı"
+      ],
+      "shortDescription": "Yüksek platform taban.",
+      "description": "Parti kombinlerinin yıldızı.",
+      "variants": [
+        {
+          "size": "36",
+          "stock": 8,
+          "color": "Kırmızı"
+        }
+      ],
+      "features": [
+        {
+          "key": "Platform",
+          "value": "Var"
+        },
+        {
+          "key": "Topuk Boyu",
+          "value": "12 cm"
+        }
+      ]
+    },
+    {
+      "id": "12205",
+      "title": "Şeffaf Detaylı Stiletto",
+      "price": 1300,
+      "discountPrice": 1100,
+      "currency": "TRY",
+      "categoryId": 122,
+      "brandId": 1,
+      "brandName": "TrendyolMilla",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1518049362265-d5b2a6467637?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.3,
+      "reviewCount": 400,
+      "isFreeShipping": true,
+      "badges": [
+        "Modern"
+      ],
+      "shortDescription": "PVC detaylı şıklık.",
+      "description": "Modern prenses ayakkabısı.",
+      "variants": [
+        {
+          "size": "37",
+          "stock": 15,
+          "color": "Şeffaf/Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Detay",
+          "value": "Şeffaf"
+        },
+        {
+          "key": "Burun",
+          "value": "Sivri"
+        }
+      ]
+    },
+    {
+      "id": "13102",
+      "title": "İnci Küpe Seti",
+      "price": 150,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 131,
+      "brandId": 8,
+      "brandName": "Koton",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.4,
+      "reviewCount": 500,
+      "isFreeShipping": false,
+      "badges": [
+        "3'lü Set"
+      ],
+      "shortDescription": "Farklı boylarda 3 çift.",
+      "description": "Klasik inci şıklığı her boyda.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 50,
+          "color": "Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Taş",
+          "value": "İnci"
+        },
+        {
+          "key": "Paket",
+          "value": "3 Çift"
+        }
+      ]
+    },
+    {
+      "id": "13103",
+      "title": "Büyük Boy Güneş Gözlüğü",
+      "price": 450,
+      "discountPrice": 350,
+      "currency": "TRY",
+      "categoryId": 131,
+      "brandId": 28,
+      "brandName": "Mango",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 300,
+      "isFreeShipping": true,
+      "badges": [
+        "UV400"
+      ],
+      "shortDescription": "Kemik çerçeve, siyah cam.",
+      "description": "%100 UV korumalı şık gözlük.",
+      "variants": [
+        {
+          "size": "Tek Ebat",
+          "stock": 20,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Çerçeve",
+          "value": "Kemik"
+        },
+        {
+          "key": "Koruma",
+          "value": "UV400"
+        }
+      ]
+    },
+    {
+      "id": "13104",
+      "title": "Baget Taşlı Yüzük",
+      "price": 320,
+      "discountPrice": 280,
+      "currency": "TRY",
+      "categoryId": 131,
+      "brandId": 45,
+      "brandName": "So Chic",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1605100804763-247f67b3557e?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 150,
+      "isFreeShipping": true,
+      "badges": [
+        "Gümüş"
+      ],
+      "shortDescription": "925 ayar gümüş.",
+      "description": "Zirkon taşlı parıltılı baget yüzük.",
+      "variants": [
+        {
+          "size": "14",
+          "stock": 10,
+          "color": "Gümüş"
+        }
+      ],
+      "features": [
+        {
+          "key": "Maden",
+          "value": "925 Gümüş"
+        },
+        {
+          "key": "Taş",
+          "value": "Zirkon"
+        }
+      ]
+    },
+    {
+      "id": "13105",
+      "title": "Renkli Boncuklu Bileklik",
+      "price": 80,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 131,
+      "brandId": 14,
+      "brandName": "Pull & Bear",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.2,
+      "reviewCount": 80,
+      "isFreeShipping": false,
+      "badges": [
+        "Yaz"
+      ],
+      "shortDescription": "El yapımı bohem tarz.",
+      "description": "Yaz kombinlerine renk katan bileklik.",
+      "variants": [
+        {
+          "size": "Ayarlanabilir",
+          "stock": 40,
+          "color": "Karışık"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tip",
+          "value": "Boncuk"
+        },
+        {
+          "key": "Stil",
+          "value": "Bohem"
+        }
+      ]
+    },
+    {
+      "id": "13106",
+      "title": "İpek Desenli Fular",
+      "price": 200,
+      "discountPrice": 150,
+      "currency": "TRY",
+      "categoryId": 131,
+      "brandId": 30,
+      "brandName": "Yargıcı",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1584030373081-f37b7bb4fa8e?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 60,
+      "isFreeShipping": true,
+      "badges": [],
+      "shortDescription": "Boyun veya çanta aksesuarı.",
+      "description": "Canlı renklerde saten dokulu fular.",
+      "variants": [
+        {
+          "size": "50x50",
+          "stock": 25,
+          "color": "Desenli"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kumaş",
+          "value": "Saten"
+        },
+        {
+          "key": "Desen",
+          "value": "Geometrik"
+        }
+      ]
+    },
+    {
+      "id": "13110",
+      "title": "Çelik Şahmeran",
+      "price": 180,
+      "discountPrice": 140,
+      "currency": "TRY",
+      "categoryId": 131,
+      "brandId": 1,
+      "brandName": "TrendyolMilla",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 120,
+      "isFreeShipping": false,
+      "badges": [
+        "Otantik"
+      ],
+      "shortDescription": "El üstü takısı.",
+      "description": "Zarif zincirli şahmeran bileklik.",
+      "variants": [
+        {
+          "size": "Ayarlanabilir",
+          "stock": 25,
+          "color": "Gümüş"
+        }
+      ],
+      "features": [
+        {
+          "key": "Materyal",
+          "value": "Çelik"
+        },
+        {
+          "key": "Model",
+          "value": "Şahmeran"
+        }
+      ]
+    },
+    {
+      "id": "21101",
+      "title": "Slim Fit Oxford Gömlek",
+      "price": 650,
+      "discountPrice": 499,
+      "currency": "TRY",
+      "categoryId": 211,
+      "brandId": 2,
+      "brandName": "TrendyolMan",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 1200,
+      "isFreeShipping": true,
+      "badges": [
+        "Ofis"
+      ],
+      "shortDescription": "Pamuklu kumaş, terletmez.",
+      "description": "Gün boyu rahatlık sunan slim fit kesim.",
+      "variants": [
+        {
+          "size": "M",
+          "stock": 50,
+          "color": "Mavi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kalıp",
+          "value": "Slim Fit"
+        },
+        {
+          "key": "Yaka",
+          "value": "Düğmeli Yaka"
+        }
+      ]
+    },
+    {
+      "id": "21102",
+      "title": "Oduncu Kareli Gömlek",
+      "price": 850,
+      "discountPrice": 700,
+      "currency": "TRY",
+      "categoryId": 211,
+      "brandId": 14,
+      "brandName": "Pull & Bear",
+      "sellerId": 103,
+      "images": [
+        "https://static.pullandbear.net/assets/public/a51e/b068/78994d368e62/32718c3b462a/07472560251-M/07472560251-M.jpg?ts=1762170643658&w=541&f=auto"
+      ],
+      "rating": 4.8,
+      "reviewCount": 450,
+      "isFreeShipping": true,
+      "badges": [
+        "Kışlık"
+      ],
+      "shortDescription": "Kalın dokulu, sıcak tutar.",
+      "description": "Kış ayları için ideal oduncu gömlek.",
+      "variants": [
+        {
+          "size": "L",
+          "stock": 25,
+          "color": "Kırmızı Kareli"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kumaş",
+          "value": "Pamuklu Flanel"
+        },
+        {
+          "key": "Desen",
+          "value": "Ekose"
+        }
+      ]
+    },
+    {
+      "id": "21103",
+      "title": "Keten Bej Gömlek",
+      "price": 1200,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 211,
+      "brandId": 28,
+      "brandName": "Mango Man",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1489987707025-afc232f7ea0f?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 180,
+      "isFreeShipping": false,
+      "badges": [
+        "Yazlık"
+      ],
+      "shortDescription": "Nefes alan keten kumaş.",
+      "description": "Sıcak havalarda ferah kullanım.",
+      "variants": [
+        {
+          "size": "XL",
+          "stock": 15,
+          "color": "Bej"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kumaş",
+          "value": "%100 Keten"
+        },
+        {
+          "key": "Yaka",
+          "value": "Hakim Yaka"
+        }
+      ]
+    },
+    {
+      "id": "21104",
+      "title": "Siyah Denim Gömlek",
+      "price": 950,
+      "discountPrice": 850,
+      "currency": "TRY",
+      "categoryId": 211,
+      "brandId": 7,
+      "brandName": "Mavi",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1571455786673-9d9d6c194f90?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 600,
+      "isFreeShipping": true,
+      "badges": [
+        "Denim"
+      ],
+      "shortDescription": "Çıtçıt düğmeli.",
+      "description": "Sportif şıklık için denim gömlek.",
+      "variants": [
+        {
+          "size": "M",
+          "stock": 35,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Materyal",
+          "value": "Jean"
+        },
+        {
+          "key": "Kapama",
+          "value": "Çıtçıtlı"
+        }
+      ]
+    },
+    {
+      "id": "21105",
+      "title": "Beyaz Klasik Gömlek",
+      "price": 550,
+      "discountPrice": 450,
+      "currency": "TRY",
+      "categoryId": 211,
+      "brandId": 2,
+      "brandName": "TrendyolMan",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1620012253295-c15cc3e65df4?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.4,
+      "reviewCount": 900,
+      "isFreeShipping": true,
+      "badges": [
+        "Basic"
+      ],
+      "shortDescription": "Kolay ütülenebilir.",
+      "description": "Takım elbise içine uygun klasik kesim.",
+      "variants": [
+        {
+          "size": "L",
+          "stock": 60,
+          "color": "Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kalıp",
+          "value": "Regular"
+        },
+        {
+          "key": "Kumaş",
+          "value": "Polyester Karışımlı"
+        }
+      ]
+    },
+    {
+      "id": "21201",
+      "title": "Kapüşonlu Basic Sweatshirt",
+      "price": 450,
+      "discountPrice": 350,
+      "currency": "TRY",
+      "categoryId": 212,
+      "brandId": 14,
+      "brandName": "Pull & Bear",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 2000,
+      "isFreeShipping": true,
+      "badges": [
+        "Çok Satan"
+      ],
+      "shortDescription": "Kanguru cepli.",
+      "description": "Yumuşak iç dokulu günlük hoodie.",
+      "variants": [
+        {
+          "size": "L",
+          "stock": 100,
+          "color": "Gri"
+        }
+      ],
+      "features": [
+        {
+          "key": "Yaka",
+          "value": "Kapüşonlu"
+        },
+        {
+          "key": "Kalıp",
+          "value": "Regular"
+        }
+      ]
+    },
+    {
+      "id": "21204",
+      "title": "Bisiklet Yaka Düz Sweat",
+      "price": 300,
+      "discountPrice": 250,
+      "currency": "TRY",
+      "categoryId": 212,
+      "brandId": 8,
+      "brandName": "Koton",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1614975058789-41316d0e2e9c?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.3,
+      "reviewCount": 350,
+      "isFreeShipping": false,
+      "badges": [
+        "Basic"
+      ],
+      "shortDescription": "Pamuklu basic parça.",
+      "description": "Evde veya dışarıda rahat kullanım.",
+      "variants": [
+        {
+          "size": "S",
+          "stock": 60,
+          "color": "Haki"
+        }
+      ],
+      "features": [
+        {
+          "key": "Yaka",
+          "value": "Bisiklet"
+        },
+        {
+          "key": "Kumaş",
+          "value": "Şardonlu"
+        }
+      ]
+    },
+    {
+      "id": "21205",
+      "title": "Kolej Ceket Tarzı Sweatshirt",
+      "price": 900,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 212,
+      "brandId": 2,
+      "brandName": "TrendyolMan",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1610384104075-e05c8cf200c3?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 150,
+      "isFreeShipping": true,
+      "badges": [
+        "Trend"
+      ],
+      "shortDescription": "Bomber yaka.",
+      "description": "Amerikan kolej stili tasarım.",
+      "variants": [
+        {
+          "size": "L",
+          "stock": 15,
+          "color": "Bordo"
+        }
+      ],
+      "features": [
+        {
+          "key": "Stil",
+          "value": "Kolej"
+        },
+        {
+          "key": "Kapama",
+          "value": "Çıtçıtlı"
+        }
+      ]
+    },
+    {
+      "id": "21206",
+      "title": "Half Zip Sweatshirt",
+      "price": 650,
+      "discountPrice": 500,
+      "currency": "TRY",
+      "categoryId": 212,
+      "brandId": 28,
+      "brandName": "Mango Man",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1512445239398-6d0c4c575b89?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 100,
+      "isFreeShipping": true,
+      "badges": [],
+      "shortDescription": "Yarım fermuarlı yaka.",
+      "description": "Ofis ve günlük şıklık için uygun.",
+      "variants": [
+        {
+          "size": "XL",
+          "stock": 10,
+          "color": "Bej"
+        }
+      ],
+      "features": [
+        {
+          "key": "Yaka",
+          "value": "Yarım Fermuar"
+        },
+        {
+          "key": "Kalıp",
+          "value": "Slim"
+        }
+      ]
+    },
+    {
+      "id": "21207",
+      "title": "Sloganlı Siyah Hoodie",
+      "price": 550,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 212,
+      "brandId": 14,
+      "brandName": "Pull & Bear",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1509942774463-acf339cf87d5?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 400,
+      "isFreeShipping": false,
+      "badges": [],
+      "shortDescription": "Göğüs baskılı.",
+      "description": "Siyah üzerine beyaz slogan detaylı.",
+      "variants": [
+        {
+          "size": "M",
+          "stock": 35,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kalıp",
+          "value": "Relaxed"
+        },
+        {
+          "key": "Detay",
+          "value": "Baskılı"
+        }
+      ]
+    },
+    {
+      "id": "21208",
+      "title": "Kamuflaj Desenli Sweatshirt",
+      "price": 700,
+      "discountPrice": 550,
+      "currency": "TRY",
+      "categoryId": 212,
+      "brandId": 19,
+      "brandName": "Puma",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1578768079052-aa76e52ff62e?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.4,
+      "reviewCount": 220,
+      "isFreeShipping": true,
+      "badges": [],
+      "shortDescription": "Askeri desen.",
+      "description": "Sokak modası için kamuflaj baskı.",
+      "variants": [
+        {
+          "size": "L",
+          "stock": 18,
+          "color": "Yeşil"
+        }
+      ],
+      "features": [
+        {
+          "key": "Desen",
+          "value": "Kamuflaj"
+        },
+        {
+          "key": "Yaka",
+          "value": "Bisiklet"
+        }
+      ]
+    },
+    {
+      "id": "21202",
+      "title": "Oversize Baskılı Sweatshirt",
+      "price": 600,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 212,
+      "brandId": 29,
+      "brandName": "Bershka",
+      "sellerId": 103,
+      "images": [
+        "https://static.bershka.net/assets/public/e3c0/7a32/ff5a478ea7a0/7936a1d00f4d/07373732527-p/07373732527-p.jpg?ts=1753973785021&w=850"
+      ],
+      "rating": 4.6,
+      "reviewCount": 500,
+      "isFreeShipping": true,
+      "badges": [
+        "Sokak Stili"
+      ],
+      "shortDescription": "Sırt baskılı tasarım.",
+      "description": "Genç ve dinamik oversize kalıp.",
+      "variants": [
+        {
+          "size": "XL",
+          "stock": 30,
+          "color": "Siyah"
+        },
+        {
+          "size": "L",
+          "stock": 2,
+          "color": "Siyah"
+        },
+        {
+          "size": "M",
+          "stock": 10,
+          "color": "Kahverengi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kalıp",
+          "value": "Oversize"
+        },
+        {
+          "key": "Baskı",
+          "value": "Grafik"
+        }
+      ]
+    },
+    {
+      "id": "21203",
+      "title": "Fermuarlı Polar Sweatshirt",
+      "price": 750,
+      "discountPrice": 600,
+      "currency": "TRY",
+      "categoryId": 212,
+      "brandId": 6,
+      "brandName": "Nike",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1605908502724-9093a79a1b39?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 800,
+      "isFreeShipping": true,
+      "badges": [
+        "Spor"
+      ],
+      "shortDescription": "Sıcak tutan polar.",
+      "description": "Outdoor aktiviteler için ideal.",
+      "variants": [
+        {
+          "size": "M",
+          "stock": 20,
+          "color": "Lacivert"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kumaş",
+          "value": "Polar"
+        },
+        {
+          "key": "Kapama",
+          "value": "Tam Fermuar"
+        }
+      ]
+    },
+    {
+      "id": "21210",
+      "title": "Vintage Yıkamalı Sweatshirt",
+      "price": 850,
+      "discountPrice": 700,
+      "currency": "TRY",
+      "categoryId": 11,
+      "brandId": 30,
+      "brandName": "Zara",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1578587018452-892bacefd3f2?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 300,
+      "isFreeShipping": true,
+      "badges": [
+        "Premium"
+      ],
+      "shortDescription": "Eskitme görünümlü.",
+      "description": "Özel yıkama tekniği ile vintage hava.",
+      "variants": [
+        {
+          "size": "M",
+          "stock": 25,
+          "color": "Antrasit"
+        }
+      ],
+      "features": [
+        {
+          "key": "Görünüm",
+          "value": "Yıkamalı"
+        },
+        {
+          "key": "Kalıp",
+          "value": "Boxy"
+        }
+      ]
+    },
+    {
+      "id": "21301",
+      "title": "Siyah Slim Fit Chino",
+      "price": 700,
+      "discountPrice": 550,
+      "currency": "TRY",
+      "categoryId": 213,
+      "brandId": 2,
+      "brandName": "TrendyolMan",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 1100,
+      "isFreeShipping": true,
+      "badges": [
+        "Çok Satan"
+      ],
+      "shortDescription": "Esnek gabardin kumaş.",
+      "description": "Hem spor hem klasik kombinlenebilir.",
+      "variants": [
+        {
+          "size": "32/32",
+          "stock": 60,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kalıp",
+          "value": "Slim Fit"
+        },
+        {
+          "key": "Kumaş",
+          "value": "Gabardin"
+        }
+      ]
+    },
+    {
+      "id": "21303",
+      "title": "Gri Kumaş Ofis Pantolonu",
+      "price": 800,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 213,
+      "brandId": 8,
+      "brandName": "Koton",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.4,
+      "reviewCount": 250,
+      "isFreeShipping": false,
+      "badges": [
+        "Ofis"
+      ],
+      "shortDescription": "Ütü istemeyen kumaş.",
+      "description": "İş hayatı için rahat ve şık.",
+      "variants": [
+        {
+          "size": "34/32",
+          "stock": 20,
+          "color": "Gri"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kalıp",
+          "value": "Regular"
+        },
+        {
+          "key": "Kumaş",
+          "value": "Poliviskon"
+        }
+      ]
+    },
+    {
+      "id": "21304",
+      "title": "Lacivert Kanvas Pantolon",
+      "price": 750,
+      "discountPrice": 600,
+      "currency": "TRY",
+      "categoryId": 11,
+      "brandId": 7,
+      "brandName": "Mavi",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1594633313593-bab3825d0caf?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 400,
+      "isFreeShipping": true,
+      "badges": [],
+      "shortDescription": "5 cepli model.",
+      "description": "Jean görünümlü rahat kanvas.",
+      "variants": [
+        {
+          "size": "33/32",
+          "stock": 25,
+          "color": "Lacivert"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kalıp",
+          "value": "Straight"
+        },
+        {
+          "key": "Bel",
+          "value": "Normal"
+        }
+      ]
+    },
+    {
+      "id": "21305",
+      "title": "Antrasit Jogger Pantolon",
+      "price": 500,
+      "discountPrice": 399.99,
+      "currency": "TRY",
+      "categoryId": 11,
+      "brandId": 2,
+      "brandName": "TrendyolMan",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1552902865-b72c031ac5ea?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.3,
+      "reviewCount": 800,
+      "isFreeShipping": false,
+      "badges": [
+        "Rahat"
+      ],
+      "shortDescription": "Beli lastikli ve bağcıklı.",
+      "description": "Günlük konfor için ideal jogger.",
+      "variants": [
+        {
+          "size": "M",
+          "stock": 80,
+          "color": "Antrasit"
+        }
+      ],
+      "features": [
+        {
+          "key": "Paça",
+          "value": "Ribanalı"
+        },
+        {
+          "key": "Kalıp",
+          "value": "Jogger"
+        }
+      ]
+    },
+    {
+      "id": "21306",
+      "title": "Ekose Desenli Pantolon",
+      "price": 1100,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 213,
+      "brandId": 30,
+      "brandName": "Zara",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 150,
+      "isFreeShipping": true,
+      "badges": [
+        "Stil Sahibi"
+      ],
+      "shortDescription": "İngiliz tarzı ekose.",
+      "description": "Farklılık arayanlar için desenli kumaş pantolon.",
+      "variants": [
+        {
+          "size": "32/30",
+          "stock": 10,
+          "color": "Gri Ekose"
+        }
+      ],
+      "features": [
+        {
+          "key": "Desen",
+          "value": "Ekose"
+        },
+        {
+          "key": "Kalıp",
+          "value": "Slim Crop"
+        }
+      ]
+    },
+    {
+      "id": "22101",
+      "title": "Nike Air Monarch IV",
+      "price": 2800,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 221,
+      "brandId": 6,
+      "brandName": "Nike",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 1500,
+      "isFreeShipping": true,
+      "badges": [
+        "Baba Ayakkabısı"
+      ],
+      "shortDescription": "Tam boy yastıklama.",
+      "description": "Spor salonu ve günlük kullanım için dayanıklı deri.",
+      "variants": [
+        {
+          "size": "42",
+          "stock": 20,
+          "color": "Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Taban",
+          "value": "Air Taban"
+        },
+        {
+          "key": "Materyal",
+          "value": "Deri"
+        }
+      ]
+    },
+    {
+      "id": "22102",
+      "title": "Adidas Ultraboost 22",
+      "price": 4500,
+      "discountPrice": 3900,
+      "currency": "TRY",
+      "categoryId": 221,
+      "brandId": 5,
+      "brandName": "Adidas",
+      "sellerId": 103,
+      "images": [
+        "https://korayspor.sm.mncdn.com/mnresize/1920/-/korayspor/products/GX3062_3.jpg"
+      ],
+      "rating": 4.8,
+      "reviewCount": 800,
+      "isFreeShipping": true,
+      "badges": [
+        "Koşu"
+      ],
+      "shortDescription": "Enerji geri dönüşümü.",
+      "description": "Boost taban teknolojisi ile maksimum konfor.",
+      "variants": [
+        {
+          "size": "43",
+          "stock": 15,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Teknoloji",
+          "value": "Boost"
+        },
+        {
+          "key": "Kullanım",
+          "value": "Performans"
+        }
+      ]
+    },
+    {
+      "id": "22103",
+      "title": "Puma Smash v2",
+      "price": 1800,
+      "discountPrice": 1500,
+      "currency": "TRY",
+      "categoryId": 221,
+      "brandId": 19,
+      "brandName": "Puma",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1608231387042-66d1773070a5?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 1200,
+      "isFreeShipping": true,
+      "badges": [
+        "Klasik"
+      ],
+      "shortDescription": "Tenis ilhamlı tasarım.",
+      "description": "Günlük şıklık için süet dış yüzey.",
+      "variants": [
+        {
+          "size": "42",
+          "stock": 30,
+          "color": "Lacivert"
+        }
+      ],
+      "features": [
+        {
+          "key": "Materyal",
+          "value": "Süet"
+        },
+        {
+          "key": "Taban",
+          "value": "Düz"
+        }
+      ]
+    },
+    {
+      "id": "22104",
+      "title": "Skechers Arch Fit",
+      "price": 3200,
+      "discountPrice": 2800,
+      "currency": "TRY",
+      "categoryId": 221,
+      "brandId": 43,
+      "brandName": "Skechers",
+      "sellerId": 105,
+      "images": [
+        "https://cdn.akakce.com/z/skechers/skechers-arch-fit.jpg"
+      ],
+      "rating": 4.9,
+      "reviewCount": 2000,
+      "isFreeShipping": true,
+      "badges": [
+        "Konfor"
+      ],
+      "shortDescription": "Ortopedik taban desteği.",
+      "description": "Ayak sağlığını düşünenler için özel tasarım.",
+      "variants": [
+        {
+          "size": "44",
+          "stock": 25,
+          "color": "Gri"
+        }
+      ],
+      "features": [
+        {
+          "key": "Teknoloji",
+          "value": "Arch Fit"
+        },
+        {
+          "key": "Kullanım",
+          "value": "Yürüyüş"
+        }
+      ]
+    },
+    {
+      "id": "22105",
+      "title": "Vans Old Skool Pro",
+      "price": 2600,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 221,
+      "brandId": 20,
+      "brandName": "Vans",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 3000,
+      "isFreeShipping": true,
+      "badges": [
+        "Kaykay"
+      ],
+      "shortDescription": "Dayanıklı kanvas süet.",
+      "description": "Sokak modasının ve kaykaycıların favorisi.",
+      "variants": [
+        {
+          "size": "41",
+          "stock": 40,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Taban",
+          "value": "Waffle"
+        },
+        {
+          "key": "Stil",
+          "value": "Low Top"
+        }
+      ]
+    },
+    {
+      "id": "22106",
+      "title": "New Balance 574",
+      "price": 3800,
+      "discountPrice": 3500,
+      "currency": "TRY",
+      "categoryId": 221,
+      "brandId": 41,
+      "brandName": "New Balance",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1628253747716-0c4f5c90fdda?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 1100,
+      "isFreeShipping": true,
+      "badges": [
+        "Retro"
+      ],
+      "shortDescription": "Zamansız tasarım.",
+      "description": "Süet ve mesh karışımı ikonik model.",
+      "variants": [
+        {
+          "size": "43",
+          "stock": 18,
+          "color": "Lacivert"
+        }
+      ],
+      "features": [
+        {
+          "key": "Teknoloji",
+          "value": "ENCAP"
+        },
+        {
+          "key": "Stil",
+          "value": "Günlük"
+        }
+      ]
+    },
+    {
+      "id": "31101",
+      "title": "Monster Abra A5 V17.2",
+      "price": 28999,
+      "discountPrice": 26500,
+      "currency": "TRY",
+      "categoryId": 311,
+      "brandId": 10,
+      "brandName": "Monster",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 2100,
+      "isFreeShipping": true,
+      "badges": [
+        "Oyuncu",
+        "Yüksek Performans"
+      ],
+      "shortDescription": "RTX 3050Ti, i7 İşlemci.",
+      "description": "Oyun canavarı, yüksek FPS garantisi.",
+      "variants": [
+        {
+          "size": "16GB RAM",
+          "stock": 40,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ekran Kartı",
+          "value": "RTX 3050Ti"
+        },
+        {
+          "key": "İşlemci",
+          "value": "Intel Core i7"
+        },
+        {
+          "key": "RAM",
+          "value": "16 GB"
+        }
+      ]
+    },
+    {
+      "id": "31102",
+      "title": "MacBook Air M1 256GB",
+      "price": 24000,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 311,
+      "brandId": 3,
+      "brandName": "Apple",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1611186871348-b1ce696e52c9?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 5000,
+      "isFreeShipping": true,
+      "badges": [
+        "Premium",
+        "Öğrenci Dostu"
+      ],
+      "shortDescription": "Hafif, güçlü ve sessiz.",
+      "description": "Apple M1 çip ile tüm gün batarya ömrü.",
+      "variants": [
+        {
+          "size": "256GB",
+          "stock": 100,
+          "color": "Uzay Grisi"
+        }
+      ],
+      "features": [
+        {
+          "key": "İşlemci",
+          "value": "Apple M1"
+        },
+        {
+          "key": "Ekran",
+          "value": "13.3 inç Retina"
+        },
+        {
+          "key": "Ağırlık",
+          "value": "1.29 kg"
+        }
+      ]
+    },
+    {
+      "id": "31103",
+      "title": "Lenovo Ideapad Gaming 3",
+      "price": 21500,
+      "discountPrice": 19999,
+      "currency": "TRY",
+      "categoryId": 311,
+      "brandId": 10,
+      "brandName": "Lenovo",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 850,
+      "isFreeShipping": true,
+      "badges": [
+        "Fiyat Performans"
+      ],
+      "shortDescription": "Ryzen 5, GTX 1650.",
+      "description": "Hem iş hem oyun için ideal.",
+      "variants": [
+        {
+          "size": "512GB SSD",
+          "stock": 30,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "İşlemci",
+          "value": "AMD Ryzen 5"
+        },
+        {
+          "key": "Ekran Kartı",
+          "value": "GTX 1650"
+        }
+      ]
+    },
+    {
+      "id": "31105",
+      "title": "Asus ROG Strix G15",
+      "price": 45000,
+      "discountPrice": 42000,
+      "currency": "TRY",
+      "categoryId": 311,
+      "brandId": 10,
+      "brandName": "Asus",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 300,
+      "isFreeShipping": true,
+      "badges": [
+        "Pro Gamer"
+      ],
+      "shortDescription": "RTX 4060, RGB Klavye.",
+      "description": "En üst düzey oyun deneyimi.",
+      "variants": [
+        {
+          "size": "1TB SSD",
+          "stock": 10,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ekran Kartı",
+          "value": "RTX 4060"
+        },
+        {
+          "key": "Yenileme Hızı",
+          "value": "144Hz"
+        }
+      ]
+    },
+    {
+      "id": "31201",
+      "title": "iPad 10. Nesil",
+      "price": 14000,
+      "discountPrice": 12500,
+      "currency": "TRY",
+      "categoryId": 312,
+      "brandId": 3,
+      "brandName": "Apple",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 2000,
+      "isFreeShipping": true,
+      "badges": [
+        "Renkli Tasarım"
+      ],
+      "shortDescription": "Tam ekran tasarım, A14 Bionic.",
+      "description": "Çizim, not alma ve eğlence için mükemmel.",
+      "variants": [
+        {
+          "size": "64GB",
+          "stock": 50,
+          "color": "Mavi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ekran",
+          "value": "10.9 inç"
+        },
+        {
+          "key": "İşlemci",
+          "value": "A14 Bionic"
+        }
+      ]
+    },
+    {
+      "id": "31203",
+      "title": "Huawei MatePad 11.5",
+      "price": 9000,
+      "discountPrice": 7500,
+      "currency": "TRY",
+      "categoryId": 312,
+      "brandId": 12,
+      "brandName": "Huawei",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1561154464-82e9adf32764?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 600,
+      "isFreeShipping": true,
+      "badges": [
+        "Klavye Hediyeli"
+      ],
+      "shortDescription": "Bilgisayar seviyesi deneyim.",
+      "description": "Ofis işleri için taşınabilir çözüm.",
+      "variants": [
+        {
+          "size": "128GB",
+          "stock": 30,
+          "color": "Uzay Grisi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ekran",
+          "value": "120Hz FullView"
+        },
+        {
+          "key": "Gövde",
+          "value": "Metal"
+        }
+      ]
+    },
+    {
+      "id": "11108",
+      "title": "Jean Salopet Elbise",
+      "price": 950,
+      "discountPrice": 850,
+      "currency": "TRY",
+      "categoryId": 111,
+      "brandId": 7,
+      "brandName": "Mavi",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 500,
+      "isFreeShipping": true,
+      "badges": [
+        "Denim"
+      ],
+      "shortDescription": "Sportif şıklık.",
+      "description": "Tişörtlerle kombinlenebilir jean elbise.",
+      "variants": [
+        {
+          "size": "M",
+          "stock": 30,
+          "color": "Mavi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kumaş",
+          "value": "Denim"
+        },
+        {
+          "key": "Askı",
+          "value": "Ayarlanabilir"
+        }
+      ]
+    },
+    {
+      "id": "11302",
+      "title": "Siyah İspanyol Paça Jean",
+      "price": 800,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 113,
+      "brandId": 8,
+      "brandName": "Koton",
+      "sellerId": 103,
+      "images": [
+        "https://ktnimg2.mncdn.com/products/2021/11/09/153921/6ea6613f-7833-45e0-b1f4-2e23043f9e3c_size870x1142.jpg"
+      ],
+      "rating": 4.4,
+      "reviewCount": 250,
+      "isFreeShipping": false,
+      "badges": [],
+      "shortDescription": "Esnek kumaş, geniş paça.",
+      "description": "Siyah İspanyol Pamuklu Jean",
+      "variants": [
+        {
+          "size": "34",
+          "stock": 10,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Paça",
+          "value": "İspanyol"
+        },
+        {
+          "key": "Materyal",
+          "value": "Pamuklu Denim"
+        }
+      ]
+    },
+    {
+      "id": "11301",
+      "title": "Mom Jean Yırtık Detaylı",
+      "price": 950,
+      "discountPrice": 750,
+      "currency": "TRY",
+      "categoryId": 113,
+      "brandId": 14,
+      "brandName": "Pull & Bear",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1542272454315-4c01d7abdf4a?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 500,
+      "isFreeShipping": true,
+      "badges": [
+        "Trend"
+      ],
+      "shortDescription": "Rahat kesim mom fit.",
+      "description": "Günlük kullanım için ideal vintage görünüm.",
+      "variants": [
+        {
+          "size": "36",
+          "stock": 20,
+          "color": "Açık Mavi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kalıp",
+          "value": "Mom Fit"
+        },
+        {
+          "key": "Bel",
+          "value": "Yüksek Bel"
+        }
+      ]
+    },
+    {
+      "id": "11402",
+      "title": "Deri Biker Ceket",
+      "price": 1400,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 114,
+      "brandId": 1,
+      "brandName": "TrendyolMilla",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1559551409-dadc959f76b8?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 350,
+      "isFreeShipping": true,
+      "badges": [
+        "Cool Tarz"
+      ],
+      "shortDescription": "Suni deri, kemer detaylı.",
+      "description": "Mevsim geçişlerinin vazgeçilmezi.",
+      "variants": [
+        {
+          "size": "S",
+          "stock": 25,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Materyal",
+          "value": "Suni Deri"
+        },
+        {
+          "key": "Model",
+          "value": "Biker"
+        }
+      ]
+    },
+    {
+      "id": "12102",
+      "title": "Adidas Stan Smith",
+      "price": 3500,
+      "discountPrice": 2999,
+      "currency": "TRY",
+      "categoryId": 121,
+      "brandId": 5,
+      "brandName": "Adidas",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 2000,
+      "isFreeShipping": true,
+      "badges": [
+        "Klasik"
+      ],
+      "shortDescription": "Yeşil detaylı tenis ayakkabısı.",
+      "description": "Sürdürülebilir malzemelerle üretilmiştir.",
+      "variants": [
+        {
+          "size": "37",
+          "stock": 20,
+          "color": "Beyaz/Yeşil"
+        }
+      ],
+      "features": [
+        {
+          "key": "Taban",
+          "value": "Düz"
+        },
+        {
+          "key": "Stil",
+          "value": "Retro"
+        }
+      ]
+    },
+    {
+      "id": "12109",
+      "title": "Nike Dunk Low Panda",
+      "price": 5500,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 121,
+      "brandId": 6,
+      "brandName": "Nike",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1552346154-21d32810aba3?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 5,
+      "reviewCount": 1200,
+      "isFreeShipping": true,
+      "badges": [
+        "Hype",
+        "Sınırlı Stok"
+      ],
+      "shortDescription": "Siyah beyaz ikonik renk.",
+      "description": "Basketbol sahalarından sokaklara.",
+      "variants": [
+        {
+          "size": "38",
+          "stock": 5,
+          "color": "Siyah/Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Model",
+          "value": "Dunk Low"
+        },
+        {
+          "key": "Taban",
+          "value": "Kauçuk"
+        }
+      ]
+    },
+    {
+      "id": "12202",
+      "title": "Nude Blok Topuklu Ayakkabı",
+      "price": 950,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 122,
+      "brandId": 8,
+      "brandName": "Koton",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.4,
+      "reviewCount": 350,
+      "isFreeShipping": false,
+      "badges": [
+        "Rahat"
+      ],
+      "shortDescription": "Günlük kullanıma uygun.",
+      "description": "5 cm kalın topuk ile konforlu yürüyüş.",
+      "variants": [
+        {
+          "size": "38",
+          "stock": 30,
+          "color": "Ten Rengi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Topuk",
+          "value": "Kalın"
+        },
+        {
+          "key": "Boy",
+          "value": "5 cm"
+        }
+      ]
+    },
+    {
+      "id": "12206",
+      "title": "Arkası Açık Topuklu (Slingback)",
+      "price": 2100,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 11,
+      "brandId": 30,
+      "brandName": "Zara",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1595341888016-a392ef81b7de?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 600,
+      "isFreeShipping": true,
+      "badges": [
+        "Trend"
+      ],
+      "shortDescription": "Kısa topuklu zarif ayakkabı.",
+      "description": "Chanel tarzı ikonik model.",
+      "variants": [
+        {
+          "size": "38",
+          "stock": 25,
+          "color": "Bej/Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Model",
+          "value": "Slingback"
+        },
+        {
+          "key": "Topuk",
+          "value": "Kitten"
+        }
+      ]
+    },
+    {
+      "id": "13101",
+      "title": "Altın Kaplama Zincir Kolye",
+      "price": 250,
+      "discountPrice": 199.99,
+      "currency": "TRY",
+      "categoryId": 131,
+      "brandId": 1,
+      "brandName": "TrendyolMilla",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 1200,
+      "isFreeShipping": false,
+      "badges": [
+        "Çok Satan"
+      ],
+      "shortDescription": "Kararmaz çelik üzeri altın kaplama.",
+      "description": "Günlük kullanıma uygun zarif zincir.",
+      "variants": [
+        {
+          "size": "45cm",
+          "stock": 100,
+          "color": "Altın"
+        }
+      ],
+      "features": [
+        {
+          "key": "Materyal",
+          "value": "Çelik"
+        },
+        {
+          "key": "Renk",
+          "value": "Gold"
+        }
+      ]
+    },
+    {
+      "id": "22107",
+      "title": "Reebok Classic Leather",
+      "price": 2500,
+      "discountPrice": 2200,
+      "currency": "TRY",
+      "categoryId": 221,
+      "brandId": 44,
+      "brandName": "Reebok",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 600,
+      "isFreeShipping": true,
+      "badges": [
+        "Vintage"
+      ],
+      "shortDescription": "Tamamen deri saya.",
+      "description": "80'lerden günümüze gelen sade şıklık.",
+      "variants": [
+        {
+          "size": "42",
+          "stock": 20,
+          "color": "Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Materyal",
+          "value": "Yumuşak Deri"
+        },
+        {
+          "key": "Taban",
+          "value": "EVA"
+        }
+      ]
+    },
+    {
+      "id": "12108",
+      "title": "Reebok Club C 85",
+      "price": 2900,
+      "discountPrice": 2500,
+      "currency": "TRY",
+      "categoryId": 121,
+      "brandId": 44,
+      "brandName": "Reebok",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1600269452121-4f2416e55c28?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 700,
+      "isFreeShipping": true,
+      "badges": [
+        "Vintage"
+      ],
+      "shortDescription": "Yumuşak deri saya.",
+      "description": "80'lerin tenis stilinden ilham alan tasarım.",
+      "variants": [
+        {
+          "size": "37",
+          "stock": 15,
+          "color": "Krem"
+        }
+      ],
+      "features": [
+        {
+          "key": "Stil",
+          "value": "Retro"
+        },
+        {
+          "key": "Materyal",
+          "value": "Deri"
+        }
+      ]
+    },
+    {
+      "id": "13107",
+      "title": "Minimal Halka Küpe",
+      "price": 120,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 131,
+      "brandId": 1,
+      "brandName": "TrendyolMilla",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1611591437281-460bfbe1220a?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 900,
+      "isFreeShipping": false,
+      "badges": [
+        "Basic"
+      ],
+      "shortDescription": "Altın renkli küçük halka.",
+      "description": "Her gün takabileceğiniz basic küpe.",
+      "variants": [
+        {
+          "size": "2cm",
+          "stock": 80,
+          "color": "Altın"
+        }
+      ],
+      "features": [
+        {
+          "key": "Model",
+          "value": "Halka"
+        },
+        {
+          "key": "Materyal",
+          "value": "Metal"
+        }
+      ]
+    },
+    {
+      "id": "12105",
+      "title": "Converse Chuck Taylor All Star",
+      "price": 2500,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 121,
+      "brandId": 42,
+      "brandName": "Converse",
+      "sellerId": 103,
+      "images": [
+        "https://floimages.mncdn.com/media/catalog/product/24-01/19/101086482_d1.JPG"
+      ],
+      "rating": 4.8,
+      "reviewCount": 4000,
+      "isFreeShipping": true,
+      "badges": [
+        "İkon"
+      ],
+      "shortDescription": "Bilekli bez ayakkabı.",
+      "description": "Asla modası geçmeyen klasik.",
+      "variants": [
+        {
+          "size": "37",
+          "stock": 60,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tip",
+          "value": "High Top"
+        },
+        {
+          "key": "Materyal",
+          "value": "Kanvas"
+        }
+      ]
+    },
+    {
+      "id": "13108",
+      "title": "Deri Kemer",
+      "price": 300,
+      "discountPrice": 250,
+      "currency": "TRY",
+      "categoryId": 131,
+      "brandId": 28,
+      "brandName": "Mango",
+      "sellerId": 105,
+      "images": [
+        "https://shop.mango.com/assets/rcs/pics/static/T1/fotos/S/17051132_99_B.jpg?imwidth=2048&imdensity=1&ts=1742409309379"
+      ],
+      "rating": 4.7,
+      "reviewCount": 200,
+      "isFreeShipping": true,
+      "badges": [],
+      "shortDescription": "Tokalı klasik kemer.",
+      "description": "Pantolon ve elbiseler için şık deri kemer.",
+      "variants": [
+        {
+          "size": "85cm",
+          "stock": 15,
+          "color": "Kahverengi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Materyal",
+          "value": "Suni Deri"
+        },
+        {
+          "key": "Toka",
+          "value": "Gold"
+        }
+      ]
+    },
+    {
+      "id": "13109",
+      "title": "Kadife Saç Bandı",
+      "price": 90,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 131,
+      "brandId": 29,
+      "brandName": "Bershka",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1576053139778-7e32f2ae3cfd?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.3,
+      "reviewCount": 50,
+      "isFreeShipping": false,
+      "badges": [
+        "Saç Aksesuarı"
+      ],
+      "shortDescription": "Yumuşak dokulu taç.",
+      "description": "Saçlarınızı şık bir şekilde toparlar.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 30,
+          "color": "Bordo"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kumaş",
+          "value": "Kadife"
+        },
+        {
+          "key": "Tip",
+          "value": "Taç"
+        }
+      ]
+    },
+    {
+      "id": "21209",
+      "title": "Turuncu Canlı Renk Hoodie",
+      "price": 400,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 212,
+      "brandId": 2,
+      "brandName": "TrendyolMan",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1556821840-3a63f95609a7?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.2,
+      "reviewCount": 90,
+      "isFreeShipping": false,
+      "badges": [
+        "Flaş Ürün"
+      ],
+      "shortDescription": "Dikkat çekici renk.",
+      "description": "Enerjik kombinler için ideal.",
+      "variants": [
+        {
+          "size": "S",
+          "stock": 40,
+          "color": "Turuncu"
+        }
+      ],
+      "features": [
+        {
+          "key": "Renk",
+          "value": "Neon"
+        },
+        {
+          "key": "Kumaş",
+          "value": "3 İplik"
+        }
+      ]
+    },
+    {
+      "id": "21302",
+      "title": "Bej Kargo Pantolon",
+      "price": 950,
+      "discountPrice": 800,
+      "currency": "TRY",
+      "categoryId": 213,
+      "brandId": 14,
+      "brandName": "Pull & Bear",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1624378439575-d8705ad7ae80?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 600,
+      "isFreeShipping": true,
+      "badges": [
+        "Trend"
+      ],
+      "shortDescription": "Cepli fonksiyonel tasarım.",
+      "description": "Sokak stilinin vazgeçilmezi kargo cepler.",
+      "variants": [
+        {
+          "size": "30/30",
+          "stock": 30,
+          "color": "Bej"
+        }
+      ],
+      "features": [
+        {
+          "key": "Model",
+          "value": "Kargo"
+        },
+        {
+          "key": "Paça",
+          "value": "Lastikli"
+        }
+      ]
+    },
+    {
+      "id": "31104",
+      "title": "Huawei Matebook D16",
+      "price": 26000,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 311,
+      "brandId": 12,
+      "brandName": "Huawei",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1517336714731-489689fd1ca4?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 600,
+      "isFreeShipping": true,
+      "badges": [
+        "Ofis"
+      ],
+      "shortDescription": "Geniş ekran, metal kasa.",
+      "description": "Profesyoneller için şık ve güçlü.",
+      "variants": [
+        {
+          "size": "16GB RAM",
+          "stock": 25,
+          "color": "Gümüş"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ekran",
+          "value": "16 inç FullView"
+        },
+        {
+          "key": "İşletim Sistemi",
+          "value": "Windows 11"
+        }
+      ]
+    },
+    {
+      "id": "31202",
+      "title": "Samsung Galaxy Tab S9 FE",
+      "price": 11500,
+      "discountPrice": 9999,
+      "currency": "TRY",
+      "categoryId": 312,
+      "brandId": 16,
+      "brandName": "Samsung",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 800,
+      "isFreeShipping": true,
+      "badges": [
+        "S-Pen Dahil"
+      ],
+      "shortDescription": "Suya dayanıklı, kalemli.",
+      "description": "Yaratıcılığınızı her yerde konuşturun.",
+      "variants": [
+        {
+          "size": "128GB",
+          "stock": 40,
+          "color": "Gri"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ekran",
+          "value": "90Hz LCD"
+        },
+        {
+          "key": "Özellik",
+          "value": "IP68 Su Geçirmezlik"
+        }
+      ]
+    },
+    {
+      "id": "31204",
+      "title": "Lenovo Tab M10 Plus",
+      "price": 6500,
+      "discountPrice": 5900,
+      "currency": "TRY",
+      "categoryId": 312,
+      "brandId": 10,
+      "brandName": "Lenovo",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1561154464-82e9adf32764?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.3,
+      "reviewCount": 1200,
+      "isFreeShipping": true,
+      "badges": [
+        "Aile Dostu"
+      ],
+      "shortDescription": "2K ekran, çocuk modu.",
+      "description": "Film izlemek ve e-kitap okumak için ideal.",
+      "variants": [
+        {
+          "size": "64GB",
+          "stock": 60,
+          "color": "Fırtına Grisi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ekran",
+          "value": "2K IPS"
+        },
+        {
+          "key": "Ses",
+          "value": "Dolby Atmos"
+        }
+      ]
+    },
+    {
+      "id": "31205",
+      "title": "Xiaomi Pad 6",
+      "price": 13000,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 312,
+      "brandId": 10,
+      "brandName": "Xiaomi",
+      "sellerId": 102,
+      "images": [
+        "https://cdn.cimri.io/image/1000x1000/xiaomi-pad-6-256gb-11-inc-gold-tablet-pc_821152351.jpg"
+      ],
+      "rating": 4.7,
+      "reviewCount": 900,
+      "isFreeShipping": true,
+      "badges": [
+        "Performans"
+      ],
+      "shortDescription": "Snapdragon 870 işlemci.",
+      "description": "Oyun ve iş için yüksek performans.",
+      "variants": [
+        {
+          "size": "256GB",
+          "stock": 25,
+          "color": "Şampanya"
+        }
+      ],
+      "features": [
+        {
+          "key": "İşlemci",
+          "value": "SD 870"
+        },
+        {
+          "key": "Ekran",
+          "value": "144Hz WQHD+"
+        }
+      ]
+    },
+    {
+      "id": "31206",
+      "title": "iPad Pro 12.9 M2",
+      "price": 45000,
+      "discountPrice": 42000,
+      "currency": "TRY",
+      "categoryId": 312,
+      "brandId": 3,
+      "brandName": "Apple",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1629729802335-b2839956972e?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 5,
+      "reviewCount": 500,
+      "isFreeShipping": true,
+      "badges": [
+        "Profesyonel"
+      ],
+      "shortDescription": "M2 çip, XDR ekran.",
+      "description": "Grafik tasarımcılar ve video editörleri için.",
+      "variants": [
+        {
+          "size": "128GB",
+          "stock": 8,
+          "color": "Gümüş"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ekran",
+          "value": "Mini-LED XDR"
+        },
+        {
+          "key": "İşlemci",
+          "value": "Apple M2"
+        }
+      ]
+    },
+    {
+      "id": "31207",
+      "title": "Samsung Galaxy Tab A9+",
+      "price": 5500,
+      "discountPrice": 4900,
+      "currency": "TRY",
+      "categoryId": 312,
+      "brandId": 16,
+      "brandName": "Samsung",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.4,
+      "reviewCount": 1500,
+      "isFreeShipping": true,
+      "badges": [
+        "Bütçe Dostu"
+      ],
+      "shortDescription": "90Hz ekran, 4 hoparlör.",
+      "description": "Multimedya keyfi için uygun fiyatlı tablet.",
+      "variants": [
+        {
+          "size": "64GB",
+          "stock": 80,
+          "color": "Lacivert"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ekran",
+          "value": "11 inç"
+        },
+        {
+          "key": "Ses",
+          "value": "Quad Speaker"
+        }
+      ]
+    },
+    {
+      "id": "31208",
+      "title": "Honor Pad X9",
+      "price": 7000,
+      "discountPrice": 6200,
+      "currency": "TRY",
+      "categoryId": 312,
+      "brandId": 40,
+      "brandName": "Honor",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 400,
+      "isFreeShipping": true,
+      "badges": [
+        "6 Hoparlör"
+      ],
+      "shortDescription": "Surround ses sistemi.",
+      "description": "Sinema deneyimini tabletinize getirin.",
+      "variants": [
+        {
+          "size": "128GB",
+          "stock": 35,
+          "color": "Gri"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ekran",
+          "value": "120Hz 2K"
+        },
+        {
+          "key": "Ses",
+          "value": "6 Hoparlör"
+        }
+      ]
+    },
+    {
+      "id": "31209",
+      "title": "TCL NxtPaper 11",
+      "price": 8000,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 312,
+      "brandId": 46,
+      "brandName": "TCL",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 200,
+      "isFreeShipping": true,
+      "badges": [
+        "Kağıt Hissi"
+      ],
+      "shortDescription": "Göz yormayan mat ekran.",
+      "description": "Okuma ve not alma odaklı benzersiz ekran teknolojisi.",
+      "variants": [
+        {
+          "size": "128GB",
+          "stock": 15,
+          "color": "Koyu Gri"
+        }
+      ],
+      "features": [
+        {
+          "key": "Teknoloji",
+          "value": "NxtPaper 2.0"
+        },
+        {
+          "key": "Göz Sağlığı",
+          "value": "Mavi Işık Koruması"
+        }
+      ]
+    },
+    {
+      "id": "32101",
+      "title": "Samsung Galaxy S24 Ultra",
+      "price": 69999,
+      "discountPrice": 65000,
+      "currency": "TRY",
+      "categoryId": 321,
+      "brandId": 16,
+      "brandName": "Samsung",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 1200,
+      "isFreeShipping": true,
+      "badges": [
+        "AI Phone",
+        "Premium"
+      ],
+      "shortDescription": "Yapay zeka, 200MP kamera.",
+      "description": "Galaxy AI ile sınırları zorlayın.",
+      "variants": [
+        {
+          "size": "512GB",
+          "stock": 10,
+          "color": "Titanyum Gri"
+        }
+      ],
+      "features": [
+        {
+          "key": "İşlemci",
+          "value": "Snapdragon 8 Gen 3"
+        },
+        {
+          "key": "Kamera",
+          "value": "200 MP"
+        }
+      ]
+    },
+    {
+      "id": "32102",
+      "title": "Xiaomi Redmi Note 13 Pro",
+      "price": 16500,
+      "discountPrice": 14999,
+      "currency": "TRY",
+      "categoryId": 321,
+      "brandId": 10,
+      "brandName": "Xiaomi",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 3000,
+      "isFreeShipping": true,
+      "badges": [
+        "Fiyat Performans"
+      ],
+      "shortDescription": "200MP kamera, 120Hz ekran.",
+      "description": "Orta segmentin kralı.",
+      "variants": [
+        {
+          "size": "256GB",
+          "stock": 60,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ekran",
+          "value": "AMOLED"
+        },
+        {
+          "key": "Pil",
+          "value": "5000 mAh"
+        }
+      ]
+    },
+    {
+      "id": "32103",
+      "title": "iPhone 13 128GB",
+      "price": 39999,
+      "discountPrice": 37500,
+      "currency": "TRY",
+      "categoryId": 321,
+      "brandId": 3,
+      "brandName": "Apple",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1632661674596-df8be070a5c5?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 8500,
+      "isFreeShipping": true,
+      "badges": [
+        "En Çok Satan"
+      ],
+      "shortDescription": "A15 Bionic çip.",
+      "description": "Hala çok güçlü, kompakt tasarım.",
+      "variants": [
+        {
+          "size": "128GB",
+          "stock": 100,
+          "color": "Gece Yarısı"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ekran",
+          "value": "6.1 inç"
+        },
+        {
+          "key": "Kamera",
+          "value": "Çift 12MP"
+        }
+      ]
+    },
+    {
+      "id": "32104",
+      "title": "Samsung Galaxy A55",
+      "price": 19000,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 321,
+      "brandId": 16,
+      "brandName": "Samsung",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1584006682522-861d20884fdd?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 900,
+      "isFreeShipping": true,
+      "badges": [
+        "Yeni",
+        "Metal Kasa"
+      ],
+      "shortDescription": "Premium hissettiren orta segment.",
+      "description": "Gece çekimlerinde usta kamera.",
+      "variants": [
+        {
+          "size": "128GB",
+          "stock": 40,
+          "color": "Muhteşem Lacivert"
+        }
+      ],
+      "features": [
+        {
+          "key": "Malzeme",
+          "value": "Metal & Cam"
+        },
+        {
+          "key": "Suya Dayanıklılık",
+          "value": "IP67"
+        }
+      ]
+    },
+    {
+      "id": "32105",
+      "title": "Poco X6 Pro",
+      "price": 18500,
+      "discountPrice": 17000,
+      "currency": "TRY",
+      "categoryId": 321,
+      "brandId": 10,
+      "brandName": "Xiaomi",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1592910147752-6e27303c2bb7?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 1500,
+      "isFreeShipping": true,
+      "badges": [
+        "Oyun Odaklı"
+      ],
+      "shortDescription": "Dimensity 8300 Ultra.",
+      "description": "Bu fiyata en yüksek performans.",
+      "variants": [
+        {
+          "size": "512GB",
+          "stock": 35,
+          "color": "Sarı"
+        }
+      ],
+      "features": [
+        {
+          "key": "İşlemci",
+          "value": "Dimensity 8300"
+        },
+        {
+          "key": "Şarj",
+          "value": "67W Hızlı Şarj"
+        }
+      ]
+    },
+    {
+      "id": "32106",
+      "title": "iPhone 15 Pro Max",
+      "price": 89999,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 321,
+      "brandId": 3,
+      "brandName": "Apple",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1695048133142-1a20484d2569?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 5,
+      "reviewCount": 2000,
+      "isFreeShipping": true,
+      "badges": [
+        "Titanyum"
+      ],
+      "shortDescription": "Titanyum tasarım, A17 Pro.",
+      "description": "Apple'ın bugüne kadarki en güçlü telefonu.",
+      "variants": [
+        {
+          "size": "256GB",
+          "stock": 10,
+          "color": "Naturel Titanyum"
+        }
+      ],
+      "features": [
+        {
+          "key": "Malzeme",
+          "value": "Titanyum"
+        },
+        {
+          "key": "Zoom",
+          "value": "5x Optik"
+        }
+      ]
+    },
+    {
+      "id": "32107",
+      "title": "Huawei Pura 70",
+      "price": 34000,
+      "discountPrice": 32000,
+      "currency": "TRY",
+      "categoryId": 321,
+      "brandId": 12,
+      "brandName": "Huawei",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1595941069915-4ebc5d27aa5f?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 400,
+      "isFreeShipping": true,
+      "badges": [
+        "Kamera Kralı"
+      ],
+      "shortDescription": "Hareketli kamera lensi.",
+      "description": "Fotoğrafçılık için özel tasarım.",
+      "variants": [
+        {
+          "size": "256GB",
+          "stock": 20,
+          "color": "Pembe"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kamera",
+          "value": "XMAGE"
+        },
+        {
+          "key": "Pil",
+          "value": "4900 mAh"
+        }
+      ]
+    },
+    {
+      "id": "32108",
+      "title": "Realme GT 2 Pro",
+      "price": 22000,
+      "discountPrice": 19999,
+      "currency": "TRY",
+      "categoryId": 321,
+      "brandId": 38,
+      "brandName": "Realme",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 600,
+      "isFreeShipping": true,
+      "badges": [
+        "2K Ekran"
+      ],
+      "shortDescription": "Kağıt hissi veren tasarım.",
+      "description": "Çevre dostu biyo-polimer malzeme.",
+      "variants": [
+        {
+          "size": "256GB",
+          "stock": 15,
+          "color": "Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ekran",
+          "value": "2K AMOLED"
+        },
+        {
+          "key": "Tasarım",
+          "value": "Biyo-Tabanlı"
+        }
+      ]
+    },
+    {
+      "id": "32109",
+      "title": "General Mobile GM 24 Pro",
+      "price": 9500,
+      "discountPrice": 8900,
+      "currency": "TRY",
+      "categoryId": 321,
+      "brandId": 39,
+      "brandName": "General Mobile",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.3,
+      "reviewCount": 2000,
+      "isFreeShipping": false,
+      "badges": [
+        "Yerli",
+        "Ekonomik"
+      ],
+      "shortDescription": "Uygun fiyatlı performans.",
+      "description": "Gündelik kullanım için ideal yerli telefon.",
+      "variants": [
+        {
+          "size": "128GB",
+          "stock": 80,
+          "color": "Gri"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ekran",
+          "value": "120Hz"
+        },
+        {
+          "key": "Hafıza",
+          "value": "256 GB"
+        }
+      ]
+    },
+    {
+      "id": "32201",
+      "title": "JBL Tune 510BT Kulaklık",
+      "price": 1800,
+      "discountPrice": 1500,
+      "currency": "TRY",
+      "categoryId": 322,
+      "brandId": 22,
+      "brandName": "JBL",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1613040809024-b4ef7ba99bc3?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 5000,
+      "isFreeShipping": true,
+      "badges": [
+        "Bass",
+        "Flaş Ürün"
+      ],
+      "shortDescription": "Pure Bass ses kalitesi.",
+      "description": "40 saat pil ömrü ve hızlı şarj.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 100,
+          "color": "Mavi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Bağlantı",
+          "value": "Bluetooth 5.0"
+        },
+        {
+          "key": "Tip",
+          "value": "Kulak Üstü"
+        }
+      ]
+    },
+    {
+      "id": "32202",
+      "title": "Apple AirPods Pro 2. Nesil",
+      "price": 8999,
+      "discountPrice": 8500,
+      "currency": "TRY",
+      "categoryId": 322,
+      "brandId": 3,
+      "brandName": "Apple",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1603351154351-5cf233081901?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 3500,
+      "isFreeShipping": true,
+      "badges": [
+        "Gürültü Engelleme"
+      ],
+      "shortDescription": "H2 çip ile üstün ses.",
+      "description": "2 kata kadar daha fazla aktif gürültü engelleme.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 50,
+          "color": "Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Şarj Kutusu",
+          "value": "MagSafe USB-C"
+        },
+        {
+          "key": "Tip",
+          "value": "Kulak İçi"
+        }
+      ]
+    },
+    {
+      "id": "32203",
+      "title": "Samsung Galaxy Buds 2 Pro",
+      "price": 3500,
+      "discountPrice": 2999,
+      "currency": "TRY",
+      "categoryId": 322,
+      "brandId": 16,
+      "brandName": "Samsung",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1610945415295-d9bbf067e59c?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 1200,
+      "isFreeShipping": true,
+      "badges": [
+        "24-bit Hi-Fi"
+      ],
+      "shortDescription": "Stüdyo kalitesinde ses.",
+      "description": "Ergonomik tasarım ve akıllı gürültü engelleme.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 40,
+          "color": "Grafit"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ses",
+          "value": "360 Derece"
+        },
+        {
+          "key": "Suya Dayanıklılık",
+          "value": "IPX7"
+        }
+      ]
+    },
+    {
+      "id": "32204",
+      "title": "Sony WH-1000XM5",
+      "price": 12500,
+      "discountPrice": 11000,
+      "currency": "TRY",
+      "categoryId": 322,
+      "brandId": 17,
+      "brandName": "Sony",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1618366712010-f4ae9c647dcb?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 900,
+      "isFreeShipping": true,
+      "badges": [
+        "Sektör Lideri"
+      ],
+      "shortDescription": "En iyi gürültü engelleme.",
+      "description": "Kristal netliğinde görüşmeler ve 30 saat pil ömrü.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 20,
+          "color": "Gümüş"
+        }
+      ],
+      "features": [
+        {
+          "key": "Mikrofon",
+          "value": "8 Adet"
+        },
+        {
+          "key": "Tip",
+          "value": "Kulak Üstü"
+        }
+      ]
+    },
+    {
+      "id": "32205",
+      "title": "Xiaomi Redmi Buds 4 Active",
+      "price": 600,
+      "discountPrice": 499,
+      "currency": "TRY",
+      "categoryId": 322,
+      "brandId": 10,
+      "brandName": "Xiaomi",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1627989580309-bfaf3e58af6f?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.3,
+      "reviewCount": 4000,
+      "isFreeShipping": false,
+      "badges": [
+        "Fiyat Performans"
+      ],
+      "shortDescription": "12mm dinamik sürücü.",
+      "description": "Uygun fiyata güçlü bas ve hızlı bağlantı.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 150,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Bağlantı",
+          "value": "Bluetooth 5.3"
+        },
+        {
+          "key": "Pil",
+          "value": "28 Saat"
+        }
+      ]
+    },
+    {
+      "id": "32206",
+      "title": "Anker Soundcore Q30",
+      "price": 2800,
+      "discountPrice": 2400,
+      "currency": "TRY",
+      "categoryId": 322,
+      "brandId": 47,
+      "brandName": "Anker",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1546435770-a3e426bf472b?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 1800,
+      "isFreeShipping": true,
+      "badges": [
+        "Hi-Res Audio"
+      ],
+      "shortDescription": "Hibrit aktif gürültü önleme.",
+      "description": "Uygulama üzerinden özelleştirilebilir EQ ayarları.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 45,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Sertifika",
+          "value": "Hi-Res"
+        },
+        {
+          "key": "Pil",
+          "value": "40 Saat (ANC Açık)"
+        }
+      ]
+    },
+    {
+      "id": "32207",
+      "title": "Huawei FreeBuds SE 2",
+      "price": 1100,
+      "discountPrice": 950,
+      "currency": "TRY",
+      "categoryId": 322,
+      "brandId": 12,
+      "brandName": "Huawei",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 850,
+      "isFreeShipping": true,
+      "badges": [
+        "Hafif"
+      ],
+      "shortDescription": "40 saat müzik çalma.",
+      "description": "Kompakt şarj kutusu ve rahat kullanım.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 60,
+          "color": "Seramik Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Ağırlık",
+          "value": "3.8g"
+        },
+        {
+          "key": "Şarj",
+          "value": "Hızlı Şarj"
+        }
+      ]
+    },
+    {
+      "id": "32208",
+      "title": "JBL Wave 300TWS",
+      "price": 1500,
+      "discountPrice": 1299,
+      "currency": "TRY",
+      "categoryId": 322,
+      "brandId": 22,
+      "brandName": "JBL",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1572569028738-411a21c1b752?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.4,
+      "reviewCount": 1100,
+      "isFreeShipping": true,
+      "badges": [
+        "Deep Bass"
+      ],
+      "shortDescription": "Açık kulak tasarımı.",
+      "description": "Çevrenizin farkında kalarak müzik dinleyin.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 35,
+          "color": "Pembe"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tasarım",
+          "value": "Stick"
+        },
+        {
+          "key": "Mikrofon",
+          "value": "Stereo"
+        }
+      ]
+    },
+    {
+      "id": "32209",
+      "title": "Sennheiser Momentum 4",
+      "price": 14000,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 322,
+      "brandId": 48,
+      "brandName": "Sennheiser",
+      "sellerId": 102,
+      "images": [
+        "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 250,
+      "isFreeShipping": true,
+      "badges": [
+        "Audiophile"
+      ],
+      "shortDescription": "60 saat pil ömrü.",
+      "description": "Odyofiller için üstün ses kalitesi ve konfor.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 10,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Pil",
+          "value": "60 Saat"
+        },
+        {
+          "key": "Ses",
+          "value": "İmza Sesi"
+        }
+      ]
+    },
+    {
+      "id": "41103",
+      "title": "Keten Dokulu Köşe Koltuk",
+      "price": 22500,
+      "discountPrice": 19999,
+      "currency": "TRY",
+      "categoryId": 411,
+      "brandId": 25,
+      "brandName": "Vivense",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 300,
+      "isFreeShipping": false,
+      "badges": [
+        "Minimalist"
+      ],
+      "shortDescription": "Modern L köşe tasarım.",
+      "description": "Silinebilir ithal kumaş, gürgen iskelet.",
+      "variants": [
+        {
+          "size": "300x200",
+          "stock": 10,
+          "color": "Antrasit"
+        }
+      ],
+      "features": [
+        {
+          "key": "İskelet",
+          "value": "Gürgen"
+        },
+        {
+          "key": "Kumaş",
+          "value": "Keten"
+        }
+      ]
+    },
+    {
+      "id": "41104",
+      "title": "Retro Berjer Tekli Koltuk",
+      "price": 4500,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 411,
+      "brandId": 49,
+      "brandName": "Enza Home",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 150,
+      "isFreeShipping": true,
+      "badges": [
+        "Tasarım"
+      ],
+      "shortDescription": "Ahşap ayaklı şık berjer.",
+      "description": "Salonunuza retro bir hava katacak konforlu koltuk.",
+      "variants": [
+        {
+          "size": "Tekli",
+          "stock": 20,
+          "color": "Hardal"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tarz",
+          "value": "Retro"
+        },
+        {
+          "key": "Ayak",
+          "value": "Ceviz"
+        }
+      ]
+    },
+    {
+      "id": "41105",
+      "title": "Chesterfield Deri Kanepe",
+      "price": 35000,
+      "discountPrice": 32000,
+      "currency": "TRY",
+      "categoryId": 411,
+      "brandId": 26,
+      "brandName": "Bellona",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1550226891-ef816aed4a98?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 80,
+      "isFreeShipping": false,
+      "badges": [
+        "Lüks"
+      ],
+      "shortDescription": "Hakiki deri kapitone.",
+      "description": "Klasik dekorasyonun vazgeçilmezi Chester model.",
+      "variants": [
+        {
+          "size": "3'lü",
+          "stock": 5,
+          "color": "Taba"
+        }
+      ],
+      "features": [
+        {
+          "key": "Materyal",
+          "value": "Deri"
+        },
+        {
+          "key": "Model",
+          "value": "Chester"
+        }
+      ]
+    },
+    {
+      "id": "41106",
+      "title": "Yataklı 3'lü Koltuk",
+      "price": 9500,
+      "discountPrice": 8500,
+      "currency": "TRY",
+      "categoryId": 411,
+      "brandId": 50,
+      "brandName": "İstikbal",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1512212621149-107ffe572d2f?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 600,
+      "isFreeShipping": false,
+      "badges": [
+        "Fonksiyonel"
+      ],
+      "shortDescription": "Sandıklı ve yataklı.",
+      "description": "Misafirleriniz için pratik yatak çözümü.",
+      "variants": [
+        {
+          "size": "3'lü",
+          "stock": 40,
+          "color": "Bej"
+        }
+      ],
+      "features": [
+        {
+          "key": "Fonksiyon",
+          "value": "Yataklı"
+        },
+        {
+          "key": "Mekanizma",
+          "value": "Makaslı"
+        }
+      ]
+    },
+    {
+      "id": "41107",
+      "title": "Modüler Puf Koltuk Seti",
+      "price": 15000,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 411,
+      "brandId": 25,
+      "brandName": "Vivense",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1524758631624-e2822e304c36?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.4,
+      "reviewCount": 120,
+      "isFreeShipping": true,
+      "badges": [
+        "Modern"
+      ],
+      "shortDescription": "Yer değiştirebilir parçalar.",
+      "description": "İsteğe göre şekillendirilebilen rahat oturma grubu.",
+      "variants": [
+        {
+          "size": "4 Parça",
+          "stock": 15,
+          "color": "Gri"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tip",
+          "value": "Modüler"
+        },
+        {
+          "key": "Dolgu",
+          "value": "Kuş Tüyü Sünger"
+        }
+      ]
+    },
+    {
+      "id": "41108",
+      "title": "İskandinav Tarzı Koltuk",
+      "price": 11000,
+      "discountPrice": 9900,
+      "currency": "TRY",
+      "categoryId": 411,
+      "brandId": 51,
+      "brandName": "IKEA",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1551298370-9d3d53740c72?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 900,
+      "isFreeShipping": false,
+      "badges": [
+        "Sade"
+      ],
+      "shortDescription": "Ahşap ayaklı modern tasarım.",
+      "description": "Küçük salonlar için ideal boyutlarda.",
+      "variants": [
+        {
+          "size": "2'li",
+          "stock": 35,
+          "color": "Açık Mavi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tarz",
+          "value": "İskandinav"
+        },
+        {
+          "key": "Kumaş",
+          "value": "Pamuklu"
+        }
+      ]
+    },
+    {
+      "id": "41109",
+      "title": "Kadife L Koltuk",
+      "price": 28000,
+      "discountPrice": 25000,
+      "currency": "TRY",
+      "categoryId": 411,
+      "brandId": 49,
+      "brandName": "Enza Home",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 200,
+      "isFreeShipping": false,
+      "badges": [
+        "Premium"
+      ],
+      "shortDescription": "Yumuşak kadife doku.",
+      "description": "Geniş oturum alanı ve şık görünüm.",
+      "variants": [
+        {
+          "size": "Büyük Boy",
+          "stock": 8,
+          "color": "Lacivert"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kumaş",
+          "value": "İthal Kadife"
+        },
+        {
+          "key": "Konfor",
+          "value": "Yumuşak"
+        }
+      ]
+    },
+    {
+      "id": "41110",
+      "title": "Bahçe Balkon Koltuk Seti",
+      "price": 7500,
+      "discountPrice": 6000,
+      "currency": "TRY",
+      "categoryId": 411,
+      "brandId": 25,
+      "brandName": "Vivense",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.3,
+      "reviewCount": 450,
+      "isFreeShipping": true,
+      "badges": [
+        "Outdoor"
+      ],
+      "shortDescription": "Rattan görünümlü plastik.",
+      "description": "Dış mekan kullanımına uygun, minderli set.",
+      "variants": [
+        {
+          "size": "2+1+1",
+          "stock": 50,
+          "color": "Kahve"
+        }
+      ],
+      "features": [
+        {
+          "key": "Malzeme",
+          "value": "Polipropilen"
+        },
+        {
+          "key": "Dayanıklılık",
+          "value": "Suya Dayanıklı"
+        }
+      ]
+    },
+    {
+      "id": "41111",
+      "title": "TV Koltuğu Recliner",
+      "price": 14000,
+      "discountPrice": 12500,
+      "currency": "TRY",
+      "categoryId": 411,
+      "brandId": 50,
+      "brandName": "İstikbal",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1560184897-602b610d749a?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 100,
+      "isFreeShipping": false,
+      "badges": [
+        "Baba Koltuğu"
+      ],
+      "shortDescription": "Mekanizmalı açılır koltuk.",
+      "description": "Film keyfi için yatar pozisyon özelliği.",
+      "variants": [
+        {
+          "size": "Tekli",
+          "stock": 15,
+          "color": "Kahverengi"
+        }
+      ],
+      "features": [
+        {
+          "key": "Mekanizma",
+          "value": "Manuel Recliner"
+        },
+        {
+          "key": "Kumaş",
+          "value": "Nubuk"
+        }
+      ]
+    },
+    {
+      "id": "51103",
+      "title": "Dior Sauvage EDP 100ml",
+      "price": 4200,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 511,
+      "brandId": 52,
+      "brandName": "Dior",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1592914610354-fd354ea45e48?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 4500,
+      "isFreeShipping": true,
+      "badges": [
+        "En Çok Satan",
+        "Erkek"
+      ],
+      "shortDescription": "Bergamot ve ambroksan.",
+      "description": "Güçlü ve taze bir imza kokusu.",
+      "variants": [
+        {
+          "size": "100ml",
+          "stock": 30,
+          "color": "Lacivert Şişe"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tip",
+          "value": "EDP"
+        },
+        {
+          "key": "Koku Ailesi",
+          "value": "Aromatik Fougère"
+        }
+      ]
+    },
+    {
+      "id": "51104",
+      "title": "Yves Saint Laurent Libre",
+      "price": 3800,
+      "discountPrice": 3500,
+      "currency": "TRY",
+      "categoryId": 511,
+      "brandId": 53,
+      "brandName": "YSL",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1541643600914-78b084683601?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 2200,
+      "isFreeShipping": true,
+      "badges": [
+        "Kadın",
+        "Trend"
+      ],
+      "shortDescription": "Lavanta ve portakal çiçeği.",
+      "description": "Özgürlüğün çiçeksi kokusu.",
+      "variants": [
+        {
+          "size": "90ml",
+          "stock": 25,
+          "color": "Gold Detay"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tip",
+          "value": "EDP"
+        },
+        {
+          "key": "Koku Ailesi",
+          "value": "Çiçeksi"
+        }
+      ]
+    },
+    {
+      "id": "51108",
+      "title": "Bleu de Chanel",
+      "price": 5200,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 511,
+      "brandId": 9,
+      "brandName": "Chanel",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1595535373192-fc04375b39f7?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 5,
+      "reviewCount": 2500,
+      "isFreeShipping": true,
+      "badges": [
+        "Erkek",
+        "Klasik"
+      ],
+      "shortDescription": "Odunsu aromatik.",
+      "description": "Özgürlüğe övgü niteliğinde maskülen koku.",
+      "variants": [
+        {
+          "size": "100ml",
+          "stock": 20,
+          "color": "Koyu Gri"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tip",
+          "value": "Parfum"
+        },
+        {
+          "key": "Koku Ailesi",
+          "value": "Odunsu"
+        }
+      ]
+    },
+    {
+      "id": "51105",
+      "title": "Armani Si Passione",
+      "price": 3600,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 511,
+      "brandId": 54,
+      "brandName": "Armani",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1541108564883-b68486299585?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 1800,
+      "isFreeShipping": true,
+      "badges": [
+        "Tutkulu"
+      ],
+      "shortDescription": "Frenk üzümü ve gül.",
+      "description": "Kırmızı şişede saklı tutku.",
+      "variants": [
+        {
+          "size": "100ml",
+          "stock": 40,
+          "color": "Kırmızı"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tip",
+          "value": "EDP"
+        },
+        {
+          "key": "Koku Ailesi",
+          "value": "Meyveli Çiçeksi"
+        }
+      ]
+    },
+    {
+      "id": "51106",
+      "title": "Tom Ford Black Orchid",
+      "price": 5500,
+      "discountPrice": 5000,
+      "currency": "TRY",
+      "categoryId": 511,
+      "brandId": 55,
+      "brandName": "Tom Ford",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1557170334-a9632e77c6e4?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 3000,
+      "isFreeShipping": true,
+      "badges": [
+        "Unisex",
+        "Lüks"
+      ],
+      "shortDescription": "Siyah orkide ve baharat.",
+      "description": "Modern ve zamansız lüks koku.",
+      "variants": [
+        {
+          "size": "100ml",
+          "stock": 15,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tip",
+          "value": "EDP"
+        },
+        {
+          "key": "Koku Ailesi",
+          "value": "Oryantal"
+        }
+      ]
+    },
+    {
+      "id": "51107",
+      "title": "Carolina Herrera Good Girl",
+      "price": 4100,
+      "discountPrice": 3800,
+      "currency": "TRY",
+      "categoryId": 511,
+      "brandId": 56,
+      "brandName": "Carolina Herrera",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1595425970377-c9703cf48b6d?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 4000,
+      "isFreeShipping": true,
+      "badges": [
+        "İkonik Şişe"
+      ],
+      "shortDescription": "Topuklu ayakkabı formunda.",
+      "description": "Yasemin ve kakao notaları.",
+      "variants": [
+        {
+          "size": "80ml",
+          "stock": 35,
+          "color": "Siyah/Lacivert"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tip",
+          "value": "EDP"
+        },
+        {
+          "key": "Koku Ailesi",
+          "value": "Oryantal Çiçeksi"
+        }
+      ]
+    },
+    {
+      "id": "61101",
+      "title": "Organik Pamuk Hastane Çıkışı",
+      "price": 450,
+      "discountPrice": 350,
+      "currency": "TRY",
+      "categoryId": 611,
+      "brandId": 24,
+      "brandName": "Kraft",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 600,
+      "isFreeShipping": true,
+      "badges": [
+        "10'lu Set"
+      ],
+      "shortDescription": "Yenidoğan seti.",
+      "description": "Hassas bebek cildi için %100 organik pamuk.",
+      "variants": [
+        {
+          "size": "Yenidoğan",
+          "stock": 50,
+          "color": "Ekru"
+        }
+      ],
+      "features": [
+        {
+          "key": "Parça Sayısı",
+          "value": "10 Parça"
+        },
+        {
+          "key": "Kumaş",
+          "value": "Organik Pamuk"
+        }
+      ]
+    },
+    {
+      "id": "61102",
+      "title": "Erkek Bebek Salopet Takım",
+      "price": 320,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 611,
+      "brandId": 8,
+      "brandName": "Koton Baby",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1519457431-44ccd64a579b?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 200,
+      "isFreeShipping": false,
+      "badges": [
+        "Şık"
+      ],
+      "shortDescription": "Tişört ve salopet.",
+      "description": "Özel günler için papyonlu bebek takımı.",
+      "variants": [
+        {
+          "size": "6-9 Ay",
+          "stock": 25,
+          "color": "Lacivert"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kumaş",
+          "value": "Gabardin"
+        },
+        {
+          "key": "Parça",
+          "value": "2'li"
+        }
+      ]
+    },
+    {
+      "id": "61105",
+      "title": "Hayvan Figürlü Uyku Tulumu",
+      "price": 350,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 611,
+      "brandId": 57,
+      "brandName": "Carter's",
+      "sellerId": 105,
+      "images": [
+        "https://images.unsplash.com/photo-1555529669-e69e7aa0ba9a?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 500,
+      "isFreeShipping": true,
+      "badges": [
+        "Sıcak Tut"
+      ],
+      "shortDescription": "Polar tulum.",
+      "description": "Fermuarlı ve kaydırmaz tabanlı uyku tulumu.",
+      "variants": [
+        {
+          "size": "2 Yaş",
+          "stock": 20,
+          "color": "Ayıcıklı"
+        }
+      ],
+      "features": [
+        {
+          "key": "TOG Değeri",
+          "value": "2.5"
+        },
+        {
+          "key": "Kumaş",
+          "value": "Polar"
+        }
+      ]
+    },
+    {
+      "id": "62102",
+      "title": "Aktivite Masası",
+      "price": 1200,
+      "discountPrice": 999,
+      "currency": "TRY",
+      "categoryId": 621,
+      "brandId": 58,
+      "brandName": "Fisher Price",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 800,
+      "isFreeShipping": true,
+      "badges": [
+        "Eğitici"
+      ],
+      "shortDescription": "Müzikli ve ışıklı.",
+      "description": "Bebeğin motor becerilerini geliştiren oyun masası.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 25,
+          "color": "Renkli"
+        }
+      ],
+      "features": [
+        {
+          "key": "Yaş",
+          "value": "6 Ay+"
+        },
+        {
+          "key": "Fonksiyon",
+          "value": "Türkçe-İngilizce"
+        }
+      ]
+    },
+    {
+      "id": "62103",
+      "title": "Ahşap Geometrik Şekiller",
+      "price": 250,
+      "discountPrice": 199,
+      "currency": "TRY",
+      "categoryId": 621,
+      "brandId": 11,
+      "brandName": "Woody",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1587654780291-39c9404d746b?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 300,
+      "isFreeShipping": false,
+      "badges": [
+        "Montessori"
+      ],
+      "shortDescription": "Tak-çıkar bulmaca.",
+      "description": "Şekil ve renk kavramını öğreten ahşap set.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 50,
+          "color": "Ahşap"
+        }
+      ],
+      "features": [
+        {
+          "key": "Malzeme",
+          "value": "Doğal Ahşap"
+        },
+        {
+          "key": "Kazanım",
+          "value": "İnce Motor"
+        }
+      ]
+    },
+    {
+      "id": "61103",
+      "title": "Kız Bebek Tüllü Elbise Seti",
+      "price": 400,
+      "discountPrice": 300,
+      "currency": "TRY",
+      "categoryId": 611,
+      "brandId": 1,
+      "brandName": "TrendyolMilla Kids",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1604467794349-0b74285de7e7?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 350,
+      "isFreeShipping": true,
+      "badges": [
+        "Doğum Günü"
+      ],
+      "shortDescription": "Saç bandı hediyeli.",
+      "description": "Prensesler için tül detaylı şık elbise.",
+      "variants": [
+        {
+          "size": "1 Yaş",
+          "stock": 30,
+          "color": "Pembe"
+        }
+      ],
+      "features": [
+        {
+          "key": "Materyal",
+          "value": "Pamuk Astarlı"
+        },
+        {
+          "key": "Aksesuar",
+          "value": "Saç Bandı"
+        }
+      ]
+    },
+    {
+      "id": "61104",
+      "title": "Bebek Eşofman Takımı",
+      "price": 280,
+      "discountPrice": 220,
+      "currency": "TRY",
+      "categoryId": 611,
+      "brandId": 6,
+      "brandName": "Nike",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1522771930-78848d9293e8?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 150,
+      "isFreeShipping": false,
+      "badges": [
+        "Spor"
+      ],
+      "shortDescription": "Sweatshirt ve alt.",
+      "description": "Günlük rahatlık için yumuşak kumaş.",
+      "variants": [
+        {
+          "size": "12-18 Ay",
+          "stock": 40,
+          "color": "Gri"
+        }
+      ],
+      "features": [
+        {
+          "key": "Kumaş",
+          "value": "Pamuklu"
+        },
+        {
+          "key": "Mevsim",
+          "value": "Sonbahar/Kış"
+        }
+      ]
+    },
+    {
+      "id": "62104",
+      "title": "Kodlama Robotu Tırtıl",
+      "price": 1500,
+      "discountPrice": 1300,
+      "currency": "TRY",
+      "categoryId": 621,
+      "brandId": 58,
+      "brandName": "Fisher Price",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1560169897-fc0cdbdfa4d5?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 150,
+      "isFreeShipping": true,
+      "badges": [
+        "STEM"
+      ],
+      "shortDescription": "Okul öncesi kodlama.",
+      "description": "Parçaları birleştirerek rota oluşturan robot.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 10,
+          "color": "Renkli"
+        }
+      ],
+      "features": [
+        {
+          "key": "Yaş",
+          "value": "3-6 Yaş"
+        },
+        {
+          "key": "Tür",
+          "value": "Robotik"
+        }
+      ]
+    },
+    {
+      "id": "62105",
+      "title": "Peluş Uyku Arkadaşı Fil",
+      "price": 400,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 621,
+      "brandId": 11,
+      "brandName": "Toyzz",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1556012018-50c5c0da73bf?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 1200,
+      "isFreeShipping": true,
+      "badges": [
+        "Yumuşak"
+      ],
+      "shortDescription": "60cm dev boy.",
+      "description": "Bebeklerin sarılarak uyuyabileceği güvenli peluş.",
+      "variants": [
+        {
+          "size": "60 cm",
+          "stock": 40,
+          "color": "Gri"
+        }
+      ],
+      "features": [
+        {
+          "key": "Doku",
+          "value": "Antialerjik"
+        },
+        {
+          "key": "Yıkama",
+          "value": "30 Derece"
+        }
+      ]
+    },
+    {
+      "id": "62106",
+      "title": "Müzikli İlk Piyano",
+      "price": 600,
+      "discountPrice": 500,
+      "currency": "TRY",
+      "categoryId": 621,
+      "brandId": 58,
+      "brandName": "Fisher Price",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1576328077645-2dd68934d2b7?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 450,
+      "isFreeShipping": true,
+      "badges": [
+        "Müzik"
+      ],
+      "shortDescription": "Hayvan sesleri ve notalar.",
+      "description": "Işıklı tuşlarıyla ritim duygusunu geliştirir.",
+      "variants": [
+        {
+          "size": "Standart",
+          "stock": 30,
+          "color": "Kırmızı"
+        }
+      ],
+      "features": [
+        {
+          "key": "Pil",
+          "value": "Dahil"
+        },
+        {
+          "key": "Mod",
+          "value": "Öğrenme & Müzik"
+        }
+      ]
+    },
+    {
+      "id": "81103",
+      "title": "Eastpak Padded Pak'r",
+      "price": 1600,
+      "discountPrice": 1400,
+      "currency": "TRY",
+      "categoryId": 811,
+      "brandId": 59,
+      "brandName": "Eastpak",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 5000,
+      "isFreeShipping": true,
+      "badges": [
+        "30 Yıl Garanti"
+      ],
+      "shortDescription": "Efsanevi dayanıklılık.",
+      "description": "Okul ve günlük kullanım için ikonik model.",
+      "variants": [
+        {
+          "size": "24L",
+          "stock": 100,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Hacim",
+          "value": "24 Litre"
+        },
+        {
+          "key": "Kumaş",
+          "value": "Su Geçirmez"
+        }
+      ]
+    },
+    {
+      "id": "81104",
+      "title": "North Face Borealis",
+      "price": 3500,
+      "discountPrice": null,
+      "currency": "TRY",
+      "categoryId": 811,
+      "brandId": 60,
+      "brandName": "The North Face",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1581605405669-fdaf81167b60?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.8,
+      "reviewCount": 800,
+      "isFreeShipping": true,
+      "badges": [
+        "Outdoor"
+      ],
+      "shortDescription": "Ortopedik sırt desteği.",
+      "description": "Hem kamp hem şehir hayatı için profesyonel çanta.",
+      "variants": [
+        {
+          "size": "28L",
+          "stock": 15,
+          "color": "Siyah/Gri"
+        }
+      ],
+      "features": [
+        {
+          "key": "Laptop",
+          "value": "15 inç"
+        },
+        {
+          "key": "Sırt Sistemi",
+          "value": "FlexVent"
+        }
+      ]
+    },
+    {
+      "id": "81105",
+      "title": "Kanken Classic Çanta",
+      "price": 2800,
+      "discountPrice": 2500,
+      "currency": "TRY",
+      "categoryId": 811,
+      "brandId": 61,
+      "brandName": "Fjallraven",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 2500,
+      "isFreeShipping": true,
+      "badges": [
+        "Trend"
+      ],
+      "shortDescription": "İsveç tasarımı.",
+      "description": "Dayanıklı Vinylon F kumaştan üretilmiştir.",
+      "variants": [
+        {
+          "size": "16L",
+          "stock": 40,
+          "color": "Kiremit"
+        }
+      ],
+      "features": [
+        {
+          "key": "Stil",
+          "value": "Kanken"
+        },
+        {
+          "key": "Özellik",
+          "value": "Suya Dayanıklı"
+        }
+      ]
+    },
+    {
+      "id": "81106",
+      "title": "Nike Brasilia Spor Çanta",
+      "price": 950,
+      "discountPrice": 800,
+      "currency": "TRY",
+      "categoryId": 811,
+      "brandId": 6,
+      "brandName": "Nike",
+      "sellerId": 103,
+      "images": [
+        "https://images.unsplash.com/photo-1577733966973-d680bffd2e80?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.6,
+      "reviewCount": 1200,
+      "isFreeShipping": true,
+      "badges": [
+        "Spor"
+      ],
+      "shortDescription": "Geniş iç hacim.",
+      "description": "Antrenman eşyalarınız için ideal sırt çantası.",
+      "variants": [
+        {
+          "size": "Medium",
+          "stock": 60,
+          "color": "Lacivert"
+        }
+      ],
+      "features": [
+        {
+          "key": "Bölme",
+          "value": "Ayakkabı Gözü"
+        },
+        {
+          "key": "Hacim",
+          "value": "24L"
+        }
+      ]
+    },
+    {
+      "id": "81107",
+      "title": "Pierre Cardin Kadın Sırt Çantası",
+      "price": 1800,
+      "discountPrice": 1500,
+      "currency": "TRY",
+      "categoryId": 811,
+      "brandId": 11,
+      "brandName": "Pierre Cardin",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.5,
+      "reviewCount": 350,
+      "isFreeShipping": true,
+      "badges": [
+        "Şık"
+      ],
+      "shortDescription": "Monogram baskılı.",
+      "description": "Günlük şıklık için deri detaylı kadın çantası.",
+      "variants": [
+        {
+          "size": "M",
+          "stock": 25,
+          "color": "Kahve Monogram"
+        }
+      ],
+      "features": [
+        {
+          "key": "Materyal",
+          "value": "Suni Deri"
+        },
+        {
+          "key": "Askı",
+          "value": "Ayarlanabilir"
+        }
+      ]
+    },
+    {
+      "id": "81108",
+      "title": "Samsonite Laptop Sırt Çantası",
+      "price": 4500,
+      "discountPrice": 3900,
+      "currency": "TRY",
+      "categoryId": 811,
+      "brandId": 62,
+      "brandName": "Samsonite",
+      "sellerId": 104,
+      "images": [
+        "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.9,
+      "reviewCount": 400,
+      "isFreeShipping": true,
+      "badges": [
+        "Business Premium"
+      ],
+      "shortDescription": "Profesyonel iş çantası.",
+      "description": "Darbe emici koruma ve USB şarj portu.",
+      "variants": [
+        {
+          "size": "15.6 inç",
+          "stock": 10,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Koruma",
+          "value": "Anti-Shock"
+        },
+        {
+          "key": "Ekstra",
+          "value": "USB Port"
+        }
+      ]
+    },
+    {
+      "id": "71105",
+      "title": "Yumoş Extra Yumuşatıcı",
+      "price": 120,
+      "discountPrice": 99.9,
+      "currency": "TRY",
+      "categoryId": 711,
+      "brandId": 66,
+      "brandName": "Yumoş",
+      "sellerId": 101,
+      "images": [
+        "https://cdn.rossmann.com.tr/media/catalog/product/4/2/424b4d0ea988c8826e901ce6667ce26808c09e80a553a118a256a4cf4069f114.jpeg"
+      ],
+      "rating": 4.9,
+      "reviewCount": 4000,
+      "isFreeShipping": false,
+      "badges": [
+        "Konsantre"
+      ],
+      "shortDescription": "Orkide ve yasemin.",
+      "description": "Giysilerinizde haftalarca süren ferahlık.",
+      "variants": [
+        {
+          "size": "1440ml",
+          "stock": 200,
+          "color": "Mor"
+        }
+      ],
+      "features": [
+        {
+          "key": "Koku",
+          "value": "Orkide"
+        },
+        {
+          "key": "Yıkama",
+          "value": "60"
+        }
+      ]
+    },
+    {
+      "id": "71104",
+      "title": "Perwoll Siyah & Doku",
+      "price": 180,
+      "discountPrice": 150,
+      "currency": "TRY",
+      "categoryId": 711,
+      "brandId": 65,
+      "brandName": "Perwoll",
+      "sellerId": 101,
+      "images": [
+        "https://cdn.cimri.io/market/260x260/perwoll-siyah-doku-1-lt-sivi-camasir-deterjani-_1292104.jpg"
+      ],
+      "rating": 4.8,
+      "reviewCount": 2500,
+      "isFreeShipping": false,
+      "badges": [
+        "Renk Koruma"
+      ],
+      "shortDescription": "Yenileyici bakım.",
+      "description": "Siyah kıyafetlerin rengini korur ve dokusunu yeniler.",
+      "variants": [
+        {
+          "size": "1L",
+          "stock": 60,
+          "color": "Siyah"
+        }
+      ],
+      "features": [
+        {
+          "key": "Özellik",
+          "value": "Siyahlar İçin"
+        },
+        {
+          "key": "Teknoloji",
+          "value": "Fibrex"
+        }
+      ]
+    },
+    {
+      "id": "71103",
+      "title": "Omo Active Oxygen Toz",
+      "price": 350,
+      "discountPrice": 299,
+      "currency": "TRY",
+      "categoryId": 711,
+      "brandId": 15,
+      "brandName": "Omo",
+      "sellerId": 101,
+      "images": [
+        "https://static.ticimax.cloud/35880/uploads/urunresimleri/buyuk/temel-gida--4a6a-.jpg"
+      ],
+      "rating": 4.9,
+      "reviewCount": 6000,
+      "isFreeShipping": true,
+      "badges": [
+        "Ekonomik Boy"
+      ],
+      "shortDescription": "Beyazlar için etkili.",
+      "description": "En zorlu lekeleri bile ilk yıkamada çıkarır.",
+      "variants": [
+        {
+          "size": "6 KG",
+          "stock": 150,
+          "color": "Beyaz"
+        }
+      ],
+      "features": [
+        {
+          "key": "Form",
+          "value": "Toz"
+        },
+        {
+          "key": "Ağırlık",
+          "value": "6 KG"
+        }
+      ]
+    },
+    {
+      "id": "71107",
+      "title": "Vanish Kosla Leke Çıkarıcı",
+      "price": 200,
+      "discountPrice": 170,
+      "currency": "TRY",
+      "categoryId": 711,
+      "brandId": 67,
+      "brandName": "Vanish",
+      "sellerId": 101,
+      "images": [
+        "https://istekirtasiye.com/media/10244/catalog/48389.jpg"
+      ],
+      "rating": 4.6,
+      "reviewCount": 1500,
+      "isFreeShipping": false,
+      "badges": [
+        "Oxi Action"
+      ],
+      "shortDescription": "Güçlü leke çıkarma.",
+      "description": "Düşük sıcaklıkta bile etkili formül.",
+      "variants": [
+        {
+          "size": "1L",
+          "stock": 50,
+          "color": "Pembe"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tip",
+          "value": "Sıvı"
+        },
+        {
+          "key": "Kullanım",
+          "value": "Renkliler"
+        }
+      ]
+    },
+    {
+      "id": "71106",
+      "title": "Fairy Platinum Bulaşık Kapsülü",
+      "price": 450,
+      "discountPrice": 399,
+      "currency": "TRY",
+      "categoryId": 711,
+      "brandId": 15,
+      "brandName": "Fairy",
+      "sellerId": 101,
+      "images": [
+        "https://cdn.akakce.com/fairy/fairy-platinum-limon-90-adet-bulasik-makinesi-kapsulu-z.jpg"
+      ],
+      "rating": 5,
+      "reviewCount": 8000,
+      "isFreeShipping": true,
+      "badges": [
+        "Mega Paket"
+      ],
+      "shortDescription": "90'lı tablet.",
+      "description": "Zorlu yağları çözer, makineyi temizler.",
+      "variants": [
+        {
+          "size": "90 Adet",
+          "stock": 100,
+          "color": "Platinum"
+        }
+      ],
+      "features": [
+        {
+          "key": "Tip",
+          "value": "Kapsül"
+        },
+        {
+          "key": "Adet",
+          "value": "90"
+        }
+      ]
+    },
+    {
+      "id": "71101",
+      "title": "Ariel Dağ Esintisi Sıvı Deterjan",
+      "price": 250,
+      "discountPrice": 199.9,
+      "currency": "TRY",
+      "categoryId": 711,
+      "brandId": 63,
+      "brandName": "Ariel",
+      "sellerId": 101,
+      "images": [
+        "https://ardenmarket.com.tr/media/catalog/product/cache/ce320e98947e5c83f08a8e256dc8423e/a/r/ariel_da_esintisi_s_v_ama_r_deterjan_15_y_kama_975_ml.png"
+      ],
+      "rating": 4.8,
+      "reviewCount": 5000,
+      "isFreeShipping": true,
+      "badges": [
+        "Fırsat Paketi",
+        "Leke Çıkarıcı"
+      ],
+      "shortDescription": "26 Yıkama, 1.69L.",
+      "description": "Düşük sıcaklıkta bile üstün leke çıkarma teknolojisi.",
+      "variants": [
+        {
+          "size": "1.69L",
+          "stock": 100,
+          "color": "Yeşil"
+        }
+      ],
+      "features": [
+        {
+          "key": "Form",
+          "value": "Sıvı"
+        },
+        {
+          "key": "Yıkama Sayısı",
+          "value": "26"
+        }
+      ]
+    },
+    {
+      "id": "71102",
+      "title": "Persil Jel Gülün Büyüsü",
+      "price": 280,
+      "discountPrice": 220,
+      "currency": "TRY",
+      "categoryId": 711,
+      "brandId": 64,
+      "brandName": "Persil",
+      "sellerId": 101,
+      "images": [
+        "https://images.unsplash.com/photo-1627916535560-642512f7166e?auto=format&fit=crop&w=600&q=80"
+      ],
+      "rating": 4.7,
+      "reviewCount": 3200,
+      "isFreeShipping": false,
+      "badges": [
+        "Kalıcı Koku"
+      ],
+      "shortDescription": "Derinlemesine temizleme.",
+      "description": "360 derece temizlik sağlayan özel formül.",
+      "variants": [
+        {
+          "size": "2.3L",
+          "stock": 80,
+          "color": "Pembe"
+        }
+      ],
+      "features": [
+        {
+          "key": "Koku",
+          "value": "Gül"
+        },
+        {
+          "key": "Uygunluk",
+          "value": "Renkliler"
+        }
+      ]
+    }
+  ],
+  "reviews": [
+    {
+      "id": "1",
+      "productId": 101,
+      "userId": "firebase_uid_12345",
+      "userFullName": "Ali Okhan",
+      "rating": 5,
+      "product": "Zara Boğazlı Kazak",
+      "comment": "Kumaşı çok kaliteli, tam beden alabilirsiniz.",
+      "date": "2023-10-15T10:30:00Z",
+      "isVerifiedPurchase": true
+    },
+    {
+      "id": "2",
+      "productId": 101,
+      "userId": "random_user_2",
+      "userFullName": "Ali Okhan",
+      "rating": 4,
+      "product": "Mavi Kot Pantolon",
+      "comment": "Güzel ama kargo biraz geç geldi.",
+      "date": "2023-10-12T14:20:00Z",
+      "isVerifiedPurchase": true
+    },
+    {
+      "id": "3",
+      "productId": 301,
+      "userId": "random_user_3",
+      "userFullName": "Ali Okhan",
+      "rating": 5,
+      "comment": "Mükemmel telefon, satıcı çok ilgili.",
+      "product": "İphone 14",
+      "date": "2023-11-01T09:00:00Z",
+      "isVerifiedPurchase": true
+    }
+  ],
+  "orders": [
+    {
+      "id": "test-order-canceled-1",
+      "orderNumber": "#TR-8821",
+      "userId": "K3y64GgMGTTuCH0fFCmLfL9LMHA2",
+      "orderDate": "2026-01-05T10:00:00.000Z",
+      "totalAmount": 1200.5,
+      "currency": "TRY",
+      "status": "canceled",
+      "items": [
+        {
+          "productId": 102,
+          "productName": "İptal Edilen Yüksek Bel Jean",
+          "title": "İptal Edilen Yüksek Bel Jean",
+          "quantity": 1,
+          "price": 1200.5,
+          "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80"
+        }
+      ]
+    },
+    {
+      "id": "test-order-returns-1",
+      "orderNumber": "#TR-4492",
+      "userId": "K3y64GgMGTTuCH0fFCmLfL9LMHA2",
+      "orderDate": "2026-01-04T12:30:00.000Z",
+      "totalAmount": 499.99,
+      "currency": "TRY",
+      "status": "returns",
+      "items": [
+        {
+          "productId": 101,
+          "productName": "İade Edilen Elbise",
+          "title": "İade Edilen Elbise",
+          "quantity": 1,
+          "price": 499.99,
+          "image": "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=600&q=80"
+        }
+      ]
+    },
+    {
+      "id": "9001",
+      "orderNumber": "#TR-9001",
+      "userId": "firebase_uid_12345",
+      "orderDate": "2023-12-01T15:45:00Z",
+      "totalAmount": 349.99,
+      "currency": "TRY",
+      "status": "delivered",
+      "items": [
+        {
+          "productId": 101,
+          "productName": "Siyah Kare Yaka Örme Elbise",
+          "title": "Siyah Kare Yaka Örme Elbise",
+          "quantity": 1,
+          "price": 349.99,
+          "image": "https://placehold.co/600x900/black/white?text=Siyah+Elbise+1"
+        }
+      ]
+    },
+    {
+      "id": "f9b4fb57-0b09-4b6c-9619-dfa3adab07e4",
+      "orderNumber": "#TR-1023",
+      "userId": "K3y64GgMGTTuCH0fFCmLfL9LMHA2",
+      "orderDate": "2026-01-06T15:27:22.460Z",
+      "totalAmount": 5698.87,
+      "currency": "TRY",
+      "status": "continuing",
+      "items": [
+        {
+          "productId": "101",
+          "productName": "Siyah Kare Yaka Örme Elbise",
+          "title": "Siyah Kare Yaka Örme Elbise",
+          "quantity": 1,
+          "price": 499.99,
+          "image": "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          "productId": "505",
+          "productName": "Adidas Superstar Ayakkabı",
+          "title": "Adidas Superstar Ayakkabı",
+          "quantity": 1,
+          "price": 3299,
+          "image": "https://images.unsplash.com/photo-1516478177764-9fe5bd7e9717?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          "productId": "102",
+          "productName": "Yüksek Bel Jean",
+          "title": "Yüksek Bel Jean",
+          "quantity": 1,
+          "price": 899.9,
+          "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80"
+        }
+      ]
+    },
+    {
+      "id": "ca2827e0-5ffc-4bff-9a61-314e020c7dca",
+      "orderNumber": "#TR-2938",
+      "userId": "K3y64GgMGTTuCH0fFCmLfL9LMHA2",
+      "orderDate": "2026-01-06T15:31:26.294Z",
+      "totalAmount": 899.9,
+      "currency": "TRY",
+      "status": "continuing",
+      "items": [
+        {
+          "productId": "102",
+          "productName": "Yüksek Bel Jean",
+          "title": "Yüksek Bel Jean",
+          "quantity": 1,
+          "price": 899.9,
+          "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80"
+        }
+      ]
+    },
+    {
+      "id": "e65a7254-9697-41f9-94d5-6825e75921d3",
+      "orderNumber": "#TR-5512",
+      "userId": "K3y64GgMGTTuCH0fFCmLfL9LMHA2",
+      "orderDate": "2026-01-06T15:55:54.278Z",
+      "totalAmount": 899.9,
+      "currency": "TRY",
+      "status": "continuing",
+      "items": [
+        {
+          "productId": "102",
+          "productName": "Yüksek Bel Jean",
+          "title": "Yüksek Bel Jean",
+          "quantity": 1,
+          "price": 899.9,
+          "image": "https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=600&q=80"
+        }
+      ]
+    },
+    {
+      "id": "40817e9c-4d2f-446c-920b-34cc9ab5c768",
+      "orderNumber": "#TR-9182",
+      "userId": "K3y64GgMGTTuCH0fFCmLfL9LMHA2",
+      "orderDate": "2026-01-06T17:04:18.512Z",
+      "totalAmount": 999.98,
+      "currency": "TRY",
+      "status": "continuing",
+      "items": [
+        {
+          "productId": "101",
+          "productName": "Siyah Kare Yaka Örme Elbise",
+          "title": "Siyah Kare Yaka Örme Elbise",
+          "quantity": 1,
+          "price": 499.99,
+          "image": "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          "productId": "101",
+          "productName": "Siyah Kare Yaka Örme Elbise",
+          "title": "Siyah Kare Yaka Örme Elbise",
+          "quantity": 1,
+          "price": 499.99,
+          "image": "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=600&q=80"
+        }
+      ]
+    },
+    {
+      "id": "c199a002-a771-433e-a7ca-15a2998cf98a",
+      "orderNumber": "#TR-6712",
+      "userId": "K3y64GgMGTTuCH0fFCmLfL9LMHA2",
+      "orderDate": "2026-01-07T12:52:41.831Z",
+      "totalAmount": 12000,
+      "currency": "TRY",
+      "status": "continuing",
+      "items": [
+        {
+          "productId": "506",
+          "productName": "Xiaomi Robot Süpürge",
+          "title": "Xiaomi Robot Süpürge",
+          "quantity": 1,
+          "price": 12000,
+          "image": "https://images.unsplash.com/photo-1590502593747-42a996133562?auto=format&fit=crop&w=600&q=80"
+        }
+      ]
+    },
+    {
+      "id": "0a88fb45-06fa-4509-9da0-0fcd568a340a",
+      "orderNumber": "#TR-3399",
+      "userId": "K3y64GgMGTTuCH0fFCmLfL9LMHA2",
+      "orderDate": "2026-01-12T15:18:31.606Z",
+      "totalAmount": 28699.96,
+      "currency": "TRY",
+      "status": "continuing",
+      "items": [
+        {
+          "productId": "41103",
+          "productName": "Keten Dokulu Köşe Koltuk",
+          "title": "Keten Dokulu Köşe Koltuk",
+          "quantity": 1,
+          "price": 22500,
+          "image": "https://images.unsplash.com/photo-1550581190-9c1c48d21d6c?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          "productId": "51103",
+          "productName": "Dior Sauvage EDP 100ml",
+          "title": "Dior Sauvage EDP 100ml",
+          "quantity": 1,
+          "price": 4200,
+          "image": "https://images.unsplash.com/photo-1592914610354-fd354ea45e48?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          "productId": "101",
+          "productName": "Siyah Kare Yaka Örme Elbise",
+          "title": "Siyah Kare Yaka Örme Elbise",
+          "quantity": 1,
+          "price": 499.99,
+          "image": "https://images.unsplash.com/photo-1539008835657-9e8e9680c956?auto=format&fit=crop&w=600&q=80"
+        }
+      ]
+    },
+    {
+      "id": "a1f4a6b3-1971-4656-b561-b2c383f47697",
+      "orderNumber": "#TR-7721",
+      "userId": "5UKj1SgUYUgswiP1cxwdzvBeLKJ2",
+      "orderDate": "2026-01-14T12:30:56.888Z",
+      "totalAmount": 2399.99,
+      "currency": "TRY",
+      "status": "continuing",
+      "items": [
+        {
+          "productId": "11103",
+          "productName": "Kırmızı Saten Abiye",
+          "title": "Kırmızı Saten Abiye",
+          "quantity": 2,
+          "price": 1500,
+          "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=600&q=80"
+        },
+        {
+          "productId": "11102",
+          "productName": "Çiçek Desenli Şifon Elbise",
+          "title": "Çiçek Desenli Şifon Elbise",
+          "quantity": 1,
+          "price": 899.99,
+          "image": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=600&q=80"
+        }
+      ]
+    },
+    {
+      "id": "ae9854fd-951a-4bbe-8e89-e1058c3f3433",
+      "userId": "5UKj1SgUYUgswiP1cxwdzvBeLKJ2",
+      "orderDate": "2026-01-14T14:39:55.157Z",
+      "totalAmount": 1799.98,
+      "status": "continuing",
+      "orderNumber": "#TR-595157",
+      "currency": "TRY",
+      "items": [
+        {
+          "productId": "11102",
+          "productName": "Çiçek Desenli Şifon Elbise",
+          "title": "Çiçek Desenli Şifon Elbise",
+          "quantity": 2,
+          "price": 899.99,
+          "image": "https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&w=600&q=80",
+          "selectedVariant": {
+            "size": "38",
+            "stock": 15,
+            "color": "Renkli"
+          }
+        }
+      ]
+    }
+  ],
+  "coupons": [
+    {
+      "id": "8e00",
+      "userId": "firebase_uid_12345",
+      "code": "OZEL50",
+      "discountAmount": 50,
+      "minCartAmount": 500,
+      "type": "fixed",
+      "isActive": true,
+      "expirationDate": "2030-12-31T23:59:59Z"
+    },
+    {
+      "id": "1240",
+      "userId": "firebase_uid_12345",
+      "code": "YENIUYE",
+      "discountPercentage": 10,
+      "minCartAmount": 0,
+      "type": "percentage",
+      "isActive": true
+    },
+    {
+      "id": "9999",
+      "userId": "baska_bir_user_id",
+      "code": "BASKASI20",
+      "discountPercentage": 20,
+      "minCartAmount": 0,
+      "type": "percentage",
+      "isActive": false
+    }
+  ],
+  "widgets": [
+    {
+      "id": "1",
+      "type": "slider",
+      "title": "Ana Slider",
+      "content": [
+        {
+          "image": "https://placehold.co/1200x400/orange/white?text=YAZ+FIRSATLARI+%2550+INDIRIM",
+          "link": "/kategori/kadin-giyim"
+        },
+        {
+          "image": "https://placehold.co/1200x400/222/white?text=TEKNOLOJI+GUNLERI",
+          "link": "/kategori/elektronik"
+        },
+        {
+          "image": "https://placehold.co/1200x400/blue/white?text=Kozmetik+Festivali",
+          "link": "/kategori/kozmetik"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "type": "stories",
+      "title": "Popüler Markalar",
+      "content": [
+        {
+          "image": "https://placehold.co/100x100?text=Milla",
+          "link": "/brand/trendyolmilla",
+          "title": "Milla"
+        },
+        {
+          "image": "https://placehold.co/100x100?text=Apple",
+          "link": "/brand/apple",
+          "title": "Apple"
+        }
+      ]
+    },
+    {
+      "id": "3",
+      "type": "banner_grid",
+      "title": "Sana Özel Fırsatlar",
+      "content": [
+        {
+          "image": "https://placehold.co/400x250/red/fff?text=3+Al+2+Ode",
+          "link": "/campaign/3al2ode"
+        },
+        {
+          "image": "https://placehold.co/400x250/purple/fff?text=Kargo+Bedava",
+          "link": "/campaign/kargo-bedava"
+        },
+        {
+          "image": "https://placehold.co/400x250/green/fff?text=Flash+Indirimler",
+          "link": "/campaign/flash"
+        }
+      ]
+    }
+  ],
+  "cart": [],
+  "recentlyViewed": []
+}

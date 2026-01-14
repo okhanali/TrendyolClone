@@ -1,36 +1,100 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🛒 Trendyol Clone - Next-Generation E-Commerce
 
-## Getting Started
+![Project Banner](public/trendyolclone.png)
 
-First, run the development server:
+<div align="center">
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+![Live Demo](https://img.shields.io/badge/Canlı_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+<br/>
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[![Next.js](https://img.shields.io/badge/Next.js-16.1-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
+[![React](https://img.shields.io/badge/React-19-blue?style=for-the-badge&logo=react)](https://react.dev/)
+[![Firebase](https://img.shields.io/badge/Firebase-Auth-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)](https://firebase.google.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![TanStack Query](https://img.shields.io/badge/TanStack_Query-v5-FF4154?style=for-the-badge&logo=react-query&logoColor=white)](https://tanstack.com/query/latest)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+<p align="center">
+  <strong>Türkiye'nin en büyük e-ticaret platformunun modern web teknolojileri ve bulut tabanlı kimlik doğrulama sistemleri ile geliştirilmiş, yüksek performanslı klonu.</strong>
+</p>
 
-## Learn More
+<p align="center">
+  <a href="#-özellikler">Özellikler</a> •
+  <a href="#-teknoloji-yığını">Teknoloji Yığını</a> •
+  <a href="#-kurulum">Kurulum</a> •
+  <a href="#-proje-mimarisi">Mimari</a>
+</p>
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🚀 Proje Hakkında
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Bu proje, modern frontend mimarisi ve **Clean Architecture** prensipleri gözetilerek geliştirilmiştir. **Next.js 16 (App Router)** altyapısı üzerine inşa edilen uygulama, **Firebase Authentication** ile güvenli kullanıcı yönetimi sağlar.
 
-## Deploy on Vercel
+Sadece bir arayüz kopyası değil; e-posta doğrulama, arama geçmişi yönetimi, dinamik varyant algılama algoritmaları ve gelişmiş filtreleme sistemleri ile tam teşekküllü bir e-ticaret simülasyonudur.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ Özellikler
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 🔐 Kimlik Doğrulama & Güvenlik (Firebase)
+
+- **Giriş & Kayıt:** Email/Şifre ile güvenli kullanıcı girişi.
+- **Email Doğrulama:** Kayıt olan kullanıcılara otomatik doğrulama e-postası gönderimi.
+- **Oturum Yönetimi:** Kullanıcı durumunun (Session) uygulama genelinde korunması.
+
+### 🛍️ Alışveriş Deneyimi
+
+- **Akıllı Arama Sistemi:** LocalStorage tabanlı, geçmişi hatırlayan ve silinebilir arama motoru.
+- **Dinamik Varyant Algoritması:** Ürün tipine göre (Teknoloji için "GB", Giyim için "Beden", Market için "Litre") otomatik etiketleme yapan akıllı UI.
+- **Sepet Yönetimi:** Persistent (kalıcı) sepet yapısı, anlık fiyat güncellemesi.
+
+### 🎨 Modern UI/UX
+
+- **Tailwind CSS v4:** Yeni nesil CSS motoru ile ultra hızlı stil derleme.
+- **Responsive Tasarım:** Mobil öncelıklı (Mobile-First) yaklaşım.
+- **Animasyonlar:** Sayfa geçişleri ve mikro etkileşimler.
+
+### ⚙️ Teknik Yetenekler
+
+- **Server State:** **TanStack Query** ile verilerin önbelleklenmesi ve senkronizasyonu.
+- **Form Validasyonu:** **Formik** ve **Yup** ile güvenli form yapıları.
+- **SEO:** Dinamik metadata ve Open Graph etiketleri.
+
+## 🛠 Teknoloji Yığını
+
+Projede endüstri standardı ve en güncel paketler kullanılmıştır:
+
+### Çekirdek (Core)
+
+- **Framework:** Next.js 16.1 (App Router)
+- **Dil:** TypeScript
+- **Kütüphane:** React 19.2
+
+### Backend & Auth
+
+- **Auth Provider:** Firebase Authentication (v12)
+- **Mock API:** JSON Server
+
+### Stil & UI
+
+- **Styling:** Tailwind CSS v4, Tailwind Merge, CLSX
+- **Komponentler:** Radix UI (Dialog, Dropdown, Tabs, Accordion)
+- **İkonlar:** Lucide React, React Icons
+- **Carousel:** Embla Carousel, React Multi Carousel
+- **Bildirimler:** React Toastify
+
+### State & Form
+
+- **State Management:** TanStack Query v5 & Context API
+- **Form:** Formik & Yup
+- **Utils:** Cookies-next, React Credit Cards 2
+
+## 💻 Kurulum
+
+Projeyi yerel ortamınızda çalıştırmak için aşağıdaki adımları izleyin:
+
+1. **Repoyu klonlayın:**
+   ```bash
+   git clone [https://github.com/okhanali/TrendyolClone.git](https://github.com/okhanali/TrendyolClone.git)
+   cd trendyol-clone
+   ```
