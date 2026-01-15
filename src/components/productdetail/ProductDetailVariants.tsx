@@ -48,7 +48,6 @@ const ProductDetailVariants: FC<Props> = ({
 
   return (
     <div className="space-y-6">
-      {/* 🎨 Renk Seçimi - (Eğer sadece 1 renk varsa ve o da "standart" gibi bir şeyse gizlenebilir, ama şimdilik bırakıyoruz) */}
       {uniqColors.length > 0 && (
         <div className="flex flex-col gap-3">
           <h3 className="text-sm font-medium text-gray-700">
@@ -100,7 +99,7 @@ const ProductDetailVariants: FC<Props> = ({
                   h-10 min-w-14 px-4 rounded-lg border text-sm font-medium transition-all duration-200 outline-none
                   ${
                     isOutOfStock
-                      ? 'bg-gray-50 text-gray-300 cursor-not-allowed border-gray-100 decoration-gray-400' // Çizgiyi kaldırdım, daha temiz görünüm
+                      ? 'bg-gray-50 text-gray-300 cursor-not-allowed border-gray-100 decoration-gray-400'
                       : isSelected
                       ? 'border-orange-600 bg-orange-600 text-white shadow-md shadow-orange-200'
                       : 'border-gray-200 hover:border-orange-500 hover:text-orange-600 text-gray-700 bg-white'

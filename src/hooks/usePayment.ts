@@ -19,7 +19,6 @@ export const usePayment = () => {
         throw new Error('Oturum süreniz dolmuş veya giriş yapmamışsınız.');
       }
 
-      // 🚀 FIX: Sepeti doğrudan localStorage'dan çek (Race condition önleyici)
       const STORAGE_KEY = 'trendyol_clone_cart';
       const localData = localStorage.getItem(`${STORAGE_KEY}_${user.uid}`);
       const cartItems: ICartItem[] = localData ? JSON.parse(localData) : [];
@@ -50,14 +49,12 @@ export const usePayment = () => {
         })),
       });
 
-      // 🚀 FIX: Sipariş başarılıysa LOCALSTORAGE SEPETİNİ TEMİZLE
       localStorage.removeItem(`${STORAGE_KEY}_${user.uid}`);
 
       return newOrder;
     },
 
     onSuccess: (newOrder) => {
-      // Query cache'lerini temizle ki sepet 0 gözüksün
       queryClient.setQueryData(['cart', auth.currentUser?.uid], []);
       queryClient.invalidateQueries({ queryKey: ['orders'] });
 

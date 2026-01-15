@@ -15,7 +15,7 @@ const BestSellingProducts: FC = async () => {
           Çok Satan Ürünler
         </h2>
         <Link
-          href="/products/bestsellers"
+          href="/category/cok-satanlar"
           className="flex items-center text-sm font-semibold text-orange-600 hover:text-orange-700 transition-colors"
         >
           Tümünü Gör <ChevronRight size={16} />

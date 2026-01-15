@@ -30,10 +30,8 @@ export default function NotFound() {
           Ana Sayfaya Dön
         </Link>
 
-        {/* Opsiyonel: Bir önceki sayfaya dönme butonu mantığı tarayıcı geçmişi gerektirir, 
-            o yüzden burada güvenli liman olan kategorilere yönlendiriyoruz. */}
         <Link
-          href="/search" // Eğer arama sayfan varsa, yoksa "/" kalabilir.
+          href="/search"
           className="flex items-center justify-center gap-2 bg-white border border-gray-200 hover:border-orange-200 hover:bg-orange-50 text-gray-700 hover:text-orange-600 px-8 py-3.5 rounded-lg font-semibold transition-all duration-200"
         >
           <SearchX size={20} />

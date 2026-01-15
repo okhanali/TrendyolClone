@@ -20,7 +20,7 @@ const CartProducts: FC = () => {
 
   if (isLoading) {
     return (
-      <div className="flex flex-col items-center justify-center w-full min-h-[400px] gap-4 bg-white rounded-xl border border-gray-100">
+      <div className="flex flex-col items-center justify-center w-full min-h-100 gap-4 bg-white rounded-xl border border-gray-100">
         <Loader2 className="w-10 h-10 animate-spin text-orange-600" />
         <span className="text-gray-500 font-medium animate-pulse">Sepetiniz yükleniyor...</span>
       </div>
@@ -29,7 +29,7 @@ const CartProducts: FC = () => {
 
   if (!cartItems || cartItems.length === 0) {
     return (
-      <div className="flex flex-col items-center justify-center w-full bg-white rounded-xl border border-dashed border-gray-300 p-10 text-center min-h-[450px]">
+      <div className="flex flex-col items-center justify-center w-full bg-white rounded-xl border border-dashed border-gray-300 p-10 text-center min-h-112.5">
         <div className="bg-orange-50 p-6 rounded-full mb-6">
           <ShoppingBag className="w-12 h-12 text-orange-500" />
         </div>
@@ -102,7 +102,7 @@ const CartProducts: FC = () => {
                         </span>
                       )}
                     </div>
-                    <div className="max-w-full sm:max-w-[280px]">
+                    <div className="max-w-full sm:max-w-70">
                       <InformationSlider
                         items={HIGHLIGHTS_DATA.map((h) => ({
                           id: `cart-hl-${item.id}-${h.id}`,

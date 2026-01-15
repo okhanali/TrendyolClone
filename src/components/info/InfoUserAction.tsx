@@ -12,7 +12,7 @@ const InfoUserAction: FC = () => {
   const router = useRouter();
   const [loading, setLoading] = useState<boolean>(false);
 
-  //* Hesap Silme
+  // Hesap Silme
   const handleDeleteAccount = async () => {
     const user = auth.currentUser;
     if (!user) return;
@@ -35,7 +35,7 @@ const InfoUserAction: FC = () => {
     } catch (error: any) {
       console.error('Hesap silme hatası:', error);
 
-      //* Yapılan giriş üzerinden uzun zaman geçtiyse tekrar giriş iste
+      // Yapılan giriş üzerinden uzun zaman geçtiyse tekrar giriş iste
       if (error.code === 'auth/requires-recent-login') {
         toast.error('Güvenlik gereği hesabınızı silmek için tekrar giriş yapmalısınız.');
         await signOut(auth);

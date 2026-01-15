@@ -14,7 +14,6 @@ interface Props {
   initialProducts: IProducts[];
 }
 
-// Slug oluşturucu (Aynı kalıyor)
 const createSlug = (title: string) => {
   return title
     .toLowerCase()
@@ -38,7 +37,6 @@ const FavoriteProductsClient: FC<Props> = ({ initialProducts }) => {
     setProducts(initialProducts);
   }, [initialProducts]);
 
-  // 👇 DÜZELTME BURADA YAPILDI: productId tipi (number | string) oldu
   const handleRemove = (productId: number | string) => {
     toggleFavorite(productId);
     setProducts((prev) => prev.filter((p) => p.id !== productId));

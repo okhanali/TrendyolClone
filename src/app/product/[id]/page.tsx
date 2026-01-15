@@ -61,7 +61,7 @@ const ProductDetail: FC<Props> = async ({ params }) => {
           </div>
         </div>
 
-        {/* --- SAĞ TARAF (Bilgiler) --- */}
+        {/* --- SAĞ TARAF  --- */}
         <div className="flex flex-col gap-4 flex-1 min-w-0 w-full">
           {/* Başlık ve Rating */}
           <div className="space-y-3">
