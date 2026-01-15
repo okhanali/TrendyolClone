@@ -76,10 +76,11 @@ const CartProducts: FC = () => {
                     src={item.image}
                     alt={item.title}
                     fill
-                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
-                    className="object-contain transition-transform duration-500 hover:scale-105"
-                    loading="lazy"
-                    quality={75}
+                    sizes="112px"
+                    className="object-contain p-1"
+                    loading={index < 2 ? 'eager' : 'lazy'}
+                    priority={index < 2}
+                    quality={60}
                   />
                 </div>
 

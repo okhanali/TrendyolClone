@@ -1,6 +1,8 @@
+'use client';
+
 import { auth } from '@/services/firebase';
-import { clearCartService, getCartItemService, createOrderService } from '@/services/orderService';
-import { IPaymentState } from '@/types/types';
+import { createOrderService } from '@/services/orderService';
+import { IPaymentState, ICartItem } from '@/types/types';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
@@ -17,17 +19,19 @@ export const usePayment = () => {
         throw new Error('Oturum süreniz dolmuş veya giriş yapmamışsınız.');
       }
 
-      //  Sepeti Çek
-      const cartItems = await getCartItemService(user.uid);
+      // 🚀 FIX: Sepeti doğrudan localStorage'dan çek (Race condition önleyici)
+      const STORAGE_KEY = 'trendyol_clone_cart';
+      const localData = localStorage.getItem(`${STORAGE_KEY}_${user.uid}`);
+      const cartItems: ICartItem[] = localData ? JSON.parse(localData) : [];
 
       if (!cartItems || cartItems.length === 0) {
         throw new Error('Sepetiniz boş, ödeme yapılamaz.');
       }
 
-      //Toplam Tutar
+      // Toplam Tutar Hesaplama
       const totalAmount = cartItems.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
-      // Sipariş Objesi
+      // Sipariş Objesi Oluşturma
       const newOrder = await createOrderService({
         userId: user.uid,
         orderDate: new Date().toISOString(),
@@ -46,14 +50,15 @@ export const usePayment = () => {
         })),
       });
 
-      //Sepeti Temizle
-      await clearCartService(cartItems);
+      // 🚀 FIX: Sipariş başarılıysa LOCALSTORAGE SEPETİNİ TEMİZLE
+      localStorage.removeItem(`${STORAGE_KEY}_${user.uid}`);
 
       return newOrder;
     },
 
     onSuccess: (newOrder) => {
-      queryClient.invalidateQueries({ queryKey: ['cart'] });
+      // Query cache'lerini temizle ki sepet 0 gözüksün
+      queryClient.setQueryData(['cart', auth.currentUser?.uid], []);
       queryClient.invalidateQueries({ queryKey: ['orders'] });
 
       toast.success(`🎉 Siparişiniz Alındı! Tutar: ${newOrder.totalAmount} TL`);
@@ -66,10 +71,6 @@ export const usePayment = () => {
     onError: (error: Error) => {
       console.error(error);
       toast.error(error.message || 'Ödeme sırasında bir hata oluştu');
-
-      if (error.message.includes('Oturum') || error.message.includes('giriş')) {
-        setTimeout(() => router.push('/login'), 1500);
-      }
     },
   });
 
