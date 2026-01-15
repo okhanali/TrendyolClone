@@ -41,7 +41,6 @@ export const useCart = () => {
     toast.success('Ürün sepete eklendi!');
   };
 
-  // 🔥 BUILD HATASINI ÇÖZEN VE ÖDEMEYE YÖNLENDİREN FONKSİYON
   const buyNowSingleItem = async (item: ICartItem) => {
     if (!user) {
       toast.warn('Satın almak için giriş yapmalısınız.');
@@ -50,24 +49,34 @@ export const useCart = () => {
     }
     try {
       await addMutation.mutateAsync(item);
-      router.push('/cart'); // Önce sepeti doğrula sonra ödemeye geçmek en sağlıklısıdır
+      router.push('/cart');
     } catch (error) {
       toast.error('İşlem başarısız oldu.');
     }
   };
 
   const proceedToCheckout = () => {
-    if (!cartItems || cartItems.length === 0) {
-      toast.error('Sepetiniz boş!');
+    if (!user?.uid) {
+      toast.warn('Giriş yapmalısınız.');
+      router.push('/login');
       return;
     }
+
+    const localData = localStorage.getItem(`trendyol_clone_cart_${user.uid}`);
+    const items = localData ? JSON.parse(localData) : [];
+
+    if (items.length === 0) {
+      toast.error('Sepetiniz boş görünüyor!');
+      return;
+    }
+
     router.push('/payment');
   };
 
   return {
     cartItems: cartItems || [],
     addToCart,
-    buyNowSingleItem, // 🚀 TypeScript hatasını burası çözüyor
+    buyNowSingleItem,
     removeFromCart: (id: string) => {
       if (!user?.uid) return;
       removeFromCartService(id, user.uid).then(() => {

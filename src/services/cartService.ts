@@ -15,11 +15,17 @@ const saveLocalCart = (userId: string, cart: ICartItem[]) => {
 
 export const getCartItemsService = async (userId: string): Promise<ICartItem[]> => {
   if (!userId) return [];
-  return getLocalCart(userId); // setTimeout'u kaldırdık, PC rahatlasın
+  return getLocalCart(userId);
 };
 
 export const addToCartService = async (item: ICartItem, userId: string): Promise<ICartItem> => {
   const cart = getLocalCart(userId);
+
+  const safeImage =
+    item.image && (item.image.startsWith('http') || item.image.startsWith('/'))
+      ? item.image
+      : '/placeholder.png';
+
   const existingIndex = cart.findIndex(
     (i) => i.productId === item.productId && i.selectedVariant?.size === item.selectedVariant?.size
   );
@@ -27,8 +33,12 @@ export const addToCartService = async (item: ICartItem, userId: string): Promise
   if (existingIndex > -1) {
     cart[existingIndex].quantity += 1;
   } else {
-    // Benzersiz ID oluştur (Payment sayfasında çakışma olmaması için)
-    cart.push({ ...item, id: `${Date.now()}-${item.productId}`, quantity: 1 });
+    cart.push({
+      ...item,
+      image: safeImage,
+      id: `${Date.now()}-${item.productId}`,
+      quantity: 1,
+    });
   }
 
   saveLocalCart(userId, cart);
