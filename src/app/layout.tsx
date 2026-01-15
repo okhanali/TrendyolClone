@@ -6,7 +6,6 @@ import 'react-toastify/dist/ReactToastify.css';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import QueryProvider from '@/components/providers/QueryProvider';
-import AuthCookieSync from '@/components/auth/AuthCookieSync';
 
 const inter = Inter({
   subsets: ['latin'],
@@ -91,8 +90,6 @@ export default function RootLayout({
     <html lang="tr" suppressHydrationWarning>
       <body className={`${inter.variable} antialiased flex flex-col min-h-screen font-sans`}>
         <QueryProvider>
-          <AuthCookieSync />
-
           <Header />
 
           <main className="flex-1 w-full">{children}</main>

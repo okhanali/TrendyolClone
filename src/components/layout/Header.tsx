@@ -10,7 +10,7 @@ import HamburgerMenu from '../categories/HamburgerMenu';
 
 const Header: FC = () => {
   return (
-    <header className="flex flex-col border-b border-border bg-white sticky top-0 z-40 w-full transition-all">
+    <header className="flex flex-col border-b border-border bg-white sticky top-0 z-40 w-full transition-shadow duration-300">
       <div className="hidden md:flex container-custom items-center justify-end py-2 gap-6 text-xs text-muted-foreground">
         <p className="headerTopPrg">İndirim Kuponlarım</p>
         <p className="headerTopPrg">Trendyol'da Satış Yap</p>
