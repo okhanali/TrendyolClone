@@ -73,7 +73,7 @@ const CartProducts: FC = () => {
               <div className="p-4 flex flex-row gap-4">
                 <div className="relative w-20 h-24 sm:w-28 sm:h-32 shrink-0 bg-white rounded-lg border border-gray-50">
                   <Image
-                    src={item.image?.[0]}
+                    src={item.image}
                     alt={item.title}
                     fill
                     sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
