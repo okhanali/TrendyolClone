@@ -1,76 +1,41 @@
 import { ICategory, IProducts } from '@/types/types';
+import dbData from '../../db.json';
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
-
-export async function fetchAPI<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
-  const url = `${BASE_URL}${endpoint}`;
-  const defaultHeaders = { 'Content-Type': 'application/json' };
-  const config = {
-    ...options,
-    headers: { ...defaultHeaders, ...options.headers },
-  };
-
-  try {
-    const res = await fetch(url, config);
-    if (!res.ok) {
-      const errorBody = await res.json().catch(() => null);
-      throw new Error(`API Error (${res.status})`);
-    }
-    return (await res.json()) as T;
-  } catch (error) {
-    console.error(`Fetch failed for ${endpoint}:`, error);
-    throw error;
-  }
-}
-
+/**
+ * Ürünleri başlık, marka veya kategori adına göre filtreler.
+ * db.json üzerinden senkron ve hızlı çalışır.
+ */
 export const searchProducts = async (query: string): Promise<IProducts[]> => {
-  if (!query || query.trim().length === 0) {
-    return [];
-  }
+  if (!query || query.trim().length === 0) return [];
 
   const searchTerm = query.toLowerCase().trim();
+  const allProducts = (dbData.products as unknown as IProducts[]) || [];
+  const allCategories = (dbData.categories as unknown as ICategory[]) || [];
 
-  try {
-    const [allProducts, allCategories] = await Promise.all([
-      fetchAPI<IProducts[]>('/products', { cache: 'no-store' }),
-      fetchAPI<ICategory[]>('/categories', { cache: 'no-store' }),
-    ]);
-
-    // Ürün İsmine veya Markaya Göre Eşleşenler
-    const matchedByText = allProducts.filter((product) => {
-      const titleMatch = product.title?.toLowerCase().includes(searchTerm);
-      const brandMatch = product.brandName?.toLowerCase().includes(searchTerm);
-      return titleMatch || brandMatch;
-    });
-
-    // Önce ismi eşleşen kategorileri bul
-    // Sadece arama terimi 3 harften uzunsa kategori araması yap
-    let matchedByCategory: IProducts[] = [];
-
-    if (searchTerm.length >= 3) {
-      const matchingCategories = allCategories.filter((cat) =>
-        cat.name.toLowerCase().includes(searchTerm)
-      );
-
-      // Bu kategorilere ait ID'leri topla
-      const matchingCategoryIds = matchingCategories.map((cat) => cat.id);
-
-      // Bu kategori ID'sine sahip ürünleri bul
-      matchedByCategory = allProducts.filter((product) =>
-        matchingCategoryIds.some((id) => String(id) === String(product.categoryId))
-      );
-    }
-
-    //Sonuçları Birleştir ve Tekilleştir
-    const combinedResults = [...matchedByText, ...matchedByCategory];
-
-    const uniqueResults = combinedResults.filter(
-      (product, index, self) => index === self.findIndex((p) => p.id === product.id)
+  // 1. Metin bazlı eşleşme (Başlık veya Marka)
+  const matchedByText = allProducts.filter((product) => {
+    return (
+      product.title?.toLowerCase().includes(searchTerm) ||
+      product.brandName?.toLowerCase().includes(searchTerm) ||
+      product.description?.toLowerCase().includes(searchTerm) // Açıklamayı da ekledik
     );
+  });
 
-    return uniqueResults;
-  } catch (error) {
-    console.error('Search Error:', error);
-    return [];
+  // 2. Kategori bazlı eşleşme
+  let matchedByCategory: IProducts[] = [];
+  if (searchTerm.length >= 3) {
+    const matchingCategoryIds = allCategories
+      .filter((cat) => cat.name.toLowerCase().includes(searchTerm))
+      .map((cat) => cat.id);
+
+    matchedByCategory = allProducts.filter((product) =>
+      matchingCategoryIds.some((id) => String(id) === String(product.categoryId))
+    );
   }
+
+  // 3. Sonuçları birleştir ve Tekilleştir (ID bazlı)
+  const combinedResults = [...matchedByText, ...matchedByCategory];
+  const uniqueResults = Array.from(new Map(combinedResults.map((p) => [p.id, p])).values());
+
+  return uniqueResults;
 };
