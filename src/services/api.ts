@@ -1,10 +1,6 @@
 import { ICategory, IProducts } from '@/types/types';
 import dbData from '../../db.json';
 
-/**
- * Ürünleri başlık, marka veya kategori adına göre filtreler.
- * db.json üzerinden senkron ve hızlı çalışır.
- */
 export const searchProducts = async (query: string): Promise<IProducts[]> => {
   if (!query || query.trim().length === 0) return [];
 
@@ -17,7 +13,7 @@ export const searchProducts = async (query: string): Promise<IProducts[]> => {
     return (
       product.title?.toLowerCase().includes(searchTerm) ||
       product.brandName?.toLowerCase().includes(searchTerm) ||
-      product.description?.toLowerCase().includes(searchTerm) // Açıklamayı da ekledik
+      product.description?.toLowerCase().includes(searchTerm)
     );
   });
 
