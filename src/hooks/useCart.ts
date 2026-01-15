@@ -58,22 +58,9 @@ export const useCart = () => {
 
   // Sepetten Silme
   const removeMutation = useMutation({
-    mutationFn: (id: string) => removeFromCartService(id),
+    mutationFn: (id: string) => removeFromCartService(id, user?.uid as string), // userId eklendi
     onMutate: async (id) => {
-      const queryKey = ['cart', user?.uid];
-      await queryClient.cancelQueries({ queryKey });
-      const previousCart = queryClient.getQueryData<ICartItem[]>(queryKey);
-
-      queryClient.setQueryData<ICartItem[]>(queryKey, (oldCart) => {
-        if (!oldCart) return [];
-        return oldCart.filter((item) => String(item.id) !== String(id));
-      });
-
-      return { previousCart };
-    },
-    onError: (_err, _variables, context) => {
-      queryClient.setQueryData(['cart', user?.uid], context?.previousCart);
-      toast.error('Ürün silinemedi.');
+      // ... mevcut onMutate kodun kalsın
     },
     onSettled: () => {
       queryClient.invalidateQueries({ queryKey: ['cart', user?.uid] });
@@ -83,7 +70,7 @@ export const useCart = () => {
   // Miktar Güncelleme
   const updateMutation = useMutation({
     mutationFn: ({ id, quantity }: { id: string; quantity: number }) =>
-      updateCartItemService(id, quantity),
+      updateCartItemService(id, quantity, user?.uid as string),
     onMutate: async ({ id, quantity }) => {
       const queryKey = ['cart', user?.uid];
       await queryClient.cancelQueries({ queryKey });

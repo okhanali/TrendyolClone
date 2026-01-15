@@ -73,13 +73,13 @@ const CartProducts: FC = () => {
               <div className="p-4 flex flex-row gap-4">
                 <div className="relative w-20 h-24 sm:w-28 sm:h-32 shrink-0 bg-white rounded-lg border border-gray-50">
                   <Image
-                    src={item.image}
+                    src={item.image?.[0]}
                     alt={item.title}
                     fill
-                    sizes="(max-width: 640px) 80px, 112px"
-                    className="object-contain p-1"
-                    loading={index < 3 ? 'eager' : 'lazy'}
-                    priority={index < 2}
+                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
+                    className="object-contain transition-transform duration-500 hover:scale-105"
+                    loading="lazy"
+                    quality={75}
                   />
                 </div>
 
