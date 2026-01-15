@@ -43,16 +43,43 @@ export const useCart = () => {
   // Sepete Ekleme
   const addMutation = useMutation({
     mutationFn: (item: ICartItem) => {
-      if (!user?.uid) throw new Error('Oturum bulunamadı');
+      if (!user?.uid) throw new Error('Auth required');
       return addToCartService(item, user.uid);
     },
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['cart', user?.uid] });
-      toast.success('Ürün sepete eklendi!');
+    onMutate: async (newItem) => {
+      await queryClient.cancelQueries({ queryKey: ['cart', user?.uid] });
+
+      const previousCart = queryClient.getQueryData<ICartItem[]>(['cart', user?.uid]);
+
+      queryClient.setQueryData<ICartItem[]>(['cart', user?.uid], (old = []) => {
+        const existingItem = old.find(
+          (i) =>
+            i.productId === newItem.productId &&
+            i.selectedVariant?.size === newItem.selectedVariant?.size
+        );
+
+        if (existingItem) {
+          return old.map((i) =>
+            i.productId === newItem.productId &&
+            i.selectedVariant?.size === newItem.selectedVariant?.size
+              ? { ...i, quantity: i.quantity + 1 }
+              : i
+          );
+        }
+        return [...old, { ...newItem, quantity: 1 }];
+      });
+
+      return { previousCart };
     },
-    onError: (error: any) => {
-      console.error('Add To Cart Error:', error);
-      toast.error('Ürün eklenirken bir hata oluştu.');
+    onSuccess: () => {
+      toast.success('Ürün sepete eklendi!', { autoClose: 1500 });
+    },
+    onError: (err, newItem, context) => {
+      queryClient.setQueryData(['cart', user?.uid], context?.previousCart);
+      toast.error('Sepete eklenemedi.');
+    },
+    onSettled: () => {
+      queryClient.invalidateQueries({ queryKey: ['cart', user?.uid] });
     },
   });
 
