@@ -1,51 +1,68 @@
 import { ICartItem, IOrder, OrderStatusType } from '@/types/types';
-import dbData from '../../db.json';
 
+const ORDERS_STORAGE_KEY = 'trendyol_clone_orders';
+const CART_STORAGE_KEY = 'trendyol_clone_cart';
+
+/**
+ * Kullanıcıya özel sepeti LocalStorage'dan çeker.
+ */
 export const getCartItemService = async (userId: string): Promise<ICartItem[]> => {
-  if (!userId) return [];
-  const cart = (dbData.cart as unknown as ICartItem[]) || [];
-
-  // Kullanıcıya göre filtrele
-  const userCart = cart.filter((c) => c.userId === userId);
-
-  return new Promise((resolve) => setTimeout(() => resolve(userCart), 100));
+  if (typeof window === 'undefined' || !userId) return [];
+  const data = localStorage.getItem(`${CART_STORAGE_KEY}_${userId}`);
+  return data ? JSON.parse(data) : [];
 };
 
-// Sepeti Temizle
-export const clearCartService = async (cartItems: ICartItem[]): Promise<void> => {
-  return new Promise((resolve) => {
-    console.log('Sepet temizlendi (Simülasyon)');
-    setTimeout(() => resolve(), 200);
-  });
+/**
+ * Sipariş tamamlandıktan sonra LocalStorage'daki sepeti temizler.
+ */
+export const clearCartService = async (userId: string): Promise<void> => {
+  if (typeof window === 'undefined' || !userId) return;
+  localStorage.removeItem(`${CART_STORAGE_KEY}_${userId}`);
+  return new Promise((resolve) => setTimeout(resolve, 100));
 };
 
-// Siparişleri Getir
+/**
+ * Siparişleri LocalStorage'dan getirir ve tarihe göre sıralar.
+ */
 export const getOrdersService = async (
   userId: string,
-  status: OrderStatusType
+  status: OrderStatusType | 'all'
 ): Promise<IOrder[]> => {
-  let orders = (dbData.orders as unknown as IOrder[]) || [];
+  if (typeof window === 'undefined' || !userId) return [];
 
-  // User Filtresi
-  orders = orders.filter((o) => o.userId === userId);
+  const data = localStorage.getItem(`${ORDERS_STORAGE_KEY}_${userId}`);
+  let orders: IOrder[] = data ? JSON.parse(data) : [];
 
   // Status Filtresi
   if (status && status !== 'all') {
     orders = orders.filter((o) => o.status === status);
   }
 
-  return new Promise((resolve) => setTimeout(() => resolve(orders), 100));
+  // En yeni sipariş en üstte görünsün
+  return orders.sort((a, b) => new Date(b.orderDate).getTime() - new Date(a.orderDate).getTime());
 };
 
-// Sipariş Oluştur
+/**
+ * Yeni siparişi LocalStorage'daki siparişler dizisine kalıcı olarak ekler.
+ */
 export const createOrderService = async (orderData: Omit<IOrder, 'id'>): Promise<IOrder> => {
+  const userId = orderData.userId;
   const newOrder = {
     ...orderData,
     id: crypto.randomUUID(),
-  };
+  } as IOrder;
 
-  return new Promise((resolve) => {
-    console.log('Sipariş oluşturuldu (Simülasyon):', newOrder);
-    setTimeout(() => resolve(newOrder as IOrder), 500);
-  });
+  if (typeof window !== 'undefined' && userId) {
+    const data = localStorage.getItem(`${ORDERS_STORAGE_KEY}_${userId}`);
+    const existingOrders: IOrder[] = data ? JSON.parse(data) : [];
+
+    // Yeni siparişi listenin başına ekle
+    const updatedOrders = [newOrder, ...existingOrders];
+    localStorage.setItem(`${ORDERS_STORAGE_KEY}_${userId}`, JSON.stringify(updatedOrders));
+
+    // Sepeti de burada temizleyelim (Garanti olsun)
+    localStorage.removeItem(`${CART_STORAGE_KEY}_${userId}`);
+  }
+
+  return new Promise((resolve) => setTimeout(() => resolve(newOrder), 400));
 };
