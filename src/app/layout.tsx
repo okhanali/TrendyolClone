@@ -27,7 +27,6 @@ const defaultUrl = process.env.VERCEL_URL
 
 // ELITE SEO CONFIGURATION
 export const metadata: Metadata = {
-  // Dinamik Domain Algılama (Deploy Hatasını Önler)
   metadataBase: new URL(defaultUrl),
 
   title: {
