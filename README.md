@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![Live Demo](https://img.shields.io/badge/Canlı_Demo-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+![Live Demo](trendyol-clone-tau.vercel.app)
 <br/>
 
 [![Next.js](https://img.shields.io/badge/Next.js-16.1-black?style=for-the-badge&logo=next.js)](https://nextjs.org/)
