@@ -23,27 +23,43 @@ import {
 } from '@/components/ui/accordion';
 import Link from 'next/link';
 
+interface CategoryTreeItem {
+  id: string | number;
+  name: string;
+  slug: string;
+  subCategories: {
+    id: string | number;
+    name: string;
+    leafs: any[];
+  }[];
+}
+
 const HamburgerMenu: FC = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const { user, logOut } = useAuth();
   const router = useRouter();
 
-  const {
-    data: categories = [],
-    isLoading,
-    error,
-  } = useQuery({
+  const { data: categories = [], isLoading } = useQuery({
     queryKey: ['categories'],
     queryFn: getCategories,
   });
 
-  const hierarchy = useMemo(() => {
-    if (!categories || categories.length === 0) return { level0: [], level1: [], level2: [] };
-    return {
-      level0: categories.filter((c) => Number(c.level) === 0),
-      level1: categories.filter((c) => Number(c.level) === 1),
-      level2: categories.filter((c) => Number(c.level) === 2),
-    };
+  const categoryTree = useMemo(() => {
+    if (!categories || categories.length === 0) return [];
+
+    const level0 = categories.filter((c) => Number(c.level) === 0);
+    const level1 = categories.filter((c) => Number(c.level) === 1);
+    const level2 = categories.filter((c) => Number(c.level) === 2);
+
+    return level0.map((parent) => ({
+      ...parent,
+      subCategories: level1
+        .filter((l1) => Number(l1.parentId) === Number(parent.id))
+        .map((sub) => ({
+          ...sub,
+          leafs: level2.filter((l2) => Number(l2.parentId) === Number(sub.id)),
+        })),
+    })) as CategoryTreeItem[];
   }, [categories]);
 
   const handleLogout = async () => {
@@ -51,20 +67,17 @@ const HamburgerMenu: FC = () => {
       await logOut();
       setIsOpen(false);
       router.push('/');
-      router.refresh();
     } catch (error) {
-      console.error('Çıkış hatası:', error);
+      console.error(error);
     }
   };
 
   if (isLoading)
     return (
-      <Button variant="ghost" size="icon" className="-ml-2 hover:bg-transparent">
-        <Menu className="h-6 w-6 text-foreground animate-pulse" />
+      <Button variant="ghost" size="icon" className="-ml-2">
+        <Menu className="h-6 w-6 animate-pulse" />
       </Button>
     );
-
-  if (error) return null;
 
   return (
     <div className="flex items-center justify-center">
@@ -77,17 +90,16 @@ const HamburgerMenu: FC = () => {
 
         <SheetContent
           side="left"
-          className="w-[85vw] max-w-[320px] p-0 flex flex-col h-full bg-white z-60"
+          className="w-[85vw] max-w-[320px] p-0 flex flex-col h-full bg-white z-[60]"
         >
-          {/* HEADER  */}
-          <SheetHeader className="p-4 border-b flex flex-row items-center justify-between shrink-0 bg-white">
+          <SheetHeader className="p-4 border-b shrink-0 bg-white">
             <SheetTitle className="text-left text-xl font-bold text-primary">
               trendyol<span className="text-foreground">clone</span>
             </SheetTitle>
           </SheetHeader>
 
-          {/* SCROLL  */}
-          <div className="flex-1 overflow-y-auto scrollbar-hide py-2">
+          <div className="flex-1 overflow-y-auto py-2 scroll-smooth">
+            {/* Üst Menü Linkleri */}
             <div className="px-4 pb-4 border-b mb-2 space-y-1">
               <SheetClose asChild>
                 <Link
@@ -107,51 +119,36 @@ const HamburgerMenu: FC = () => {
               </SheetClose>
             </div>
 
-            <p className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase tracking-wider">
-              Kategoriler
-            </p>
+            <p className="px-4 py-2 text-xs font-semibold text-gray-400 uppercase">Kategoriler</p>
 
             <Accordion type="single" collapsible className="w-full">
-              {hierarchy.level0.map((parent) => (
-                <AccordionItem
-                  key={parent.id}
-                  value={`item-${parent.id}`}
-                  className="border-b-0 px-0"
-                >
-                  <AccordionTrigger className="px-4 py-3 text-sm font-medium hover:text-primary hover:bg-gray-50 text-gray-800">
+              {categoryTree.map((parent) => (
+                <AccordionItem key={parent.id} value={`item-${parent.id}`} className="border-b-0">
+                  <AccordionTrigger className="px-4 py-3 text-sm font-medium hover:bg-gray-50">
                     {parent.name}
                   </AccordionTrigger>
-
                   <AccordionContent className="pb-0">
                     <div className="bg-gray-50/50">
-                      {hierarchy.level1
-                        .filter((lvl1) => Number(lvl1.parentId) === Number(parent.id))
-                        .map((subCategory) => (
-                          <div
-                            key={subCategory.id}
-                            className="border-b border-gray-100 last:border-0"
-                          >
-                            <div className="px-6 py-2 text-xs font-bold text-gray-500 uppercase mt-2">
-                              {subCategory.name}
-                            </div>
-
-                            <div className="flex flex-col">
-                              {hierarchy.level2
-                                .filter((lvl2) => Number(lvl2.parentId) === Number(subCategory.id))
-                                .map((leafCategory) => (
-                                  <SheetClose asChild key={leafCategory.id}>
-                                    <Link
-                                      href={`/category/${leafCategory.slug}`}
-                                      className="flex items-center justify-between px-6 py-2.5 text-sm text-gray-700 hover:text-primary hover:bg-orange-50/50 transition-colors"
-                                    >
-                                      {leafCategory.name}
-                                      <ChevronRight className="w-3 h-3 text-gray-300" />
-                                    </Link>
-                                  </SheetClose>
-                                ))}
-                            </div>
+                      {parent.subCategories.map((sub) => (
+                        <div key={sub.id} className="border-b border-gray-100 last:border-0">
+                          <div className="px-6 py-2 text-[10px] font-bold text-gray-400 uppercase mt-1">
+                            {sub.name}
                           </div>
-                        ))}
+                          <div className="flex flex-col">
+                            {sub.leafs.map((leaf) => (
+                              <SheetClose asChild key={leaf.id}>
+                                <Link
+                                  href={`/category/${leaf.slug}`}
+                                  className="flex items-center justify-between px-6 py-2 text-sm text-gray-600 hover:text-primary hover:bg-orange-50 transition-colors"
+                                >
+                                  {leaf.name}
+                                  <ChevronRight className="w-3 h-3 text-gray-300" />
+                                </Link>
+                              </SheetClose>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
                     </div>
                   </AccordionContent>
                 </AccordionItem>
@@ -159,63 +156,7 @@ const HamburgerMenu: FC = () => {
             </Accordion>
           </div>
 
-          {/* FOOTER */}
-          <div className="border-t p-4 bg-gray-50 shrink-0">
-            {!user ? (
-              <div className="grid grid-cols-2 gap-3">
-                <SheetClose asChild>
-                  <Link
-                    href="/login"
-                    className="flex items-center justify-center h-10 rounded-md bg-primary text-white text-sm font-semibold hover:bg-primary-hover transition-colors"
-                  >
-                    Giriş Yap
-                  </Link>
-                </SheetClose>
-                <SheetClose asChild>
-                  <Link
-                    href="/register"
-                    className="flex items-center justify-center h-10 rounded-md border border-gray-300 bg-white text-gray-700 text-sm font-semibold hover:bg-gray-50 transition-colors"
-                  >
-                    Üye Ol
-                  </Link>
-                </SheetClose>
-              </div>
-            ) : (
-              <div className="space-y-3">
-                <div className="flex items-center gap-3 px-1">
-                  <div className="w-8 h-8 rounded-full bg-orange-100 flex items-center justify-center text-primary font-bold">
-                    {user.email?.charAt(0).toUpperCase()}
-                  </div>
-                  <div className="flex flex-col overflow-hidden">
-                    <span className="text-xs text-gray-500">Hoşgeldin,</span>
-                    <span className="text-sm font-semibold text-gray-900 truncate">
-                      {user.email}
-                    </span>
-                  </div>
-                </div>
-
-                <div className="h-px bg-gray-200 my-2" />
-
-                <SheetClose asChild>
-                  <Link
-                    href="/account/info"
-                    className="flex items-center gap-3 p-2 rounded-md hover:bg-white text-gray-700 font-medium transition-colors"
-                  >
-                    <User className="w-4 h-4" />
-                    Hesabım
-                  </Link>
-                </SheetClose>
-
-                <button
-                  onClick={handleLogout}
-                  className="flex items-center gap-3 w-full p-2 rounded-md text-red-600 hover:bg-red-50 font-medium transition-colors cursor-pointer"
-                >
-                  <LogOut className="w-4 h-4" />
-                  Çıkış Yap
-                </button>
-              </div>
-            )}
-          </div>
+          <div className="border-t p-4 bg-gray-50 shrink-0"></div>
         </SheetContent>
       </Sheet>
     </div>

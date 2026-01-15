@@ -25,7 +25,7 @@ const HeaderCategory: FC = () => {
             {item.label}
 
             {item.badge && (
-              <span className="text-[10px] px-1.5 py-0.5 text-white bg-red-600 rounded-full animate-pulse">
+              <span className="text-[10px] px-1.5 py-0.5 text-white bg-red-600 rounded-full">
                 {item.badge}
               </span>
             )}
