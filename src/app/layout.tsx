@@ -64,7 +64,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'tr_TR',
-    // url: 'https://aliokhan.com', // Domain alınca aktif edeceğiz
+    url: 'https://trendyol-clone-tau.vercel.app/',
     title: 'Trendyol Clone | Alışverişin Yeni Adresi',
     description: 'En trend ürünler ve büyük indirimler Trendyol Clone güvencesiyle burada.',
     siteName: 'Trendyol Clone',
