@@ -10,11 +10,6 @@ import { HIGHLIGHTS_DATA, PRODUCT_BADGES } from '@/constants';
 import { useFavorites } from '@/hooks/useFavorites';
 import InformationSlider, { SliderItem } from './InformationSlider';
 
-interface Props {
-  item: IProducts;
-  variant?: 'default' | 'flash' | 'bestseller';
-}
-
 const createSlug = (title: string) => {
   return title
     .toLowerCase()
@@ -36,6 +31,11 @@ const formatPrice = (amount: number, currency: string = 'TRY') =>
     minimumFractionDigits: 2,
   }).format(amount);
 
+interface Props {
+  item: IProducts;
+  variant?: 'default' | 'flash' | 'bestseller';
+}
+
 const ProductCard: FC<Props> = ({ item, variant = 'default' }) => {
   const { toggleFavorite, favoriteIds, isProcessing } = useFavorites();
 
@@ -45,11 +45,17 @@ const ProductCard: FC<Props> = ({ item, variant = 'default' }) => {
 
   const currentPrice = item.discountPrice ?? item.price;
   const hasDiscount = item.discountPrice !== null && item.discountPrice < item.price;
-  const discountRate = hasDiscount
-    ? Math.round(((item.price - currentPrice) / item.price) * 100)
-    : 0;
 
-  // --- BADGE & HIGHLIGHT LOGIC ---
+  const productUrl = useMemo(
+    () => `/product/${item.id}-${createSlug(item.title)}`,
+    [item.id, item.title]
+  );
+
+  const discountRate = useMemo(
+    () => (hasDiscount ? Math.round(((item.price - currentPrice) / item.price) * 100) : 0),
+    [hasDiscount, item.price, currentPrice]
+  );
+
   const mappedBadges: SliderItem[] = useMemo(() => {
     const badges: SliderItem[] = [];
     if (item.isFreeShipping) {
@@ -82,8 +88,6 @@ const ProductCard: FC<Props> = ({ item, variant = 'default' }) => {
     }));
   }, [item.id]);
 
-  const productUrl = `/product/${item.id}-${createSlug(item.title)}`;
-
   const handleFavoriteClick = (e: React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
     e.stopPropagation();
@@ -95,7 +99,6 @@ const ProductCard: FC<Props> = ({ item, variant = 'default' }) => {
       href={productUrl}
       className="relative flex h-full w-full flex-col justify-between overflow-hidden rounded-lg border border-gray-200 bg-white transition-all duration-300 hover:shadow-xl hover:border-orange-300"
     >
-      {/* FAVORITE BUTTON */}
       <button
         onClick={handleFavoriteClick}
         disabled={isProcessing}
@@ -117,8 +120,8 @@ const ProductCard: FC<Props> = ({ item, variant = 'default' }) => {
           fill
           sizes="(max-width: 768px) 50vw, (max-width: 1200px) 25vw, 20vw"
           className="object-contain transition-transform duration-500 hover:scale-105"
+          priority={false}
         />
-        {/* İndirim Rozeti */}
         {hasDiscount && (
           <div className="absolute left-0 top-3 z-10 rounded-r bg-red-600 px-2 py-1 text-[10px] font-bold text-white shadow-sm">
             %{discountRate}
@@ -127,21 +130,18 @@ const ProductCard: FC<Props> = ({ item, variant = 'default' }) => {
       </div>
 
       <div className="flex flex-1 flex-col p-3">
-        {/* Başlık ve Marka */}
         <div className="mb-2 min-h-10">
-          <h3 className="line-clamp-2 text-xs leading-relaxed text-gray-700" title={item.title}>
+          <h3 className="line-clamp-2 text-xs leading-relaxed text-gray-700">
             <span className="font-bold text-gray-900 mr-1">{item.brandName}</span>
             {item.description}
           </h3>
         </div>
 
-        {/* Highlights Slider */}
         <div className="mb-3 h-6 overflow-hidden">
           <InformationSlider items={mappedHighlights} textColor="text-gray-500" />
         </div>
 
         <div className="mt-auto space-y-2">
-          {/* Rating */}
           <div className="flex items-center gap-1">
             <div className="flex text-orange-400">
               <Star size={10} fill="currentColor" />
@@ -153,16 +153,12 @@ const ProductCard: FC<Props> = ({ item, variant = 'default' }) => {
             <span className="text-[9px] text-gray-400">({item.reviewCount})</span>
           </div>
 
-          {/* Badges */}
           <div className="h-6">
-            {mappedBadges.length > 0 ? (
+            {mappedBadges.length > 0 && (
               <InformationSlider items={mappedBadges} textColor="text-orange-600 font-bold" />
-            ) : (
-              <div className="h-6" />
             )}
           </div>
 
-          {/* Fiyat */}
           <div className="flex flex-col items-start pt-1">
             <span
               className={`font-bold ${
@@ -171,13 +167,10 @@ const ProductCard: FC<Props> = ({ item, variant = 'default' }) => {
             >
               {formatPrice(currentPrice, item.currency)}
             </span>
-
-            {hasDiscount ? (
+            {hasDiscount && (
               <span className="text-[11px] text-gray-400 line-through">
                 {formatPrice(item.price, item.currency)}
               </span>
-            ) : (
-              <span className="h-4 block"></span>
             )}
           </div>
         </div>

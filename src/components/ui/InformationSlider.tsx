@@ -20,24 +20,20 @@ const ITEM_HEIGHT = '1.75rem';
 const InformationSlider: FC<Props> = ({ items, className = '', textColor = 'text-gray-600' }) => {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [isTransitioning, setIsTransitioning] = useState<boolean>(true);
+  const [isHovered, setIsHovered] = useState<boolean>(false);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   if (!items || items.length === 0) return null;
 
-  // Tek eleman durumu
-  if (items.length === 1) {
-    const Item = items[0];
-    return (
-      <div className={`h-7 flex items-center gap-2 text-xs w-full ${className}`}>
-        {Item.icon && <span className="shrink-0">{Item.icon}</span>}
-        <span className={`truncate ${textColor} font-medium`}>{Item.text}</span>
-      </div>
-    );
-  }
-
-  const extendedData = [...items, items[0]];
+  const shouldAnimate = items.length > 1 && isHovered;
 
   useEffect(() => {
+    if (!shouldAnimate) {
+      if (timeoutRef.current) clearInterval(timeoutRef.current);
+      setCurrentIndex(0);
+      return;
+    }
+
     timeoutRef.current = setInterval(() => {
       setCurrentIndex((prev) => prev + 1);
       setIsTransitioning(true);
@@ -46,7 +42,7 @@ const InformationSlider: FC<Props> = ({ items, className = '', textColor = 'text
     return () => {
       if (timeoutRef.current) clearInterval(timeoutRef.current);
     };
-  }, []);
+  }, [shouldAnimate]);
 
   const handleTransitionEnd = () => {
     if (currentIndex === items.length) {
@@ -56,23 +52,27 @@ const InformationSlider: FC<Props> = ({ items, className = '', textColor = 'text
   };
 
   return (
-    <div className={`h-7 overflow-hidden relative w-full ${className}`}>
+    <div
+      className={`h-7 overflow-hidden relative w-full ${className}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+    >
       <div
         className={`flex flex-col will-change-transform ${
-          isTransitioning ? 'transition-transform duration-500 ease-in-out' : ''
+          isTransitioning && shouldAnimate ? 'transition-transform duration-500 ease-in-out' : ''
         }`}
         style={{ transform: `translateY(calc(-${currentIndex} * ${ITEM_HEIGHT}))` }}
         onTransitionEnd={handleTransitionEnd}
       >
-        {extendedData.map((item, index) => {
-          const uniqueKey = `slider-${index}`;
-          return (
-            <div key={uniqueKey} className="h-7 flex items-center gap-2 text-xs w-full shrink-0">
-              {item.icon && <span className="shrink-0">{item.icon}</span>}
-              <span className={`truncate ${textColor} font-medium`}>{item.text}</span>
-            </div>
-          );
-        })}
+        {(shouldAnimate ? [...items, items[0]] : [items[0]]).map((item, index) => (
+          <div
+            key={`${item.id}-${index}`}
+            className="h-7 flex items-center gap-2 text-xs w-full shrink-0"
+          >
+            {item.icon && <span className="shrink-0">{item.icon}</span>}
+            <span className={`truncate ${textColor} font-medium`}>{item.text}</span>
+          </div>
+        ))}
       </div>
     </div>
   );
