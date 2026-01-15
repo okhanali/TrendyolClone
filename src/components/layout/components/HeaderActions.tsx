@@ -29,9 +29,6 @@ const HeaderActions: FC = () => {
           );
         }
 
-        // Giriş yapmışsa 'Giriş Yap' linkini gizle
-        if (item.href === '/login' && user) return null;
-
         return (
           <Link
             key={i}
