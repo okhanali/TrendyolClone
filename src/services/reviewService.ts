@@ -1,18 +1,10 @@
 import { IReview } from '@/types/types';
+import dbData from '../../db.json';
 
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
-
-// Ürün yorumlarını getir
 export const getReview = async (userId: string): Promise<IReview[]> => {
-  const res = await fetch(`${BASE_URL}/reviews?userId=${userId}`, {
-    method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    cache: 'no-store',
+  const reviews = (dbData.reviews as unknown as IReview[]) || [];
+
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(reviews), 100);
   });
-
-  if (!res.ok) throw new Error('Yorumlar Getirilemedi');
-
-  return (await res.json()) as IReview[];
 };

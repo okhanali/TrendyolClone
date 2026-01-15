@@ -1,51 +1,34 @@
 import { ICartItem } from '@/types/types';
+import dbData from '../../db.json';
 
-const API_URL = process.env.NEXT_PUBLIC_API_URL;
-
+// Sepeti Getir
 export const getCartItemsService = async (userId: string): Promise<ICartItem[]> => {
   if (!userId) return [];
-  const res = await fetch(`${API_URL}/cart?userId=${userId}`, { cache: 'no-store' });
-  if (!res.ok) throw new Error('Sepet verisi alınamadı');
-  return res.json();
+  const cart = (dbData.cart as unknown as ICartItem[]) || [];
+  const userCart = cart.filter((c) => c.userId === userId);
+
+  return new Promise((resolve) => setTimeout(() => resolve(userCart), 100));
 };
 
+// Sepete Ekle (MOCK)
 export const addToCartService = async (item: ICartItem, userId: string): Promise<ICartItem> => {
-  const currentCart = await getCartItemsService(userId);
-
-  // Aynı ürünün aynı varyantı var mı?
-  const existingItem = currentCart.find(
-    (c) =>
-      c.productId === item.productId &&
-      c.selectedVariant.size === item.selectedVariant.size &&
-      c.selectedVariant.color === item.selectedVariant.color
-  );
-
-  if (existingItem) {
-    return await updateCartItemService(existingItem.id, existingItem.quantity + 1);
-  }
-
-  const res = await fetch(`${API_URL}/cart`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ ...item, userId }),
+  return new Promise((resolve) => {
+    console.log('Sepete eklendi (Simülasyon):', item);
+    setTimeout(() => resolve(item), 200);
   });
-
-  if (!res.ok) throw new Error('Ekleme başarısız');
-  return res.json();
 };
 
+// Miktar Güncelle
 export const updateCartItemService = async (id: string, quantity: number): Promise<ICartItem> => {
-  const res = await fetch(`${API_URL}/cart/${id}`, {
-    method: 'PATCH',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ quantity }),
+  return new Promise((resolve) => {
+    const mockItem = { id, quantity } as any;
+    setTimeout(() => resolve(mockItem), 100);
   });
-  if (!res.ok) throw new Error('Güncelleme başarısız');
-  return res.json();
 };
 
+// Sepetten Sil
 export const removeFromCartService = async (id: string) => {
-  const res = await fetch(`${API_URL}/cart/${id}`, { method: 'DELETE' });
-  if (!res.ok) throw new Error('Silme başarısız');
-  return res.json();
+  return new Promise((resolve) => {
+    setTimeout(() => resolve({ success: true }), 100);
+  });
 };

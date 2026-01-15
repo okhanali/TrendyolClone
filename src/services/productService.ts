@@ -1,12 +1,10 @@
 import { IProducts } from '@/types/types';
 import dbData from '../../db.json';
 
-// Tip güvenliği ekledik (any yerine IProduct)
 export const getProducts = async (
   categoryId?: number | string,
   query?: string
 ): Promise<IProducts[]> => {
-  // dbData.products yoksa boş dizi döndür
   let data: IProducts[] = (dbData.products as IProducts[]) || [];
 
   // Kategori Filtresi

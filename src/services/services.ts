@@ -1,62 +1,29 @@
 import { ICategory, IProducts } from '@/types/types';
-
-const BASE_URL = process.env.NEXT_PUBLIC_API_URL;
-
-if (!BASE_URL) {
-  throw new Error('🚨 CRITICAL: NEXT_PUBLIC_API_URL environment variable is not defined!');
-}
-
-async function fetchAPI<T>(endpoint: string, options: RequestInit = {}): Promise<T> {
-  const url = `${BASE_URL}${endpoint}`;
-
-  const defaultHeaders = {
-    'Content-Type': 'application/json',
-  };
-
-  const config = {
-    ...options,
-    headers: {
-      ...defaultHeaders,
-      ...options.headers,
-    },
-  };
-
-  try {
-    const res = await fetch(url, config);
-
-    if (!res.ok) {
-      const errorBody = await res.json().catch(() => null);
-      throw new Error(
-        `API Error (${res.status}): ${errorBody?.message || res.statusText} at ${endpoint}`
-      );
-    }
-
-    return (await res.json()) as T;
-  } catch (error) {
-    console.error(`Fetch failed for ${endpoint}:`, error);
-    throw error;
-  }
-}
+import dbData from '../../db.json';
 
 export const getCategories = async (): Promise<ICategory[]> => {
-  return fetchAPI<ICategory[]>('/categories', {
-    cache: 'no-store',
+  const categories = (dbData.categories as unknown as ICategory[]) || [];
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(categories), 100);
   });
 };
 
 export const getProducts = async (): Promise<IProducts[]> => {
-  return fetchAPI<IProducts[]>('/products', {
-    next: { revalidate: 60 },
+  const products = (dbData.products as unknown as IProducts[]) || [];
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(products), 100);
   });
 };
 
 export const getProductDetail = async (id: string | number): Promise<IProducts | null> => {
-  try {
-    return await fetchAPI<IProducts>(`/products/${id}`, {
-      cache: 'no-store',
-    });
-  } catch (error: any) {
-    console.error(`Product ${id} not found or error occurred.`);
-    return null;
-  }
+  const products = (dbData.products as unknown as IProducts[]) || [];
+  const product = products.find((p) => p.id.toString() === id.toString());
+
+  return new Promise((resolve) => {
+    setTimeout(() => resolve(product || null), 100);
+  });
+};
+
+export const getUserFavoriteProducts = async (userId: string): Promise<IProducts[]> => {
+  return [];
 };

@@ -1,51 +1,22 @@
 import { ICoupon } from '@/types/types';
-
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:3001';
+import dbData from '../../db.json';
 
 export const getCoupons = async (userId: string): Promise<ICoupon[]> => {
-  try {
-    const response = await fetch(`${API_URL}/coupons?userId=${userId}`, {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' },
-      cache: 'no-store',
-    });
-
-    if (!response.ok) {
-      throw new Error('Kupon listesi alınamadı');
-    }
-
-    const data: ICoupon[] = await response.json();
-    return data;
-  } catch (error) {
-    console.error('getCoupons Service Error:', error);
-    return [];
-  }
+  const coupons = (dbData.coupons as unknown as ICoupon[]) || [];
+  return new Promise((resolve) => setTimeout(() => resolve(coupons), 100));
 };
 
 export const validateCouponService = async (
   code: string,
   userId: string
 ): Promise<ICoupon | null> => {
-  try {
-    const response = await fetch(`${API_URL}/coupons?code=${code}&userId=${userId}`, {
-      method: 'GET',
-      headers: { 'Content-Type': 'application/json' },
-      cache: 'no-store',
-    });
+  const coupons = (dbData.coupons as unknown as ICoupon[]) || [];
 
-    if (!response.ok) throw new Error('Kupon sorgulanamadı');
+  const coupon = coupons.find((c) => c.code === code);
 
-    const data: ICoupon[] = await response.json();
-
-    if (data.length > 0) {
-      const coupon = data[0];
-      if (coupon.isActive === false) return null;
-      return coupon;
-    }
-
-    return null;
-  } catch (error) {
-    console.error('Coupon Service Error:', error);
-    throw error;
+  if (coupon && coupon.isActive !== false) {
+    return new Promise((resolve) => setTimeout(() => resolve(coupon), 200));
   }
+
+  return new Promise((resolve) => setTimeout(() => resolve(null), 200));
 };
