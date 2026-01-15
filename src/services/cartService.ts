@@ -1,64 +1,34 @@
 import { ICartItem } from '@/types/types';
+import dbData from '../../db.json';
 
-const STORAGE_KEY = 'trendyol_clone_cart';
-
-/**
- * LocalStorage'dan kullanıcıya özel sepeti okur.
- */
-const getLocalCart = (userId: string): ICartItem[] => {
-  if (typeof window === 'undefined' || !userId) return [];
-  const data = localStorage.getItem(`${STORAGE_KEY}_${userId}`);
-  return data ? JSON.parse(data) : [];
-};
-
-/**
- * LocalStorage'a kullanıcıya özel sepeti kaydeder.
- */
-const saveLocalCart = (userId: string, cart: ICartItem[]) => {
-  if (typeof window === 'undefined' || !userId) return;
-  localStorage.setItem(`${STORAGE_KEY}_${userId}`, JSON.stringify(cart));
-};
-
+// Sepeti Getir
 export const getCartItemsService = async (userId: string): Promise<ICartItem[]> => {
   if (!userId) return [];
-  const userCart = getLocalCart(userId);
-  // Ağ gecikmesini simüle etmek için küçük bir timeout
-  return new Promise((resolve) => setTimeout(() => resolve(userCart), 150));
+  const cart = (dbData.cart as unknown as ICartItem[]) || [];
+  const userCart = cart.filter((c) => c.userId === userId);
+
+  return new Promise((resolve) => setTimeout(() => resolve(userCart), 100));
 };
 
+// Sepete Ekle (MOCK)
 export const addToCartService = async (item: ICartItem, userId: string): Promise<ICartItem> => {
-  const cart = getLocalCart(userId);
-
-  // Aynı ürün ve aynı beden var mı kontrol et
-  const existingIndex = cart.findIndex(
-    (i) => i.productId === item.productId && i.selectedVariant.size === item.selectedVariant.size
-  );
-
-  if (existingIndex > -1) {
-    cart[existingIndex].quantity += item.quantity || 1;
-  } else {
-    cart.push({ ...item, quantity: item.quantity || 1 });
-  }
-
-  saveLocalCart(userId, cart);
-  return new Promise((resolve) => setTimeout(() => resolve(item), 200));
+  return new Promise((resolve) => {
+    console.log('Sepete eklendi (Simülasyon):', item);
+    setTimeout(() => resolve(item), 200);
+  });
 };
 
-export const updateCartItemService = async (
-  id: string,
-  quantity: number,
-  userId: string
-): Promise<void> => {
-  const cart = getLocalCart(userId);
-  const updatedCart = cart.map((item) =>
-    String(item.id) === String(id) ? { ...item, quantity } : item
-  );
-  saveLocalCart(userId, updatedCart);
+// Miktar Güncelle
+export const updateCartItemService = async (id: string, quantity: number): Promise<ICartItem> => {
+  return new Promise((resolve) => {
+    const mockItem = { id, quantity } as any;
+    setTimeout(() => resolve(mockItem), 100);
+  });
 };
 
-export const removeFromCartService = async (id: string, userId: string) => {
-  const cart = getLocalCart(userId);
-  const updatedCart = cart.filter((item) => String(item.id) !== String(id));
-  saveLocalCart(userId, updatedCart);
-  return new Promise((resolve) => setTimeout(() => resolve({ success: true }), 150));
+// Sepetten Sil
+export const removeFromCartService = async (id: string) => {
+  return new Promise((resolve) => {
+    setTimeout(() => resolve({ success: true }), 100);
+  });
 };
